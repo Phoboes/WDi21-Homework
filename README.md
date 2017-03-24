@@ -1,5 +1,5 @@
 # WDi-21 ([General Assembly, Sydney](https://generalassemb.ly/sydney))
-##Homework Repository
+## Homework Repository
 
 1. Git Config
 2. Repository Setup;
