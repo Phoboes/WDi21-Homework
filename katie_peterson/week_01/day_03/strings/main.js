@@ -28,6 +28,7 @@ DrEvil (1000000);
 // Look up the JavaScript string reference to find methods which may be useful!'
 
 var mixUp = function ( x , y ) {
+  //slice
   console.log(y.slice(0, 2) + x.slice(2) + " " + x.slice(0, 2) + y.slice(2));
 };
 
@@ -39,10 +40,19 @@ mixUp ( "mix", "pod" );
 //
 // fixStart('babble'): 'ba**le'
 
+//
 
 var fixStart = function ( a )  {
+  //charAt, return the first character of a string
+  var c = a.charAt(0);
+  // RegExp is search and find, 'g' finds all matches
+  //slice seems to work but I am not really sure if it is the correct use and the internet suggested using it with arrays.
+  return c + a.slice(1).replace(new RegExp(c, 'g'), '*');
+}
 
-};
+fixStart ("babble");
+
+//need to call fixStart ("babble"); in the browser console.
 
 // Verbing
 //
@@ -53,19 +63,20 @@ var fixStart = function ( a )  {
 //   verbing('swimming'): 'swimmingly'
 //   verbing('go'): 'go'
 // Not Bad
-//
-
+// //
+// //
 var verbing = function ( word ) {
   if (word.length < 3);
       console.log( word );
+//slice seems to work again...
  if (word.slice(-3) == "ing") {
     console.log(word + "ly");
   }
   else {
     console.log( word + "ing");
   };
-
-verbing ("swim");
+};
+verbing ( "swim" );
 
 
 
@@ -77,13 +88,22 @@ verbing ("swim");
 // For example:
 //
 //   notBad('This dinner is not that bad!'): 'This dinner is good!'
-//   notBad('This movie is not so bad!'): 'This movie is good!'
-//   notBad('This dinner is bad!'): 'This dinner is bad!'
-
+// //   notBad('This movie is not so bad!'): 'This movie is good!'
+// //   notBad('This dinner is bad!'): 'This dinner is bad!'
+// //
+// //
 
 var notBad = function (sentence) {
-  var notIndex = sentence.indexOf('not');
-  var badIndex = sentence.indexOf('bad');
-  if (notIndex == -1 || badIndex == -1 || badIndex < notIndex) return sentence;
-  return sentence.slice(0, notIndex) + 'good' + sentence.slice(badIndex + 3);
+
+//indexOf retruns the position of the first occurance of a value in a string.
+  var notInd = sentence.indexOf('not');
+  var badInd = sentence.indexOf('bad');
+//
+  if (notInd == -1 || badInd == -1 || badInd < notInd) {
+  console.log (sentence);}
+  else {
+    console.log (sentence.slice(0, notInd) + 'good' + sentence.slice(badInd + 3));
+  };
 };
+
+notBad ("This dinner is not that bad!");
