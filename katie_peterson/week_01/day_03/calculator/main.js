@@ -47,6 +47,8 @@ var areaOfCircle = function (radius) {
 
 areaOfCircle (12);
 
+//need to work on the decimal, not quite working yet. 
+
 
 // Part 2
 //
