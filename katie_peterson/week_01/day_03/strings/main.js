@@ -14,7 +14,7 @@ var DrEvil = function ( amount ) {
     console.log( amount + " dollars (pinky)" );
   } else {
     console.log( amount + " dollars");
-  }
+  };
 };
 
 DrEvil (1000000);
@@ -28,7 +28,7 @@ DrEvil (1000000);
 // Look up the JavaScript string reference to find methods which may be useful!'
 
 var mixUp = function ( x , y ) {
-  //slice
+  //slice?
   console.log(y.slice(0, 2) + x.slice(2) + " " + x.slice(0, 2) + y.slice(2));
 };
 
