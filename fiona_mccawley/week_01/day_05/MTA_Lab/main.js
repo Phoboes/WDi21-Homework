@@ -50,37 +50,37 @@
 var trainLineN = [
   "Times Square",
   "34th",
-  "28th",
-  "23rd(N line)",
+  "28th N",  //differentiate from the one on the 6 line
+  "23rd N", //differentiate this stop from the one one on the 6 line
   "Union Square",
   "8th"
 ];
 //
 //log stops going forwards
 
-for( var i = 0; i < trainLineN.length; i += 1 ){
-  console.log(trainLineN[i]);
-};
-
-//log stops going backwards
-
-for( var i = trainLineN.length -1; i >= 0; i -=1 ){
-  console.log(trainLineN[i]);
-};
-
-//log out all the stops going forwards on the one line, with a string prefix
-var msg = ' ';
-for( var i = 0; i < trainLineN.length; i += 1 ){
-  msg += trainLineN[i] + ", ";
-};
-  console.log("You must travel through the following stops " + msg);
-
-//log out all the stops going backwards on the one line
-var msg = ' ';
-for( var i = trainLineN.length -1; i >= 0; i -=1 ){
-  msg += trainLineN[i] + ", ";
-};
-  console.log("You must travel through the following stops " + msg);
+// for( var i = 0; i < trainLineN.length; i += 1 ){
+//   console.log(trainLineN[i]);
+// };
+//
+// //log stops going backwards
+//
+// for( var i = trainLineN.length -1; i >= 0; i -=1 ){
+//   console.log(trainLineN[i]);
+// };
+//
+// //log out all the stops going forwards on the one line, with a string prefix
+// var msg = " ";
+// for( var i = 0; i < trainLineN.length; i += 1 ){
+//   msg += trainLineN[i] + ", ";
+// };
+//   // console.log("You must travel through the following stops " + msg);
+//
+// //log out all the stops going backwards on the one line
+// var msg = " ";
+// for( var i = trainLineN.length -1; i >= 0; i -=1 ){
+//   msg += trainLineN[i] + ", ";
+// };
+  // console.log("You must travel through the following stops " + msg);
 
 
 
@@ -91,46 +91,54 @@ for( var i = trainLineN.length -1; i >= 0; i -=1 ){
 //Then using a loop, i'll print out the stations between those 2
 //My for loop will have the starting point = to stop 1, and the end point = to stop 2.
 //Increase by increments of 1
-
+var msgForward = " ";
 var trainForwards = function ( stop1, stop2) {
   var firstStop = trainLineN.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = trainLineN.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  var msg = '';
   for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
-    msg += trainLineN[i] + ", "
+    msgForward += trainLineN[i] + ", "
   }
-  console.log("You must travel through the following stops " + msg);
+  // console.log("You must travel through the following stops " + msgForward);
+  return msgForward; //output this variable so it can be used again outside of function
 };
-trainForwards("34th", "Union Square");
+// trainForwards("34th", "Union Square");
+
 //
 // //function similar to above but going backwards.
-
+var msgBackward = " ";
 var trainBackwards = function ( stop1, stop2) {
   var firstStop = trainLineN.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = trainLineN.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  var msg = '';
-  for ( var i = secondStop; i >= firstStop; i -= 1) { //starting point is secondStop, loop keeps going as long as i is greater than the first stop  , increase by 1
-    msg += trainLineN[i] + ", "
+  for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+    msgBackward += trainLineN[i] + ", "
   }
-    console.log("You must travel through the following stops " + msg);
-  };
-  trainBackwards("8th", "28th");
+    // console.log("You must travel through the following stops " + msgBackward);
+    return msgBackward;
+};
+// trainBackwards("Union Square", "34th");
 
 
-// //How do I know whether the is going forwards or backwards
-// //I need to include a check to see if secondStop > or < firstStop
-// //I could include an if statement to firstly check this, if true run forwards of false run backwards
-//
-// var trainJourney = function ( stop1, stop2) {
-//   var firstStop = trainLineN.indexOf(stop1); //declare a variable to capture the index number of stop 1
-//   var secondStop = trainLineN.indexOf(stop2); //declare a variable to capture the index number of stop 2
-//   if (firstStop < secondStop) {
-//     trainForwards(stop1, stop2);
-//   } else if (secondStop > firstStop){
-//     trainBackwards(stop1, stop2);
-//   }
-// };
-// trainJourney("34th", "8th")
+
+
+// How do I know whether the train is going forwards or backwards
+// I need to include a check to see if secondStop > or < firstStop
+// I could include an if statement to firstly check this, if true run forwards function  of false run backwards function
+
+var trainJourneyN = function ( stop1, stop2 ) {
+  var firstStop = trainLineN.indexOf(stop1); //declare a variable to capture the index number of stop 1
+  var secondStop = trainLineN.indexOf(stop2); //declare a variable to capture the index number of stop 2
+  if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
+    trainForwards(stop1, stop2);
+    console.log("You must travel through the following stops" + msgForward);
+  } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
+    trainBackwards(stop1, stop2);
+    console.log("You must travel through the following stops" + msgBackward);
+  } else {
+    console.log("You are not going anywhere");
+  }
+};
+trainJourneyN("Union Square", "Times Square");
+
 
 
 
