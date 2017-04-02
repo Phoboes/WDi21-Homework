@@ -2,7 +2,10 @@
 var lines = {
     N: ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
     L: ["8th", "6th", "Union Square", "3rd", "1st" ],
-    6: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"]
+    6: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Astor Place"],
+    R: ["Fordham", "9th", "Yonkers Station", "Union Square", "Forest Hills", "WTC"],
+    D: ["East New York", "Union Square", "Pennsylvania", "Jamacia Station", "14th" ],
+    T: ["Penn Station", "Metro North", "Union Square", "New Jersey", "Amtrak", "LIRR"]
 };
 
 function firstLeg(line, station) {
@@ -83,14 +86,14 @@ function isStartOrEndUnion (startLine, startStation, endLine, endStation) {
 
 function planTrip(startLine, startStation, endLine, endStation) {
     // Check if user is staying on the same line or staying at union square
-    if((startLine === endLine) || (startStation === "Union Square" && endStation === "Union Square")) {
+    if((startLine === endLine) || ((startStation && endStation) === "Union Square")) {
         // Check if user is staying at the same station
         if (startStation === endStation) {
             return "You won't be going anywhere with these choices.";
         }
         // Check if the use is travelling on the same line to a different station
+        // let isSameLine() determine the array and return it
         var s = isSameLine(startLine, startStation, endStation);
-        // Log the trip that is on the same line
         var msg = "You are travelling on line " + startLine;
         msg += " from station " + "'"+s[0]+"'" + " through to station " + "'"+s[s.length - 1]+"'";
         return msg;
@@ -148,7 +151,20 @@ function startTripMenu() {
         for(var i=0; i < lines[line].length ;i++){
             $("#startStation").append("<option>"+lines[line][i]+"</option>")
         }
-    } else {
+    } else if(line === "R") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#startStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    } else if(line === "D") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#startStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    } else if(line === "T") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#startStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    }
+    else {
         return null;
     }   
 };
@@ -169,7 +185,19 @@ function endTripMenu() {
         for(var i=0; i < lines[line].length ;i++){
             $("#endStation").append("<option>"+lines[line][i]+"</option>")
         }
-    } else {
+    } else if(line === "R") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#endStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    } else if(line === "D") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#endStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    } else if(line === "T") {
+        for(var i=0; i < lines[line].length ;i++){
+            $("#endStation").append("<option>"+lines[line][i]+"</option>")
+        }
+    }else {
         return null;
     }
 };
