@@ -53,10 +53,10 @@ var NLine = [
   "28th N",  //differentiate from the one on the 6 line
   "23rd N", //differentiate this stop from the one one on the 6 line
   "Union Square",
-  "8th"
+  "8th N"
 ];
 var LLine= [
-  "8th",
+  "8th L",
   "6th",
   "Union Square",
   "3rd",
@@ -65,37 +65,12 @@ var LLine= [
 var sixLine = [
   "Grand Central",
   "33rd",
-  "28th 6",
-  "23rd 6",
+  "28th 6", //added 6 to differentiate from the one on the NLine
+  "23rd 6", //added 6 to differentiate from the one on the NLine
   "Union Square",
   "Astor Place"
 ];
-//
-//log stops going forwards
 
-// for( var i = 0; i < NLine.length; i += 1 ){
-//   console.log(NLine[i]);
-// };
-//
-// //log stops going backwards
-//
-// for( var i = NLine.length -1; i >= 0; i -=1 ){
-//   console.log(NLine[i]);
-// };
-//
-// //log out all the stops going forwards on the one line, with a string prefix
-// var msg = " ";
-// for( var i = 0; i < NLine.length; i += 1 ){
-//   msg += NLine[i] + ", ";
-// };
-//   // console.log("You must travel through the following stops " + msg);
-//
-// //log out all the stops going backwards on the one line
-// var msg = " ";
-// for( var i = NLine.length -1; i >= 0; i -=1 ){
-//   msg += NLine[i] + ", ";
-// };
-  // console.log("You must travel through the following stops " + msg);
 
 
 
@@ -154,42 +129,42 @@ var sixLine = [
 // };
 // trainJourneyN("Union Square", "Times Square");
 
+
+////////////////////////////////////////////////////////////////////////////////////////
 //I need to create a trainForwards and trainBackwards function that is not hardcoded to one train line
 //So the function will need to have 4 arguments, lineOne, stopOne, lineTwo, stopTwo
 // I need to adjust the indexOf variables
 //Copy functions from above and update
 
 var msgForward = " ";
+var arrayForward = [];
 var trainForwards = function ( lineOne, stop1, lineTwo, stop2) {
   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  var totalForward = firstStop + secondStop; //total number of stops
-  for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+  for ( var i = firstStop + 1; i <= secondStop - 1; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+    arrayForward.push(i);
     msgForward += lineOne[i] + ", "
   }
-  // console.log("You must travel through the following stops " + msgForward)
   return msgForward; //output this variable so it can be used again outside of function
+  return arrayForward;
 };
-// trainForwards(NLine, "Times Square", NLine, "8th");
-
-
 
 var msgBackward = " ";
+var arrayBackward = [];
 var trainBackwards = function ( lineOne, stop1, lineTwo, stop2) {
   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+  for ( var i = firstStop - 1; i >= secondStop + 1; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+    arrayBackward.push(i);
     msgBackward += lineOne[i] + ", "
   }
-    // console.log("You must travel through the following stops " + msgBackward);
     return msgBackward;
+    return arrayForward;
 
 };
 
-
-// trainBackwards(sixLine, "Astor Place", sixLine, "Grand Central");
-
-//Create a train journey function that isn't hardcoded to one train line
+//Create a train journey function that isn't hardcoded to one train line///
+//This is used for when the journey is on the same train line
 
 var trainJourney = function ( lineOne, stop1, lineTwo, stop2 ) {
   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
@@ -197,43 +172,49 @@ var trainJourney = function ( lineOne, stop1, lineTwo, stop2 ) {
   if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
     trainForwards(lineOne, stop1, lineTwo, stop2);
     console.log("You must travel through the following stops" + msgForward);
-    // console.log(" stops in total");
+    var totalStops = arrayForward.length + 1;
+    console.log(totalStops + " stops in total.");
   } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
     trainBackwards(lineOne, stop1, lineTwo, stop2);
     console.log("You must travel through the following stops" + msgBackward);
-    // console.log(" stops in total");
+    var totalStops = arrayBackward.length + 1;
+    console.log(totalStops + " stops in total.");
   } else {
     console.log("You are not going anywhere");
   }
 };
 
-// trainJourney(NLine, "Union Square", NLine, "34th");
+
 //////////////////////////////////////////////////////////
-//second group of functions to run if train lines are different
+//function for first part of trip if lines different///////
 //////////////////////////////////////////////////////////
 
 var msgForwardOne = " ";
+var arrayForwardOne = [];
 var trainForwardsOne = function ( lineOne, stop1) {
   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
-  var totalForward = firstStop + secondStop; //total number of stops
-  for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+  for ( var i = firstStop + 1; i <= secondStop - 1; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+    arrayForwardOne.push(i);
     msgForwardOne += lineOne[i] + ", "
   }
   return msgForwardOne;
+  return arrayForwardOne;
 };
 
 
 
 var msgBackwardOne = " ";
+var arrayBackwardOne = [];
 var trainBackwardsOne = function ( lineOne, stop1 ) {
   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
-  console.log(secondStop);
-  for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+  for ( var i = firstStop -1 ; i >= secondStop + 1; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+    arrayBackwardOne.push(i);
     msgBackwardOne += lineOne[i] + ", "
   }
     return msgBackwardOne;
+    return arrayBackwardOne;
 
 };
 
@@ -242,43 +223,45 @@ var trainJourneyOne = function ( lineOne, stop1 ) {
   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
   if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
     trainForwardsOne(lineOne, stop1);
-    console.log("You must travel through the following stops" + msgForwardOne);
-    console.log(" stops in total");
+    console.log("You must travel through the following stops" + msgForwardOne + "Union Square.");
   } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
     trainBackwardsOne(lineOne, stop1 );
-    console.log("You must travel through the following stops" + msgBackwardOne);
-    console.log(" stops in total");
+    console.log("You must travel through the following stops" + msgBackwardOne + "Union Square");
   } else {
     console.log("You are not going anywhere");
   }
 };
 
-// trainJourneyOne(sixLine, "Grand Central");
 
-// console.log("Change at Union Square");
 
 ////////////////////////////////////////////////////////////////////
-//log message for the 2nd part of the trip
+//Function for second part of trip if on different line/////////////////////////
+////////////////////////////////////////////////////////////////////
+
 var msgForwardTwo = " ";
+var arrayForwardTwo = [];
 var trainForwardsTwo = function ( lineTwo, stop2) {
   var firstStop = lineTwo.indexOf("Union Square"); //declare a variable to capture the index number of stop 1
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  var totalForward = firstStop + secondStop; //total number of stops
-  for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+  for ( var i = firstStop + 1; i <= secondStop -1; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
+    arrayForwardTwo.push(i);
     msgForwardTwo += lineTwo[i] + ", "
   }
   return msgForwardTwo; //output this variable so it can be used again outside of function
+  return arrayForwardTwo;
 };
 
 var msgBackwardTwo = " ";
+var arrayBackwardTwo = [];
 var trainBackwardsTwo = function ( lineTwo, stop2 ) {
   var firstStop = lineTwo.indexOf("Union Square"); //declare a variable to capture the index number of stop 1
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-  for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+  for ( var i = firstStop - 1; i >= secondStop +1; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
+    arrayBackwardTwo.push(i);
     msgBackwardTwo += lineTwo[i] + ", "
   }
-    // console.log("You must travel through the following stops " + msgBackwardTwo);
     return msgBackwardTwo;
+    return arrayBackwardTwo;
 
 };
 
@@ -287,129 +270,43 @@ var trainJourneyTwo = function ( lineTwo, stop2 ) {
   var secondStop = lineTwo.indexOf(lineTwo); //declare a variable to capture the index number of stop 2
   if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
     trainForwardsTwo(lineTwo, stop2);
-    console.log("You must travel through the following stops" + msgForwardTwo);
-    console.log(" stops in total");
+    console.log("Your journey continues through the following stops" + msgForwardTwo + "and " + stop2 + ".");
   } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
     trainBackwardsTwo(lineTwo, stop2 );
-    console.log("You must travel through the following stops" + msgBackwardTwo);
-    console.log(" stops in total");
+    console.log("Your journey continues through the following stops" + msgBackwardTwo + "and " + stop2 + ".");
   } else {
     console.log("You are not going anywhere");
   }
 };
-// trainJourneyTwo(NLine, "Times Square");
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////Final function//////////////////////
-//Ok so I want to know firstly if the first stop and the second stop is on the same line
-//If they are then run the trainJourney function. Else run the other 2 functions, with a separate log
-//statement between to say change at union square 
+//Ok so I want to know firstly if the first stop and the second stop are on the same line
+//If they are then run the trainJourney function. Else run the other 2 functions, trainJourneyOne first with a separate log
+//statement between to say change at union square, then trainJourneyTwo
 
 var planJourney = function ( lineOne, stop1, lineTwo, stop2) {
   if (lineOne === lineTwo) {
     trainJourney( lineOne, stop1, lineTwo, stop2);
-    console.log(" lines are the same");
   } else {
     trainJourneyOne( lineOne, stop1);
     console.log("Change at Union Square");
     trainJourneyTwo( lineTwo, stop2);
   }
 };
-planJourney( NLine, "Times Square", sixLine, "Grand Central");
+planJourney( NLine, "Times Square", sixLine, "33rd");
 
 
-///////////////////////////////////////////////////////////////////////////////////
-//If they are not on the same line,
-// then work out the first stop index and the Union Square index of that line, is it going backwards or fowards
-// - log the stops between these two stops out.
-// add another log message saying change at Union Squre
-//Then work out the union square index to the second stop on the other line index, check backwards or forwards
-// then log out the stops between those
-// then work out total number of stops and log that
-////////////////////else statement////////////////////
-// var msgForwardOne = " ";
-// var trainForwardsOne = function ( lineOne, stop1) {
-//   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
-//   var totalForward = firstStop + secondStop; //total number of stops
-//   for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
-//     msgForwardOne += lineOne[i] + ", "
-//   }
-//   return msgForwardOne;
-// };
-//
-//
-//
-// var msgBackwardOne = " ";
-// var trainBackwardsOne = function ( lineOne, stop1 ) {
-//   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
-//   console.log(secondStop);
-//   for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
-//     msgBackwardOne += lineOne[i] + ", "
-//   }
-//     return msgBackwardOne;
-//
-// };
-//
-// var trainJourneyOne = function ( lineOne, stop1 ) {
-//   var firstStop = lineOne.indexOf(stop1); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
-//   if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
-//     trainForwardsOne(lineOne, stop1);
-//     console.log("You must travel through the following stops" + msgForwardOne);
-//     console.log(" stops in total");
-//   } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
-//     trainBackwardsOne(lineOne, stop1 );
-//     console.log("You must travel through the following stops" + msgBackwardOne);
-//     console.log(" stops in total");
-//   } else {
-//     console.log("You are not going anywhere");
-//   }
-// };
-//
-// trainJourneyOne(sixLine, "Grand Central");
-//
-// console.log("Change at Union Square");
-//
-// ////////////////////////////////////////////////////////////////////
-// //log message for the 2nd part of the trip
-// var msgForwardTwo = " ";
-// var trainForwardsTwo = function ( lineTwo, stop2) {
-//   var firstStop = lineTwo.indexOf("Union Square"); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-//   var totalForward = firstStop + secondStop; //total number of stops
-//   for ( var i = firstStop; i <= secondStop; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
-//     msgForwardTwo += lineTwo[i] + ", "
-//   }
-//   return msgForwardTwo; //output this variable so it can be used again outside of function
-// };
-//
-// var msgBackwardTwo = " ";
-// var trainBackwardsTwo = function ( lineTwo, stop2 ) {
-//   var firstStop = lineTwo.indexOf("Union Square"); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
-//   for ( var i = firstStop; i >= secondStop; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
-//     msgBackwardTwo += lineTwo[i] + ", "
-//   }
-//     // console.log("You must travel through the following stops " + msgBackwardTwo);
-//     return msgBackwardTwo;
-//
-// };
-//
-// var trainJourneyTwo = function ( lineTwo, stop2 ) {
-//   var firstStop = lineTwo.indexOf("Union Square"); //declare a variable to capture the index number of stop 1
-//   var secondStop = lineTwo.indexOf(lineTwo); //declare a variable to capture the index number of stop 2
-//   if (firstStop < secondStop) {      //check to see if the first index is less than the 2nd, if so then train is going forwards
-//     trainForwardsTwo(lineTwo, stop2);
-//     console.log("You must travel through the following stops" + msgForwardTwo);
-//     console.log(" stops in total");
-//   } else if (secondStop < firstStop){   //check to see if the second index is less than the first index, if so then train is going backwards
-//     trainBackwardsTwo(lineTwo, stop2 );
-//     console.log("You must travel through the following stops" + msgBackwardTwo);
-//     console.log(" stops in total");
-//   } else {
-//     console.log("You are not going anywhere");
-//   }
-// };
-// trainJourneyTwo(NLine, "Times Square");
+//////////////////////Stops in total//////////////////////////////////
+//Now I have to work out the number of stops in total
+  //If on the same line
+    //If on different lines
+//I'll need to create a function that captures the output indexes from the loop
+  //creates an array, using .push
+  // return the array so it can be used outside
+    //Then users the .length function to get a number for the length of the array
+      //Logs total in the if statement, if on the same line
+        //adds the 2 array.length's together for when they are on different lines
+          //logs that in the else statement
+    //Problem: I have different functions for forwards and backwards, which means I have
+    // 4 different combos (fwd + fwd or fwd + bwards or bwds + bwds or bwds + fwds)
