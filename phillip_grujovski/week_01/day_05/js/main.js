@@ -9,10 +9,10 @@ function firstLeg(line, station) {
     var tripLine = lines[line];
     var stationIndex = lines[line].indexOf(station);
     var unionIndex = tripLine.indexOf("Union Square");
-    // If the stationIndex > unionIndex call the compareIndexToUnion function
+    // If the stationIndex > unionIndex call the compareStationToUnion function
     // and let that function have the responsibility of return the correct array
     if(stationIndex > unionIndex) {
-        return compareIndexToUnion(tripLine, unionIndex, stationIndex);
+        return compareStationToUnion(tripLine, unionIndex, stationIndex);
     } 
     // if stationIndex < unionIndex we can straight away
     // slice from the stationIndex to the unionIndex + 1
@@ -25,10 +25,10 @@ function secondLeg(line, station) {
     var tripLine = lines[line];
     var unionIndex = lines[line].indexOf("Union Square");
     var stationIndex = tripLine.indexOf(station);
-    // If the stationIndex < unionIndex call the compareIndexToUnion function
+    // If the stationIndex < unionIndex call the compareStationToUnion function
     // and let that function have the responsibility of returning the correct array.
     if(stationIndex < unionIndex) {
-        return compareIndexToUnion(tripLine, unionIndex, stationIndex);
+        return compareStationToUnion(tripLine, unionIndex, stationIndex);
     }
     // if the stationIndex > unionIndex we can straight away
     // slice from the unionIndex to the stationIndex + 1 (off by one error)
@@ -38,7 +38,7 @@ function secondLeg(line, station) {
     return r;
 }
 
-function compareIndexToUnion(line, unionIndex, stationIndex) {
+function compareStationToUnion(line, unionIndex, stationIndex) {
     // If the stationIndex > unionIndex, slice from the unionIndex
     // then reverse the array to get it in the correct order and return
     // add + 1 when slicing to accomodate for off by 1 error
@@ -68,6 +68,20 @@ function isSameLine(line, startStation, endStation) {
     return tripLine.slice(startIndex, endIndex + 1);
 }
 
+function isStartorEndUnion (startLine, startStation, endLine, endStation) {
+    // This function holds responsibility of returning the correct message
+    // when travelling too or from Union Square
+    if (startStation === "Union Square") {  
+        var msg = "You are travelling from " + startStation + " through to ";
+        msg += endStation + " on the " + endLine + " line.";
+        return msg;
+    }
+    // You are Travelling from the startSation on the startLine through to UnionSquare;
+    var msg = "You are travelling from the "  + startStation + " on the ";
+    msg += startLine + " line through to "  + endStation;
+    return msg;
+}
+
 function planTrip(startLine, startStation, endLine, endStation) {
     // Check if user is staying on the same line or staying at union square
     if((startLine === endLine) || (startStation === "Union Square" && endStation === "Union Square")) {
@@ -81,6 +95,13 @@ function planTrip(startLine, startStation, endLine, endStation) {
         var msg = "You are travelling on line " + startLine;
         msg += " from station " + "'"+s[0]+"'" + " through to station " + "'"+s[s.length - 1]+"'";
         return msg;
+        
+    } else if (endStation === "Union Square" || startStation === "Union Square") { 
+        // Check if they are travelling too or from Union Square and call isStartOrEndUnion();
+        if(startStation === "Union Square") {
+            return isStartorEndUnion(startLine, startStation, endLine, endStation);
+        }
+        return isStartorEndUnion(startLine, startStation, endLine, endStation);
 
     } else if (startLine !== endLine){
         // Call the two below functions to return the appropriate arrays
