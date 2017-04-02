@@ -90,3 +90,16 @@ exercise (4);
 // # 2 Square the result of #1 and store that result.
 // # 3 Calculate the area of a circle with the result of #2 as the radius.
 // # 4 Calculate what percentage that area is of the squared result (#3).
+
+
+
+var exercise = function ( number ) {
+  var a = halfNumber(number);
+  var b = squareNumber(a);
+  var c = areaOfCircle(b);
+  var result = percentOf(c, b);
+  console.log(result);
+  return result;
+}
+
+exercise(30);
