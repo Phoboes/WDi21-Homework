@@ -68,36 +68,20 @@ var sixLine = [
   "Astor Place"
 ];
 
-//Need a variable to be able to log dynamically what line the trainJourney is on
+//Need a function to be able to log dynamically what line the trainJourney is on
 //Create an if/else, that I can call, that will take lineOne as an argument,
 //and then log the name of the line depending on what array is being called.
 //
-
-// var logLineOne = lineOne;
-//   if (lineOneTest === NLine) {
+// //
+// var logLineOne = function(lineOne) {
+//   if (lineOne === NLine) {
 //     console.log("NLine");
-//   } else if (lineOneTest === LLine) {
+//   } else if (lineOne === LLine) {
 //     console.log("LLine");
 //   } else {
 //     console.log("sixLine");
 //   }
-
-
-var age = 28;
-if (age > 16) {
-  console.log('Yay, you can drive!');
-} else {
-  console.log('Sorry, but you have ' + (16 - age) + ' years til you can drive.');
-}
-// => 'Yay, you can drive!'
-
-
-
-
-
-
-
-
+// };
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -276,4 +260,4 @@ var planJourney = function ( lineOne, stop1, lineTwo, stop2) {
   }
 };
 
-planJourney( NLine, "Times Square", NLine, "8th N");
+planJourney( NLine, "Grand Central", sixLine, "Astor Place");
