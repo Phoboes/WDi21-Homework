@@ -68,6 +68,34 @@ var sixLine = [
   "Astor Place"
 ];
 
+//Need a variable to be able to log dynamically what line the trainJourney is on
+//Create an if/else, that I can call, that will take lineOne as an argument,
+//and then log the name of the line depending on what array is being called.
+//
+
+// var logLineOne = lineOne;
+//   if (lineOneTest === NLine) {
+//     console.log("NLine");
+//   } else if (lineOneTest === LLine) {
+//     console.log("LLine");
+//   } else {
+//     console.log("sixLine");
+//   }
+
+
+var age = 28;
+if (age > 16) {
+  console.log('Yay, you can drive!');
+} else {
+  console.log('Sorry, but you have ' + (16 - age) + ' years til you can drive.');
+}
+// => 'Yay, you can drive!'
+
+
+
+
+
+
 
 
 
@@ -76,7 +104,7 @@ var sixLine = [
 //If trains are on the same line, I need a function that will run if it is going forwards
 //And a function if it is going backwards////
 //Then a function to work out if it is going forwards or backwards, and if so, run the relevant forward or backward function and log the stops
-
+//Not hardcoded like previously
 
 var msgForward = " "; //empty variable to capture the stops
 var arrayForward = []; //creating an empty array, so I can add the index values for the stops to this from the loop. I can then find the length of this array to work out the total stops
@@ -124,6 +152,8 @@ var trainJourney = function ( lineOne, stop1, lineTwo, stop2 ) {
     console.log("You are not going anywhere");
   }
 };
+
+
 
 
 //////////////////////////////////////////////////////////
@@ -246,4 +276,4 @@ var planJourney = function ( lineOne, stop1, lineTwo, stop2) {
   }
 };
 
-planJourney( NLine, "Times Square", sixLine, "33rd");
+planJourney( NLine, "Times Square", NLine, "8th N");
