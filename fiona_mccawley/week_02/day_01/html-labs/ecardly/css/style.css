@@ -1,6 +1,6 @@
-/* 
+/*
 Project Name: Ecard.ly
-Client: General Assembly 
+Client: General Assembly
 Author: Christopher Castig | @castig
 Developer @GA in NYC
 */
@@ -26,5 +26,58 @@ Developer @GA in NYC
 	clear: both;
 }
 
+.container {
+  background: #d6d6d6;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
+}
+
+div.centre {
+  background: white;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  padding-top: 12px;
+}
+
+p {
+  margin-right: 10px;
+}
+
+p.centre {
+  float: right;
+}
+
+.startup {
+  float: left;
+  margin-left:20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+img.banner {
+  width: 25%;
+  float: left;
+}
+
+.top-banner {
+}
 
 
+a {
+  text-decoration: none;
+  color: red;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+.logo {
+  margin: -140px 560px 30px 560px;
+}
