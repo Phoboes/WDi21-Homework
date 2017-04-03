@@ -32,9 +32,9 @@ a:hover {
   color: #20222a;
 }
 
-div {
-  padding-left: 245px;
-  padding-right: 245px;
+.container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .media {
@@ -44,4 +44,5 @@ div {
 
 .main-image-one {
   width: 945px;
+  margin: 0 auto;
 }
