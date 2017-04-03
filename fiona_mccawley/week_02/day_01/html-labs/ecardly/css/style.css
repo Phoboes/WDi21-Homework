@@ -28,17 +28,16 @@ Developer @GA in NYC
 
 .container {
   background: #d6d6d6;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding-bottom: 50px;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding-bottom: 200px;
 }
 
 div.centre {
   background: white;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-bottom: 100px;
+  margin: 0 auto;
   padding-top: 12px;
+  max-width: 890px;
 }
 
 p {
@@ -66,6 +65,7 @@ img.banner {
 }
 
 .top-banner {
+  position: relative;
 }
 
 
@@ -79,5 +79,9 @@ h3 {
 }
 
 .logo {
-  margin: -140px 560px 30px 560px;
+  position: relative;
+  margin-top: -120px;
+  margin-bottom: 50px;
+  margin-left: 540px;
+  max-width: 216px;
 }
