@@ -1,4 +1,6 @@
-
+// Added extra lines to test how dynamic the code is. 
+// You can add as many lines as you want with as many stations as you want
+// as long as each array has 'Union Square' somewhere in the array.
 var lines = {
     N: ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
     L: ["8th", "6th", "Union Square", "3rd", "1st" ],
@@ -100,9 +102,6 @@ function planTrip(startLine, startStation, endLine, endStation) {
         
     } else if (endStation === "Union Square" || startStation === "Union Square") { 
         // Check if they are travelling too or from Union Square and call isStartOrEndUnion();
-        if(startStation === "Union Square") {
-            return isStartOrEndUnion(startLine, startStation, endLine, endStation);
-        }
         return isStartOrEndUnion(startLine, startStation, endLine, endStation);
 
     } else if (startLine !== endLine){
@@ -138,67 +137,18 @@ endTripMenu();
 function startTripMenu() {
     var line = $("#startLine").val();
     $("#startStation").html("");
-
-    if(line === "N") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "L") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "6") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "R") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "D") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "T") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#startStation").append("<option>"+lines[line][i]+"</option>")
-        }
+    // Dynamically out put stations based on line selection
+    for(var i=0; i < lines[line].length; i++) {
+        $("#startStation").append("<option>"+lines[line][i]+"</option>")
     }
-    else {
-        return null;
-    }   
 };
 
 function endTripMenu() {
     var line = $("#endLine").val();
     $("#endStation").html("");
-
-    if(line === "N") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "L") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "6") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "R") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "D") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    } else if(line === "T") {
-        for(var i=0; i < lines[line].length ;i++){
-            $("#endStation").append("<option>"+lines[line][i]+"</option>")
-        }
-    }else {
-        return null;
+    // Dynamically out put stations based on line selection
+    for(var i=0; i < lines[line].length; i++) {
+        $("#endStation").append("<option>"+lines[line][i]+"</option>")
     }
 };
 
@@ -222,6 +172,7 @@ function resultOutput() {
     span.appendChild(document.createTextNode(result));
 };
 
+// Button to calculate selected options
 var btn = document.getElementById("calcTrip");
 btn.addEventListener("click", resultOutput);
 
