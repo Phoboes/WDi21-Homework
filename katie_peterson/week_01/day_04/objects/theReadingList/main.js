@@ -26,17 +26,23 @@ for ( var i = 0; i < libraryOfBooks.length; i++) {
   var title = book.title;
   var author = book.author;
 <<<<<<< HEAD
+<<<<<<< HEAD
   var msg = title + " by " + author + ".";
   console.log(msg);
 };
 
 //if already read is true og a string like 'You already read "The Hobbit" by J.R.R. Tolkien',
 =======
+=======
+>>>>>>> 1574f8a47efbd1d2b0b7ad5afb88e6810b6bb988
   //var msg = title + " by " + author + ".";
   //console.log(msg)
 
 //if already read is true of a string like 'You already read "The Hobbit" by J.R.R. Tolkien',
+<<<<<<< HEAD
 >>>>>>> b5fbf3809b5d48d640fea165fe5cd66c27c83178
+=======
+>>>>>>> 1574f8a47efbd1d2b0b7ad5afb88e6810b6bb988
 // else log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 if ( book.alreadyRead === true) {
   console.log( "You already read " + title + " by " + author + "." );
@@ -44,7 +50,12 @@ if ( book.alreadyRead === true) {
   console.log( "You still need to read " + title + " by " + author + "." );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 };
 >>>>>>> b5fbf3809b5d48d640fea165fe5cd66c27c83178
+=======
+
+};
+>>>>>>> 1574f8a47efbd1d2b0b7ad5afb88e6810b6bb988
