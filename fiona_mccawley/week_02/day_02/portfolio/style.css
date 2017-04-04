@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: grey;
+  padding: 0;
+}
+
+.landing-image {
+  background-image: url("images/organ.jpg");
+  background-position: center;
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+}
+
+.landing-image h1 {
+  color: white;
+  position: absolute;
+  top: -18px;
+  left: 5px;
+}
+.fa {
+  color: white;
+  position: absolute;
+  right: 119px;
+  top: 5px;
+  font-size: 30px;
+
+}
+
+.menu-anim {
+  background: rgba(13, 11, 11, 0.4);
+  color: white;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  right: -119px;
+  transition: right 0.4s;
+
+}
+
+.menu-anim:hover {
+right: 7px;
+}
+
+.menu-anim ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.para {
+  display: inline-block;
+  width: 70%;
+  border: 2px solid grey;
+}
+
+.bio-para {
+  width: 49%;
+  display: inline-block;
+  border: 2px solid grey;
+  padding: 10px;
+}
+
+.bio img {
+  float: right;
+  width: 26%;
+  height: 50%;
+  border: 2px solid grey;
+}
+
+.contr-para {
+  width: 50%;
+  display: inline-block;
+}
+
+.contribution-one img {
+  width: 50%;
+  float: left;
+
+}
+.contr-para-two {
+  width: 50%;
+  display: inline-block;
+}
+
+.contribution-two img {
+  width: 50%;
+  float: right;
+
+}
