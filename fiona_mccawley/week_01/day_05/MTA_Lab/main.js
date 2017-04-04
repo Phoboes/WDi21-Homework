@@ -72,7 +72,7 @@ var sixLine = [
 //Create an if/else, that I can call, that will take lineOne as an argument,
 //and then log the name of the line depending on what array is being called.
 //
-// //
+//
 // var logLineOne = function(lineOne) {
 //   if (lineOne === NLine) {
 //     console.log("NLine");
