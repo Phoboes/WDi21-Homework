@@ -141,15 +141,18 @@ var cartForParty = {
   nalgene: "10.34",
   proteinShake: "22.36"
 };
+
+debugger;
 //create a function for total shop cost
 var totalShopCost = function () {
 //create a undefined variable, to capture the amounts that are returned with
 //each iteration
-  var retNum = '';
+  var retNum = 0;
 //I want to create a loop to go through each object property
   for (var i = 0;  i < cartForParty.length; i += 1) {
+    console.log("test");
 //I want to store the value returned into the undefined variable
-    retNum += cartForParty[i];
+    retNum += cartForParty.i;
 //log that total
     console.log(retNum);
   }
