@@ -1,0 +1,53 @@
+header	{
+	background-color: #FFFFFF;
+	text-align: Center;
+	font-family: 'Cutive Mono', monospace;
+	font-size: 36px;
+	padding: 0;
+	margin: 0;
+}
+
+nav	{
+	background-color: #000000;
+	color: White;
+	text-align: center;
+	font-family: 'Cutive Mono', monospace;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 28px;
+	padding: 8px 0;
+	margin: 0;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Cutive Mono', monospace;
+	}
+
+p {
+		text-align: center;
+		font-family: 'Cutive Mono', monospace;
+	}
+
+img {
+	    /* Full height */
+	    height: 100%;
+			width: 960px;
+	    /* Center and scale the image to fit page */
+}
+
+div.image:before {
+  content:url(http://cityscape3.jpg/1024x768);
+	content:url(http://yukihiro1.jpg/1024x768);
+	content:url(http://hometown1.jpg/1024x768);
+}
+
+footer {
+			display: block;
+}
+
+/* body {
+	text-align: center;
+	background: url("http://cityscape3.jpg");
+	background-size: cover;
+	background-position: center;
