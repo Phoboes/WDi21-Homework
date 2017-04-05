@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scrabble</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container" style="width: 80%; margin: auto; font-family: arial">
+        <h1 id="scrabble">Scrabble</h1>
+
+        <p>Write a program that will replicate the scoring system in Scrabble. The function should take a single argument (the word, comprised of letters/tiles) and return a score. </p>
+
+        <h2 id="lettervalues">Letter Values</h2>
+
+        <p>You'll need these:</p>
+
+        <pre><code class="plain language-plain">Letter                           Value
+A, E, I, O, U, L, N, R, S, T       1
+D, G                               2
+B, C, M, P                         3
+F, H, V, W, Y                      4
+K                                  5
+J, X                               8
+Q, Z                               10
+</code></pre>
+
+        <p>So now that you've got those letter values, consider what data structure is good for mapping keys to values?</p>
+
+        <h2 id="examples">Examples</h2>
+
+        <p>"cabbage" should be scored as worth 14 points:</p>
+
+        <ul>
+            <li>3 points for C</li>
+
+            <li>1 point for A, twice</li>
+
+            <li>3 points for B, twice</li>
+
+            <li>2 points for G</li>
+
+            <li>1 point for E</li>
+        </ul>
+
+        <p>And to total:</p>
+
+        <ul>
+            <li><code>3 + 2 * 1 + 2 * 3 + 2 + 1</code></li>
+
+            <li>= <code>3 + 2 + 6 + 3</code></li>
+
+            <li>= <code>5 + 9</code></li>
+
+            <li>= 14</li>
+        </ul>
+
+        <hr />
+
+        <h4 id="bonus">Bonus:</h4>
+
+        <ul>
+            <li>Have your program be able to proces a sentence. "Hello world!" is worth 17 points.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

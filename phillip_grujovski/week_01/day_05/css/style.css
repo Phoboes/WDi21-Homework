@@ -1,0 +1,105 @@
+body {
+    text-align: center;
+    margin: 0;
+    background-color: #dedee0;
+}
+
+header {
+    background-color: #00A6B3;
+    padding: 30px, 20px;
+}
+
+main {
+    width: 850px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Raleway";
+    font-weight: 400;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 60px;
+    padding: 20px;
+}
+
+h3 {
+    font-family: "Raleway";
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.start-trip {
+    display: inline-block;
+    width: 350px;
+    border-right: 1px solid black;
+    padding-bottom: 15px;
+}
+
+.end-trip {
+    display: inline-block;
+    width: 350px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 7px;
+    width: 100%;
+    transition-duration: 0.4s;
+    border: 1px #98999b solid;
+    margin: 0 0 30px 23px;
+}
+
+button:hover {
+    background-color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border: 2px solid white;
+}
+
+select {
+    background-color: #dedee0;
+    color: black;
+    padding: 5px 7px 5px 7px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-overflow: '';
+}
+
+
+select > option {
+    text-align: center;
+}
+
+#result {
+    font-family: "Raleway";
+    font-size: 25px;
+}
+
+#wrapper {
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    background-color: #F15B31;
+    margin-bottom: 20px;
+}
+
+.lineSelect {
+    margin-bottom: 5px;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
