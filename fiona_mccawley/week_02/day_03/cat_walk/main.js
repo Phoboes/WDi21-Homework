@@ -1,13 +1,5 @@
 // console.log("cats!!!");
-// What do i need
-// Starting Point
-//   opacity: 1.0
-// Ending point
-//   opacity: 0.0
-// Step or Increment
-//   -= 0.1 each time this iteration runs i want to take away 0.1
-// Delay between steps
-//   100 ms
+
 //CAT WALK
 
 // Create a new Javascript file and link to it with a script tag at the bottom.
@@ -21,7 +13,8 @@
 
 // window.innerWidth
 // scaleX
-
+//
+//Cat walking to the right, then walking back to the left.
 
 var image = document.querySelector(".walking");
 //starting point
@@ -49,20 +42,3 @@ var catWalk = function () {
     }
 };
 var stopWalk = window.setInterval (catWalk, 50);
-
-
-
-
-
-
-//
-// var imageTwo = document.querySelector(".walkingTwo");
-// imageTwo.style.right = "0px";
-// imageTwo.style.transform = "scaleX(-1)";
-//
-// var catReverse = function () {
-//   var catRightRv = parseInt(imageTwo.style.right);
-//   var catLeftRv = catRightRv + 5;
-//   imageTwo.style.right = catLeftRv + "px";
-// };
-// window.setInterval (catReverse, 50);
