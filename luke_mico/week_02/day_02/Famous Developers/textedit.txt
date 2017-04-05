@@ -1,0 +1,116 @@
+Yukihiro Matsumoto
+
+Born in Osaka, Japan April 14, 1965
+Websitehttp://www.rubyist.net/~matz/
+Twitteryukihiro_matz
+GenreComputers & Internet
+
+"Matsumoto Yukihiro, a.k.a. Matz, is a Japanese computer scientist and software programmer best known as the chief designer of the Ruby programming language and its reference implementation, Matz's Ruby Interpreter (MRI).
+
+Matsumoto's real name is the kanji 松本行弘, but it is normally written in hiragana, as まつもとゆきひろ.
+
+Born in Osaka Prefecture, he was raised in Tottori Prefecture from the age of four. According to an interview conducted by Japan Inc., he was a self-taught programmer until the end of high school. He graduated with an information science degree from Tsukuba University, where he associated himself with research departments dealing with programming languages and compilers.
+
+As of 2006, Matsumoto is the head of the research and development department at the Network Applied Communication Laboratory, an open source systems integrator company in Shimane Prefecture. He is a member of The Church of Jesus Christ of Latter-Day Saints and served as a missionary for the church. Matsumoto is married and has four children."
+
+
+"Matz" believes in changing the world with a keyboard. Although he has written software used world-wide, he feels it is more important to be a good father and a good Christian. See more at http://www.mormon.org/matz
+
+Bio
+
+Trivia
+
+Hometown 
+
+
+Background
+
+
+What is your favorite language other than Ruby?
+
+Actually, Lisp is my favorite. It’s the ancestor for every good language. Recently I’ve studied the Lua language from Brazil. It shares a lot with the small dialect of Ruby. I’ve learned a lot from it. The list goes on, I’m a language geek.
+
+References to Ruby language 
+
+
+
+
+THE PLAN OF ATTACK 
+
+// Pseudocode
+// Research YM
+// Plan out Page 1
+// Plan out Page 2
+// Plan out Page 3
+
+PAGE 1 
+
+Header
+
+Sub-heading 
+
+Navigation -  Links to page 2, link to page 3 (LINK HTML FILES TOGETHER)
+
+Animation
+Symbols/ other icons / 
+Floats 
+Fixed / Absolute / 
+
+Colour 
+
+Font/ Text / Google Font 
+
+Background Images/ Full width/ Responsive  
+Image/s 
+
+Footer
+
+
+About 
+Yukihiro Matsumoto (まつもとゆきひろ Matsumoto Yukihiro, a.k.a. Matz, born 14 April 1965) is a Japanese computer scientist and software programmer best known as the chief designer of the Ruby programming language and its reference implementation, Matz's Ruby Interpreter (MRI). His demeanour has brought about a motto in the Ruby community: "Matz is nice and so we are nice," commonly abbreviated as MINASWAN.
+
+As of 2011, Matsumoto is the Chief Architect of Ruby at Heroku, an online cloud platform-as-a-service in San Francisco. He is a fellow of Rakuten Institute of Technology, a research and development organisation in Rakuten Inc. He was appointed to the role of technical advisor for VASILY, Inc. starting in June 2014.[2]
+
+Early Life 
+Born in Osaka Prefecture, Japan, he was raised in Tottori Prefecture from the age of four. According to an interview conducted by Japan Inc., he was a self-taught programmer until the end of high school.[3] He graduated with an information science degree from University of Tsukuba, where he was a member of Ikuo Nakata's research lab on programming languages and compilers.
+
+Personal Life
+Matsumoto is married and has four children. He is a member of The Church of Jesus Christ of Latter-day Saints,[12] did standard service as a missionary and is now a counsellor in the bishopric in his church ward.
+
+
+
+
+
+
+
+
+
+
+Page 2
+Header
+
+Sub-heading 
+
+Navigation - Links to page `, link to page 3 (LINK HTML FILES TOGETHER)
+
+Trivia
+
+
+Footer 
+
+
+Page 3
+Header
+
+Sub-heading 
+
+Navigation - Links to page 1, link to page 2 (LINK HTML FILES TOGETHER)
+
+Hometown 
+
+Footer 
+
+
+
+
+
