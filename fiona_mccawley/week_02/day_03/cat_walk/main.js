@@ -32,23 +32,38 @@ image.style.left = "0px";
 var catWalk = function () {
 //so i want to change px to a number so I can add to it, then turn it back to px
   var catLeft = parseInt(image.style.left);
-  var catRight = catLeft + 5;
+  var catRight = catLeft + 10;
   image.style.left = catRight + "px";
+  if (catRight === 950) {
+    window.clearInterval(stopWalk);
+
+  var reverse = function (){
+    image.style.transform = "scaleX(-1)";
+    var catRev = parseInt(image.style.left);
+    var catToLeft = catRev - 10;
+    image.style.left = catToLeft + "px";
+  };
+  window.setInterval (reverse, 50);
+    }
 };
-// Then i want to use a time to automate this to move every 50ms
-window.setInterval (catWalk, 50);
+var stopWalk = window.setInterval (catWalk, 50);
 
 
-var imageTwo = document.querySelector(".walkingTwo");
-imageTwo.style.right = "0px";
-imageTwo.style.transform = "scaleX(-1)";
 
-var catReverse = function () {
-  var catRightRv = parseInt(imageTwo.style.right);
-  var catLeftRv = catRightRv + 5;
-  imageTwo.style.right = catLeftRv + "px";
-};
-window.setInterval (catReverse, 50);
+
+
+
+//
+// var imageTwo = document.querySelector(".walkingTwo");
+// imageTwo.style.right = "0px";
+// imageTwo.style.transform = "scaleX(-1)";
+//
+// var catReverse = function () {
+//   var catRightRv = parseInt(imageTwo.style.right);
+//   var catLeftRv = catRightRv + 5;
+//   imageTwo.style.right = catLeftRv + "px";
+// };
+// window.setInterval (catReverse, 50);
 
 
 
