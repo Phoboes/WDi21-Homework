@@ -5,6 +5,7 @@
 body {
   background: grey;
   padding: 0;
+  font-family: 'Cousine', monospace;
 }
 
 .landing-image {
@@ -48,6 +49,11 @@ right: 7px;
 
 .menu-anim ul {
   list-style-type: none;
+  font-size: 14px;
+}
+
+.menu-anim li {
+  padding-bottom: 5px;
 }
 
 a {
@@ -85,16 +91,17 @@ a {
 
 .contr-para {
   width: 50%;
-  height: 50vh;
   display: inline-block;
+  position: relative;
   padding: 20px;
+  left: 50px;
+  top: 25px;
 }
 
 .contribution-one img {
-  width: 50%;
+  height: 330px;
   float: left;
   position: relative;
-  top: 37px;
 }
 /*///////////////////////////////////*/
 .contribution-two {
@@ -108,10 +115,13 @@ a {
   display: inline-block;
   float: left;
   padding: 20px;
+  position: relative;
+  top: 15px;
 }
 
 .contribution-two img {
   width: 50%;
+  height: 371px;
   position: relative;
   top: 16px;
 
@@ -119,4 +129,24 @@ a {
 
 .clear {
   clear: both;
+}
+
+.funfact {
+  width: 40%;
+  display: inline-block;
+}
+
+.funfact p {
+  padding: 20px;
+}
+
+.funfact h1 {
+  padding: 20px;
+}
+
+.video {
+  float: right;
+  position: relative;
+  top: 150px;
+  right: 200px;
 }
