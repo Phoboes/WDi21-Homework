@@ -35,9 +35,10 @@ body {
   color: white;
   width: 150px;
   height: 100px;
-  position: absolute;
+  position: fixed;
   right: -119px;
   transition: right 0.4s;
+  z-index: 1;
 
 }
 
@@ -57,40 +58,65 @@ a {
 .para {
   display: inline-block;
   width: 70%;
-  border: 2px solid grey;
 }
 
-.bio-para {
-  width: 49%;
+.bio-col-one {
+  width: 50%;
   display: inline-block;
-  border: 2px solid grey;
   padding: 10px;
+}
+
+.bio-col-two {
+  width: 50%;
+  display: inline-block;
+  padding: 10px;
+  float: right;
 }
 
 .bio img {
   float: right;
   width: 26%;
   height: 50%;
-  border: 2px solid grey;
+}
+/*/////////////////////////////*/
+.contribution-one {
+  height: 50vh;
 }
 
 .contr-para {
   width: 50%;
+  height: 50vh;
   display: inline-block;
+  padding: 20px;
 }
 
 .contribution-one img {
   width: 50%;
   float: left;
-
+  position: relative;
+  top: 37px;
 }
+/*///////////////////////////////////*/
+.contribution-two {
+  height: 50vh;
+}
+
+
 .contr-para-two {
   width: 50%;
+  height: 50vh;
   display: inline-block;
+  float: left;
+  padding: 20px;
 }
 
 .contribution-two img {
   width: 50%;
-  float: right;
+  position: relative;
+  top: 16px;
 
+}
+
+.clear {
+  clear: both;
 }
