@@ -21,7 +21,6 @@
 
 // window.innerWidth
 // scaleX
-//cross over 450px
 
 
 var image = document.querySelector(".walking");
@@ -30,18 +29,21 @@ image.style.left = "0px";
 //create a function
 
 var catWalk = function () {
-//so i want to change px to a number so I can add to it, then turn it back to px
+
+  var width = window.innerWidth - 296; //created variable to store width of screen minus size of cat
   var catLeft = parseInt(image.style.left);
   var catRight = catLeft + 10;
   image.style.left = catRight + "px";
-  if (catRight === 950) {
+
+  if (catRight > width) { //if cat goes more than the width, then stop the intervals
     window.clearInterval(stopWalk);
 
-  var reverse = function (){
-    image.style.transform = "scaleX(-1)";
-    var catRev = parseInt(image.style.left);
-    var catToLeft = catRev - 10;
-    image.style.left = catToLeft + "px";
+    var reverse = function (){ //then run this function
+      image.style.transform = "scaleX(-1)"; //flip cat
+      var catRev = parseInt(image.style.left); //create new varible with new left position turned to a number
+      var catToLeft = catRev - 10; // -10 to go back the other way
+      image.style.left = catToLeft + "px";
+
   };
   window.setInterval (reverse, 50);
     }
@@ -64,28 +66,3 @@ var stopWalk = window.setInterval (catWalk, 50);
 //   imageTwo.style.right = catLeftRv + "px";
 // };
 // window.setInterval (catReverse, 50);
-
-
-
-
-
-
-
-
-// -webkit-transform: scaleY(-1);
-//     transform: scaleY(-1);
-//     filter: FlipV;
-//     -ms-filter: "FlipV";
-
-
-//
-// //Make the cat go from right to left
-// var image = document.querySelector(".walking");
-// image.style.right = "0px";
-//
-// var catWalkReverse = function () {
-//   var catRightRv = parseInt(image.style.right);
-//   var catLeftRv = catRightRv + 10;
-//   image.style.right = catLeftRv;
-// };
-// catWalkReverse();
