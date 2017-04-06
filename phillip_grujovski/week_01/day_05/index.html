@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href=css/reset.css rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.js"
+			  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+			  crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>MTA LAB</h1>
+        </header>
+        <main>
+            <div id="wrapper">
+                <div class="start-trip">
+                    <h3>Select Start Destination</h3>
+                    <div class="lineSelect">
+                        <select id="startLine">
+                            <option val="N">N</option>
+                            <option val="L">L</option>
+                            <option val="6">6</option>
+                            <option val="R">R</option>
+                            <option val="D">D</option>
+                            <option val="T">T</option>
+                        </select>    
+                    </div>
+                    
+                    <select id="startStation">
+                    </select>
+                    
+                </div>
+                <div class="end-trip">
+                    <h3>Select End Destination</h3>
+                    <div class="lineSelect">
+                        <select id="endLine">
+                            <option val="N">N</option>
+                            <option val="L">L</option>
+                            <option val="6">6</option>
+                            <option val="R">R</option>
+                            <option val="D">D</option>
+                            <option val="T">T</option>
+                        </select>
+                    </div>
+                   
+                    <select id="endStation">
+                    </select>
+
+                </div>
+            </div>
+            
+            <button id="calcTrip">Calulate trip</button>
+
+            <span id="result"></span>
+        </main>
+    </body>
+    <script src="js/main.js"></script>
+</html>
