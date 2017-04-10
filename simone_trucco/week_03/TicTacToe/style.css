@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  /* width typically set  and then it changes when padding is added. border box sizing makes sure that hte width includes padding and border */
+}
+
+body {
+  background-color: ghostwhite;
+  /*background-image: url(/Users/simonetrucco/wdi-21/TicTacToe/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;*/
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  }
+
+h1{
+  text-align: center;
+  font-size: 48px;
+}
+
+div {
+ padding: 10px;
+ margin-left: 5px;
+ float: left;
+}
+
+div.squares {
+  position: absolute;
+  left: 18%;
+  top: 20%;
+}
+
+.square {
+  float: left;
+  display: inline-block;
+  border: black solid;
+  margin: 10px;
+}

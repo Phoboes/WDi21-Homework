@@ -30,8 +30,8 @@ var runningCat = document.querySelector("#runningCat");
     runningCatTwo.style.top = "500px";
     runningCatTwo.style.left ="250px";
 
-var getCatBigger = document.querySelector("#crazyCat");
-  getCatBigger.style.
+// var getCatBigger = document.querySelector("#crazyCat");
+//   getCatBigger.style.
 
 ///////////////////////////////////////////////
   // Create a function called catWalk() that moves the cat 10 pixels to the right of where it started, by changing the "left" style property.
@@ -99,10 +99,10 @@ var catRun = function () {
       //   };
       //   catTimerID = window.setInterval(backAndForth, 50)
       //
-
-  var catFallOne = function () {
-    var start = parseInt( runningCat.style.top );
-    var step = start + 4;
-      runningCat.style.left = step + "px";
-  };
-    window.setInterval( catRun, 50 );
+  //
+  // var catFallOne = function () {
+  //   var start = parseInt( runningCat.style.top );
+  //   var step = start + 4;
+  //     runningCat.style.left = step + "px";
+  // };
+  //   window.setInterval( catRun, 50 );
