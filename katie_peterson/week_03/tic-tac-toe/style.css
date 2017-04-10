@@ -7,16 +7,15 @@ h1 {
 body {
     background: pink;
     font: tahoma;
-    font-size: 50px;
+    font-size: 20px;
     /*repeat: no-repeat;*/
     /*text-align: center;*/
 }
 
-.ticBoard {
-  /*width: 75%;
-  height: 75%;*/
-  border: none;
+
+.board {
   margin: auto;
+  border: none;
 }
 
 .column1, .column2, .column3 {
@@ -31,12 +30,11 @@ body {
   height: 100px;
 }*/
 
-#resetButton {
-  text-decoration: none;
+.reset{
   /*padding: 0px;
   margin: 0px;*/
   color: black;
-  font: 17px tahoma;
+  font: 20px tahoma;
 }
 
 #resetButton:hover {
