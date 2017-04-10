@@ -1,0 +1,44 @@
+h1 {
+  color: black;
+  text-align: center;
+  font: 25px tahoma;
+}
+
+body {
+    background: pink;
+    font: tahoma;
+    font-size: 50px;
+    /*repeat: no-repeat;*/
+    /*text-align: center;*/
+}
+
+.ticBoard {
+  /*width: 75%;
+  height: 75%;*/
+  border: none;
+  margin: auto;
+}
+
+.column1, .column2, .column3 {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  background: white;
+}
+
+/*#box1:hover {
+  width: 100px:
+  height: 100px;
+}*/
+
+#resetButton {
+  text-decoration: none;
+  /*padding: 0px;
+  margin: 0px;*/
+  color: black;
+  font: 17px tahoma;
+}
+
+#resetButton:hover {
+  font-size: 20px;
+}
