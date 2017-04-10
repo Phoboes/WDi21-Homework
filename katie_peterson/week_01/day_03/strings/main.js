@@ -14,7 +14,8 @@ var DrEvil = function ( amount ) {
     console.log( amount + " dollars (pinky)" );
   } else {
     console.log( amount + " dollars");
-  };
+  }
+
 };
 
 DrEvil (1000000);
