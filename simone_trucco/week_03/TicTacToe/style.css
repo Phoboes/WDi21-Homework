@@ -9,8 +9,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;*/
-  margin: 10px;
-  padding: 10px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
   }
@@ -21,20 +19,21 @@ h1{
 }
 
 div {
- padding: 10px;
- margin-left: 5px;
- float: left;
-}
 
-div.squares {
-  position: absolute;
-  left: 18%;
-  top: 20%;
+  display: block;
+  margin: auto;
+  width: 600px;
+
 }
 
 .square {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  border: 3px black solid;
+  background-image: url(http://fillmurray.com/150/150);
+  background-size: cover;
   float: left;
   display: inline-block;
-  border: black solid;
   margin: 10px;
 }
