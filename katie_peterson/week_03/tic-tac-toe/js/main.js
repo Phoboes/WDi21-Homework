@@ -202,6 +202,7 @@ var playerTwoWins = function () {
 
 $(".reset").on("click", function ()  {
     $("td").empty();
+    window.location.reload(true);
 });
 
  }); //doc.ready end of
