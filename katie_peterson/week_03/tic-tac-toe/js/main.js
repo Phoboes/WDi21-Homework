@@ -18,18 +18,23 @@
 
 $(document).ready (function () {
 
-var player = 1;
-  $('.box').click(function () {
+  var player = 1;
+  $(".box").one("click", function () {
     $(this).addClass("animated flipInX");
       console.log(this);
     if(player === 1){
       $(this).text("O");
+      $("#whoseGo").text("twos ");
      player = 2;
     } else {
      $(this).text("X");
+     $("#whoseGo").text("ones ");
      player = 1;
    }
   });
+
+
+// var counter = 1;
 
 var playerOneWins = function () {
   window.setTimeout( function () {
@@ -52,8 +57,6 @@ var playerTwoWins = function () {
     })}, 1000);
 };
 
-
-
   //first row win
     //if in row one all boxes equal X
       //then playerOne wins
@@ -69,7 +72,6 @@ var playerTwoWins = function () {
       playerTwoWins();
   };
 });
-
 
 //second row win
 //if in the second row all boxes equal X
@@ -175,14 +177,31 @@ var playerTwoWins = function () {
   };
   });
 
-//playerOne wins if above conditions are met
+  // $(".box").on("click", function () {
+  //
+  //   if(player === 1){
+  //     var $paragraph = $("<p></p>");
+  //     $paragraph.html( "lorem ipsum dolor..." );
+  //     $paragraph.appendTo("body");
+  //    player = 2;
+  //   } else {
+  //     var $paragraph = $("<p></p>");
+  //     $paragraph.html( "lorem ipsum dolor..." );
+  //     $paragraph.appendTo("body");
+  //    player = 1;
+  // });
 
-//player two wins if above conditions are met
+// //If nobody wins
+//   $(".box").click (function () {
+//     if (this) === 10) {
+//     alert ("It is a draw! Reset the board to play again!");
+//   }
+//   });
 
 //reset board
 
 $(".reset").on("click", function ()  {
-    $("td").empty().removeClass("complete");
+    $("td").empty();
 });
 
  }); //doc.ready end of
