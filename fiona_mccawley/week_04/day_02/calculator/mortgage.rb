@@ -29,9 +29,9 @@ def monthly_repayment
     top_half = (( 1 + rate ) ** num_of_payments) * rate #top half (r(1+r)**n)
     bottom_half = (( 1 + rate ) ** num_of_payments) - 1 #bottom half (1 + r)**n - 1
 
-    result = ((top_half / bottom_half) * principal).round(2) #round float to 2 decimal places 
+    result = ((top_half / bottom_half) * principal).round(2) #round float to 2 decimal places
 
-    p "Your monthly repayment on a $#{principal}, at #{interest_rate}% over #{num_of_years} years is $#{result}" #(top half / bottom half) * p
+    p "Your monthly repayment on a $#{principal} loan, at #{interest_rate}% over #{num_of_years} years is $#{result}" #(top half / bottom half) * p
 end
 monthly_repayment()
 
