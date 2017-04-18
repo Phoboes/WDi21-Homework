@@ -1,0 +1,13 @@
+body {
+  background: rgb(126, 159, 63);
+  background-image: url(laserbg.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.suit {
+  border: Opx;
+ /*background:  rgb(126, 159, 63);*/
+}
