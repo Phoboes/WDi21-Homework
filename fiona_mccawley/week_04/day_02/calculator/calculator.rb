@@ -68,7 +68,7 @@ end
 #My division function
 def division
   print "What is your first number? "
-  first_num = gets().to_i() #this will do the gets.chomp for me, as it will extract the only the number
+  first_num = gets().to_i()
 
   print "What is the second number? "
   second_num = gets().to_i()
@@ -80,7 +80,7 @@ end
 #My exponential function
 def exponential
   print "What is your first number? "
-  first_num = gets().to_i() #this will do the gets.chomp for me, as it will extract the only the number
+  first_num = gets().to_i()
 
   print "To the power of? "
   second_num = gets().to_i()
@@ -91,14 +91,11 @@ end
 
 #My square root function
 def square_root
-  print "What is your first number? "
-  first_num = gets().to_i() #this will do the gets.chomp for me, as it will extract the only the number
+  print "What is the number you want the square root of? "
+  first_num = gets().to_i()
 
-  print "To the power of? "
-  second_num = gets().to_i()
-
-  result = first_num ** second_num
-  puts "#{first_num} ** #{second_num} = #{result}"
+  result = Math.sqrt(first_num)
+  puts "The square root of #{first_num} = #{result}"
 end
 
 
