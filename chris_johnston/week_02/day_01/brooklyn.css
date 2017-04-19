@@ -1,0 +1,69 @@
+body {
+  color:darkgray;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  height:100%;
+
+}
+
+h1 {
+color:darkgray;
+font:Georgia,"Times New Roman", serif;
+letter-spacing: 2px;
+font-weight:normal;
+}
+
+
+
+h3 {
+  color:gray;
+}
+
+h4 {
+  color:lightblue;
+}
+
+a {
+  color:lightblue;
+}
+
+p {
+  width: 100%;
+}
+
+div {
+  width:100%;
+  height:100%;
+}
+
+img.resize{
+  width:auto;
+  height:auto;
+}
+img.newyork {
+  border: 3px solid darkgrey;
+  /*width: 100%;
+  height:100%;*/
+}
+
+img.huffpost {
+  border: 3px solid darkgrey;
+  /*width: 100%;
+  height:100%;*/
+}
+img.lucky {
+  border: 3px solid darkgrey;
+  /*width: 100%;
+  height:100%;*/
+}
+img.marie {
+  border: 3px solid darkgrey;
+  /*width: 100%;
+  height:100%;*/
+}
+
+img.ring {
+  width: 100%;
+  height:100%;
+}
