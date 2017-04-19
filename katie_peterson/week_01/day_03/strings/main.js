@@ -14,8 +14,16 @@ var DrEvil = function ( amount ) {
     console.log( amount + " dollars (pinky)" );
   } else {
     console.log( amount + " dollars");
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
+  };
+>>>>>>> b3872d63a2e5386c2318f7185226a323e7bb624f
+=======
   }
 
+>>>>>>> 343c9894c79353eecd7642833572d6403b520ff0
 };
 
 DrEvil (1000000);
@@ -29,7 +37,15 @@ DrEvil (1000000);
 // Look up the JavaScript string reference to find methods which may be useful!'
 
 var mixUp = function ( x , y ) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  //slice
+=======
   //slice?
+>>>>>>> b3872d63a2e5386c2318f7185226a323e7bb624f
+=======
+  //slice?
+>>>>>>> 343c9894c79353eecd7642833572d6403b520ff0
   console.log(y.slice(0, 2) + x.slice(2) + " " + x.slice(0, 2) + y.slice(2));
 };
 
