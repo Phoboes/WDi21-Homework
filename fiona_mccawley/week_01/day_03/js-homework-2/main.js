@@ -79,7 +79,7 @@ var fixStart = function ( string ) {
       if( string[i] === firstLetter ){
         returnStr += '*'
       } else {
-        
+
       }
     // var replace = string[i];
     }
@@ -87,6 +87,7 @@ var fixStart = function ( string ) {
     return replace;
 };
 fixStart("babble");
+
 
 // var string = "Babble";
 // var newString = string.replace("a", "g");
