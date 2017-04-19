@@ -1,0 +1,165 @@
+body {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.content {
+    text-align: center;
+    
+}
+
+.title {
+    font-family: 'Monoton', cursive;
+    font-size: 80px;
+    margin: 20px 0 20px 0;
+}
+
+nav {
+    max-width: 100%;
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+
+ul > li {
+    display: inline-block;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    width: 110px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+a:hover {
+    color: black;
+}
+
+ul > li:hover {
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    right: 370px;
+    margin-top: -50px;
+    z-index: -1;
+}
+
+#ht-title {
+    margin-bottom: 20px;
+}
+
+.columns {
+    margin-bottom: 40px;
+}
+
+.col1 {
+    width: 49%;
+    float: left;
+    border-right: 1px solid black;
+}
+
+
+.col2 {
+    width: 50%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.vid-title {
+    margin-bottom: 20px;
+}
+
+p {
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    text-align: justify;
+    line-height: 22px;
+    font-size: 20px;
+}
+
+.trivia > p > a {
+    color: saddlebrown;
+}
+
+.trivia > p {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    line-height: 22px;
+    font-size: 20px;
+}
+
+hr {
+    width: 200px;
+}
+/*body {
+    background-image: url(../images/lw-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -400px -30px;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    right: 400px;
+    top: 190px;
+}
+
+.titles {
+    font-size: 80px;
+    font-family: 'Monoton', cursive;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Arima Madurai', cursive;
+    font-size: 18px;
+}
+
+ul > li {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    
+}
+
+ul > li:hover {
+    border: 2px solid white;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+
+ul > li:first-child, li:first-child+li {
+    margin-right: 75px;
+}*/

@@ -1,0 +1,77 @@
+/* 
+Project Name: Ecard.ly
+Client: General Assembly 
+Author: Christopher Castig | @castig
+Developer @GA in NYC
+*/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+img {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat-x;
+    background-color: #d6d6d6;
+    color: black;
+}
+
+a {
+    color: #cc6633;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    margin-left: 30px;
+    font-size: 20px;
+}
+p {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.container {
+    max-width: 940px;
+    background: white;
+    margin: 0 auto;
+}
+
+.col1 {
+    background: white;
+    min-height: 100px;
+    float: left;
+    width: 640px;
+
+}
+
+.col2 {
+    min-height: 100px;
+    float: left;
+    width: 280px;
+    margin: 50px 0 0 0;
+}
+
+
