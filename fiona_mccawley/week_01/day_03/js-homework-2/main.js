@@ -57,11 +57,7 @@ drEvil(100000988);
 // fixStart('babble'): 'ba**le'
 
 // debugger;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 343c9894c79353eecd7642833572d6403b520ff0
 // var fixStart = function ( string ) {
 //     var firstLetter = string.charAt(0);
 //     for (var i = 1; i < string.length; i += 1) {
@@ -72,11 +68,7 @@ drEvil(100000988);
 //     }
 // };
 // fixStart("Babble");
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 343c9894c79353eecd7642833572d6403b520ff0
 var fixStart = function ( string ) {
     var returnStr = '';
     var firstLetter = string.charAt(0);
@@ -87,7 +79,7 @@ var fixStart = function ( string ) {
       if( string[i] === firstLetter ){
         returnStr += '*'
       } else {
-        
+
       }
     // var replace = string[i];
     }
@@ -95,10 +87,7 @@ var fixStart = function ( string ) {
     return replace;
 };
 fixStart("babble");
-<<<<<<< HEAD
->>>>>>> b3872d63a2e5386c2318f7185226a323e7bb624f
-=======
->>>>>>> 343c9894c79353eecd7642833572d6403b520ff0
+
 
 // var string = "Babble";
 // var newString = string.replace("a", "g");
