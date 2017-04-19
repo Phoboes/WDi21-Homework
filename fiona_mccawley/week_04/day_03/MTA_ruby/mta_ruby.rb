@@ -18,7 +18,6 @@ $stop_array_two = [] #array to capture second part of 2 line journey
 $stop_array_three = [] #array to capture same line journey
 
 
-
 #first part - forwards to union square
 def trip_one_fwd( line_one, first_stop )
       i = $line[line_one].index( first_stop ) + 1
@@ -27,6 +26,7 @@ def trip_one_fwd( line_one, first_stop )
         i += 1
       end
 end
+
 #first part - backwards to union Square
 def trip_one_bwd( line_one, first_stop )
     i = $line[line_one].index( first_stop ) - 1
@@ -35,6 +35,7 @@ def trip_one_bwd( line_one, first_stop )
       i -= 1
     end
 end
+
 #second part - forwards from union Square
 def trip_two_fwd( line_two, second_stop )
       i = $line[line_two].index( "Union Square" ) + 1
@@ -43,6 +44,7 @@ def trip_two_fwd( line_two, second_stop )
         i += 1
       end
 end
+
 #second part - backwards from union square
 def trip_two_bwd( line_two, second_stop )
     i = $line[line_two].index("Union Square") - 1
@@ -52,7 +54,7 @@ def trip_two_bwd( line_two, second_stop )
     end
 end
 
-
+# Plan trip method
 def plan_trip( line_one, first_stop, line_two, second_stop )
 
 # if different lines
