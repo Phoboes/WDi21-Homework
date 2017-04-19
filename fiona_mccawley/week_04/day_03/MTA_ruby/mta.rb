@@ -55,168 +55,168 @@ sixLine = [
 
 
 
-def train_forwards (line_one, stop1, line_two, stop2)
-    first_stop = line_one.index(stop1)
-    second_stop = line_two.index(stop2)
-
-    msg_forward = ""
-    array_forward = []
-
-    i = first_stop + 1
-    while i <= second_stop -1
-      array_forward.push(i)
-      msg_forward += line_one[i] + " ,"
-      i += 1
-  end
-  p "You must travel through the following stops: #{msg_forward} and #{stop2}"
-  p "#{array_forward}"
-end
-
-#train backwards
-
-def train_backwards (line_one, stop1, line_two, stop2)
-    first_stop = line_one.index(stop1)
-    second_stop = line_two.index(stop2)
-
-    msg_backward = ""
-    array_backward = []
-
-    i = first_stop - 1
-    while i >= second_stop + 1
-      array_backward.push(i)
-      msg_backward += line_one[i] + " ,"
-      i -= 1
-  end
-  p "You must travel through the following stops: #{msg_backward} and #{stop2}"
-  p "#{array_backward}"
-end
-
-#full train journey
-
-def train_journey (line_one, stop1, line_two, stop2)
-  first_stop = line_one.index(stop1)
-  second_stop = line_two.index(stop2)
-
-  if first_stop < second_stop
-    train_forwards(line_one, stop1, line_two, stop2)
-  elsif first_stop > second_stop
-    train_backwards(line_one, stop1, line_two, stop2)
-  else
-    p "you are not going anywhere"
- end
-end
-# train_journey(NLine, "8th N", NLine, "Times Square") #backwards
-# train_journey(NLine, "Times Square", NLine, "8th N") #forwards
-
-#Different lines
-  #first half
-
-#forwards
-def train_forwards_one (line_one, stop1)
-    first_stop = line_one.index(stop1)
-    second_stop = line_one.index("Union Square")
-
-    msg_forward_one = ""
-    array_forward_one = []
-
-    i = first_stop + 1
-    while i <= second_stop -1
-      array_forward_one.push(i)
-      msg_forward_one += line_one[i] + " ,"
-      i += 1
-  end
-  p "You must travel through the following stops: #{msg_forward_one} and Union Square"
-  p "#{array_forward_one}"
-end
-
-def train_backwards_one (line_one, stop1)
-    first_stop = line_one.index(stop1)
-    second_stop = line_one.index("Union Square")
-
-    msg_backward_one = ""
-    array_backward_one = []
-
-    i = first_stop - 1
-    while i >= second_stop + 1
-      array_backward_one.push(i)
-      msg_backward_one += line_one[i] + " ,"
-      i -= 1
-  end
-  p "You must travel through the following stops: #{msg_backward_one} and Union Square"
-  p "#{array_backward_one}"
-end
-
-def train_journey_one (line_one, stop1)
-  first_stop = line_one.index(stop1)
-  second_stop = line_one.index("Union Square")
-
-  if first_stop < second_stop
-    train_forwards_one(line_one, stop1)
-  elsif first_stop > second_stop
-    train_backwards_one(line_one, stop1)
-  else
-    p "you are not going anywhere"
- end
-end
-
-#second half
-
-#forwards
-def train_forwards_two (line_two, stop2)
-    first_stop = line_two.index("Union Square")
-    second_stop = line_two.index(stop2)
-
-    msg_forward_two = ""
-    array_forward_two = []
-
-    i = first_stop + 1
-    while i <= second_stop -1
-      array_forward_two.push(i)
-      msg_forward_two += line_one[i] + " ,"
-      i += 1
-  end
-  p "You must travel through the following stops: #{msg_forward_two} and #{stop2}"
-  p "#{array_forward_two}"
-end
-
-def train_backwards_two (line_two, stop2)
-    first_stop = line_two.index("Union Square")
-    second_stop = line_two.index(stop2)
-
-    msg_backward_two = ""
-    array_backward_two = []
-
-    i = first_stop - 1
-    while i >= second_stop + 1
-      array_backward_two.push(i)
-      msg_backward_two += line_one[i] + " ,"
-      i -= 1
-  end
-  p "You must travel through the following stops: #{msg_backward_two} and Union Square"
-  p "#{array_backward_two}"
-end
-
-def train_journey_two (line_two, stop2)
-  first_stop = line_two.index("Union Square")
-  second_stop = line_two.index(stop2)
-
-  if first_stop < second_stop
-    train_forwards_two(line_two, stop2)
-  elsif first_stop > second_stop
-    train_backwards_two(line_two, stop2)
-  else
-    p "you are not going anywhere"
- end
-end
-
-def plan_journey (line_one, stop1, line_two, stop2)
-  if line_one == line_two
-    train_journey(line_one, stop1, line_two, stop2)
-  else
-    train_journey_one(line_one, stop1)
-    p "Change at Union Square"
-    train_journey_two(line_two, stop2)
-  end
-end
-
-plan_journey( NLine, "Grand Central", NLine, "8th N")
+# def train_forwards (line_one, stop1, line_two, stop2)
+#     first_stop = line_one.index(stop1)
+#     second_stop = line_two.index(stop2)
+#
+#     msg_forward = ""
+#     array_forward = []
+#
+#     i = first_stop + 1
+#     while i <= second_stop -1
+#       array_forward.push(i)
+#       msg_forward += line_one[i] + " ,"
+#       i += 1
+#   end
+#   p "You must travel through the following stops: #{msg_forward} and #{stop2}"
+#   p "#{array_forward}"
+# end
+#
+# #train backwards
+#
+# def train_backwards (line_one, stop1, line_two, stop2)
+#     first_stop = line_one.index(stop1)
+#     second_stop = line_two.index(stop2)
+#
+#     msg_backward = ""
+#     array_backward = []
+#
+#     i = first_stop - 1
+#     while i >= second_stop + 1
+#       array_backward.push(i)
+#       msg_backward += line_one[i] + " ,"
+#       i -= 1
+#   end
+#   p "You must travel through the following stops: #{msg_backward} and #{stop2}"
+#   p "#{array_backward}"
+# end
+#
+# #full train journey
+#
+# def train_journey (line_one, stop1, line_two, stop2)
+#   first_stop = line_one.index(stop1)
+#   second_stop = line_two.index(stop2)
+#
+#   if first_stop < second_stop
+#     train_forwards(line_one, stop1, line_two, stop2)
+#   elsif first_stop > second_stop
+#     train_backwards(line_one, stop1, line_two, stop2)
+#   else
+#     p "you are not going anywhere"
+#  end
+# end
+# # train_journey(NLine, "8th N", NLine, "Times Square") #backwards
+# # train_journey(NLine, "Times Square", NLine, "8th N") #forwards
+#
+# #Different lines
+#   #first half
+#
+# #forwards
+# def train_forwards_one (line_one, stop1)
+#     first_stop = line_one.index(stop1)
+#     second_stop = line_one.index("Union Square")
+#
+#     msg_forward_one = ""
+#     array_forward_one = []
+#
+#     i = first_stop + 1
+#     while i <= second_stop -1
+#       array_forward_one.push(i)
+#       msg_forward_one += line_one[i] + " ,"
+#       i += 1
+#   end
+#   p "You must travel through the following stops: #{msg_forward_one} and Union Square"
+#   p "#{array_forward_one}"
+# end
+#
+# def train_backwards_one (line_one, stop1)
+#     first_stop = line_one.index(stop1)
+#     second_stop = line_one.index("Union Square")
+#
+#     msg_backward_one = ""
+#     array_backward_one = []
+#
+#     i = first_stop - 1
+#     while i >= second_stop + 1
+#       array_backward_one.push(i)
+#       msg_backward_one += line_one[i] + " ,"
+#       i -= 1
+#   end
+#   p "You must travel through the following stops: #{msg_backward_one} and Union Square"
+#   p "#{array_backward_one}"
+# end
+#
+# def train_journey_one (line_one, stop1)
+#   first_stop = line_one.index(stop1)
+#   second_stop = line_one.index("Union Square")
+#
+#   if first_stop < second_stop
+#     train_forwards_one(line_one, stop1)
+#   elsif first_stop > second_stop
+#     train_backwards_one(line_one, stop1)
+#   else
+#     p "you are not going anywhere"
+#  end
+# end
+#
+# #second half
+#
+# #forwards
+# def train_forwards_two (line_two, stop2)
+#     first_stop = line_two.index("Union Square")
+#     second_stop = line_two.index(stop2)
+#
+#     msg_forward_two = ""
+#     array_forward_two = []
+#
+#     i = first_stop + 1
+#     while i <= second_stop -1
+#       array_forward_two.push(i)
+#       msg_forward_two += line_one[i] + " ,"
+#       i += 1
+#   end
+#   p "You must travel through the following stops: #{msg_forward_two} and #{stop2}"
+#   p "#{array_forward_two}"
+# end
+#
+# def train_backwards_two (line_two, stop2)
+#     first_stop = line_two.index("Union Square")
+#     second_stop = line_two.index(stop2)
+#
+#     msg_backward_two = ""
+#     array_backward_two = []
+#
+#     i = first_stop - 1
+#     while i >= second_stop + 1
+#       array_backward_two.push(i)
+#       msg_backward_two += line_one[i] + " ,"
+#       i -= 1
+#   end
+#   p "You must travel through the following stops: #{msg_backward_two} and Union Square"
+#   p "#{array_backward_two}"
+# end
+#
+# def train_journey_two (line_two, stop2)
+#   first_stop = line_two.index("Union Square")
+#   second_stop = line_two.index(stop2)
+#
+#   if first_stop < second_stop
+#     train_forwards_two(line_two, stop2)
+#   elsif first_stop > second_stop
+#     train_backwards_two(line_two, stop2)
+#   else
+#     p "you are not going anywhere"
+#  end
+# end
+#
+# def plan_journey (line_one, stop1, line_two, stop2)
+#   if line_one == line_two
+#     train_journey(line_one, stop1, line_two, stop2)
+#   else
+#     train_journey_one(line_one, stop1)
+#     p "Change at Union Square"
+#     train_journey_two(line_two, stop2)
+#   end
+# end
+#
+# plan_journey( NLine, "Grand Central", NLine, "8th N")
