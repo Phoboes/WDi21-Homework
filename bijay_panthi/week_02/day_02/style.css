@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #c3c6bc;
+  font-family: monospace;
+}
+.container {
+  width: 900px;
+  height: 750px;
+  background: #daedc2;
+  margin: auto;
+}

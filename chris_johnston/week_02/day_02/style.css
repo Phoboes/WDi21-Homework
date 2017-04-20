@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 30px;
+  background: black;
+  position: fixed;
+  top: 0;
+  text-align: left;
+  margin: 15px;
+}
+
+
+
+
+
+video {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transfomr: translateX(-50%) translateY(-50%);
+  -webkit-transorm: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+div.eatstext{
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  position: fixed;
+  width: 300px;
+  right: 30px;
+  top: 200px
+}
+
+div.waitforit{
+  font-size: 40px;
+  font-family:'Roboto', sans-serif;
+  color: white;
+  position: fixed;
+  width: 300px;
+  right: 30px;
+  top: 400px
+}
+
+.quote1 {
+font-family:'Roboto', sans-serif;
+border: 1px solid gray;
+width: 33%;
+margin: ;
+float: left;
+}
+
+.quote2 {
+font-family:'Roboto', sans-serif;
+border: 1px solid gray;
+width: 33%;
+margin-top: 60px;
+display: inline-block;
+}
+
+.quote3 {
+font-family:'Roboto', sans-serif;
+border: 1px solid gray;
+width: 33%;
+height: 100%;
+margin-top: 30px;
+float: right;
+}
+
+.main {
+  margin-top: 30px;
+}
+.gnu {
+width: 100%;
+height: auto;
+opacity: 0.1;
+display: fixed;
+z-index: -1
+}
+
+.navitem {
+  color: white;
+  opacity: 1;
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+  font-size: 17.5px;
+  text-decoration: none;
+  margin: 10px;
+  position: relative;
+  left: 25%;
+
+}
+
+.mainpage {
+
+  font-size: 80px;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  width: 100%;
+  text-align: center;
+  top: 150px;
+  position: relative;
+}

@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper, .wrapper2 {
+  width: 960px;
+  margin: 0 auto;
+}
+
+main {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+body {
+  font-family: "arial", sans-serif;
+  font-size: 12px;
+  background: #FFFFFD;
+  background-image: url(../images/bg_body.jpg);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+a {
+  color: #0182F0;
+  text-decoration: none;
+}
+
+span {
+  color: #0182F0;
+}
+
+nav {
+  font-size: 14px;
+  font-weight: 300;
+  height: 70px;
+  background: black;
+  color: #ffffff;
+  padding: 25px 0;
+}
+
+/* ////////// COULDNT GET THe HOVER WORKING TO WORK SMOOTHLY, CAN SEE IT JUMP ////////////// */
+/*nav ul li:hover { ////
+border-top: 4px solid #0182F0;
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
+}*/
+
+nav ul li {
+  display: inline-block;
+  width: 80px;
+}
+
+header {
+  margin: 20px 0;
+  position: relative;
+}
+
+.logo{
+  width: 711px;
+  float: left;
+}
+
+.social-media {
+  width: 249px;
+  float: left;
+  margin-top: -75px;
+  margin-right: 0;
+  text-align: right;
+/* ////////// COULDNT GET THIS WORKING TO HAVE THE LOGOS BEHIND THE NAVIGATION ////////////// */
+  /*position: absolute;
+  z-index: -5; */
+}
+
+.shadow {
+  margin-top: -4px;
+}
+
+.request {
+  display: inline-block;
+  box-shadow: 0 0 2px #888888;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.request .left {
+  width: 70%;
+  float: left;
+}
+
+.request .right {
+  width: 30%;
+  float: left;
+  text-align: right;
+}
+
+.homebox {
+  display: inline-block;
+}
+
+.homebox1, .homebox2, .homebox3{
+  float: left;
+  width: 274px;
+}
+
+.homebox1, .homebox2 {
+  margin-right: 69px;
+}
+
+.homebox1 img, .homebox2 img, .homebox3 img {
+  width: 274px;
+  background: white;
+  border: 5px solid lightgrey;
+  padding: 1px;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 60px;
+  background: black;
+  color: white;
+  line-height: 20px;
+}
+
+footer a, footer p {
+  color: grey;
+}
+
+.blogroll, .text-widget {
+  margin-right: 100px;
+}
+
+.blogroll {
+  width: 210px;
+  float: left;
+}
+
+.text-widget {
+  width: 340px;
+  float: left;
+}
+
+.meta-widget {
+width: 210px;
+float: left;
+}
+
+.copyright-foot {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+.copyright {
+  width: 600px;
+  float: left;
+}
+
+.theme {
+  width: 360px;
+  float: left;
+  text-align: right;
+}
+.clear {
+  clear: both;
+}
+
+.blogroll ul li, .meta-widget ul li {
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+}

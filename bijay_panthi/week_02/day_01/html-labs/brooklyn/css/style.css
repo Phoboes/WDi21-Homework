@@ -1,0 +1,71 @@
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+/*
+
+<img class="logo" src="images/brook-and-lyn-logo.gif">
+
+<img class="topimage" src="images/home-bloghero.png">
+<img class="bottomimage"src="images/home-rings.png">
+<img class="footerimage"src="images/press-nbcnewyork.gif">
+<img class="footerimage"src="images/press-huffpost.gif">
+<img class="footerimage"src="images/press-logo_lucky.gif">
+<img class="footerimage"src="images/press-marieclaire.gif">
+
+
+
+*/
+
+body {
+  /*font-family: monospace;*/
+  font-size: 12px;
+  /*line-height: 17px;*/
+  font-family: "Times New Roman", serif;
+  color: #656565;
+
+
+}
+
+p {
+  display: inline-block;
+}
+
+#container {
+  margin-left: 80px;
+  width: 960px;
+
+}
+
+h4 {
+  color: blue;
+}
+
+.footerimage {
+  float: left;
+  margin: 3px 3px 3px 3px;
+  border: 2px solid grey;
+  padding: 1px 1px 1px 1px;
+  position: relative;
+}
+
+
+.clear{
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #20222a;
+}
