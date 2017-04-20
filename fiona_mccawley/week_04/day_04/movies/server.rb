@@ -12,6 +12,10 @@ end
 get "/search_results" do
   movie_name = params["t"]
   url = "http://www.omdbapi.com/?s=#{movie_name}"
+  res = HTTParty.get(url)
+  @search = res["Search"][1]["Title"]
+
+
   # movie_name = params["t"]
   # url = "http://omdbapi.com?t=#{movie_name}"
   # res = HTTParty.get(url)
