@@ -1,0 +1,83 @@
+/* {
+  box-sizing: border-box;
+  /* width typically set  and then it changes when padding is added. border box sizing makes sure that hte width includes padding and border
+}*/
+@-webkit-keyframes simbolsFadeIn {
+  0%   {
+    opacity: 0;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, 1);*/
+  }
+  20% {
+    opacity: .2;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, .8);*/
+  }
+  40% {
+    opacity: .4;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, .6);*/
+  }
+  60% {
+    opacity: .6;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, .4);*/
+  }
+  80% {
+    opacity: .8;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, .2);*/
+  }
+  100% {
+    opacity: 1;
+    /*box-shadow: 10px 10px 10px rgba(255, 255, 255, 0);*/
+  }
+}
+
+body {
+  background-image:url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Megrim', cursive;
+  text-align: center;
+  }
+
+h1 {
+  font-size: 64px;
+  width: 100%;
+}
+
+.titleBlock {
+  margin: 0;
+  padding: 70px;
+  width: 90.75%;
+  background-color: rgba(152, 170, 169, .3);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.squares {
+  display: block;
+  margin: 7% 32%;
+  width: 600px;
+
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, .7);
+  background-size: cover;
+  float: left;
+  display: inline-block;
+  margin: 10px;
+}
+
+.circle {
+  -webkit-animation: simbolsFadeIn 1s;
+  background-image: url('images/circle.png');
+}
+.cross {
+  -webkit-animation: simbolsFadeIn 1s;
+  background-image: url('images/cross.png');
+}

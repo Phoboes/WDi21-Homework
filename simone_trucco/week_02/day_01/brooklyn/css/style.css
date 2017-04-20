@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+body * {
+  font-family: "Times New Roman", serif;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+/*.intro {
+margin-right: 60px;
+}*/
+
+h6 {
+  color: teal;
+}
+
+.nbc .huff .lucky .marie {
+  width: 25%;
+  width: 50%;
+  border: 10px solid black;
+  padding: 10px;
+}
+
+.text-content {
+  margin: 0px;
+  display: block;
+  line-height: 17px;
+}
+
+a {
+  color: teal;
+}
+
+.nbc .huff .lucky .marie {
+  width: 25%;
+  width: 50%;
+  border: 10px solid black;
+  padding: 10px;
+}
+
+/*footer {
+
+}*/
+
+/*div {
+  min-height: 50px;
+  width: 20%;
+  display: inline;
+  float: left;
+}
+
+h1, img, .text-content {
+  margin: 0 60px;
+}
+
+*/
+
+
+
+/*
+
+## Style Hints:
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/

@@ -13,7 +13,7 @@
       { title: "The Song of Achilles", author: "Madeline Miller", alreadyRead: true },
       { title: "Beautiful Creatures", author: "Kami Garcia", alreadyRead: true },
       { title: "Not My Fater's Son", author: "Alan Cummings", alreadyRead: false },
-      { title: "The Den of Shadows", author: "Amelia Atwater-Rhodes", alreadyRead: false },
+      { title: "The Den of Shadows", author: "Amelia Atwater-Rhodes", alreadyRead: false }
   ];
 
 // Iterate through the array of books.
