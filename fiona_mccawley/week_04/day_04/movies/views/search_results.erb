@@ -2,21 +2,22 @@
 <!-- <a href="<%= @url %>">Link</a> -->
 <!-- @movie_name[] -->
 
-<%= @empty_arr %>
+<!-- # <%= @empty_arr %> -->
 
 
 <!-- # <%= @titles %> -->
 
-<!-- # <%= num = @search[1]["Title"]%> -->
-<!-- num = @search[i]["Title"] -->
+
 
 
 <ul>
   <% @empty_arr.each do |title| %>
-  <li><a href = "/posters"><%=title%></a></li>
+  <li><a href = "http://omdbapi.com?t=<%=title%>"><%=title%></a></li>
   <% end %>
 </ul>
 
 
 
-<!-- <img src="<%= @poster %>"> -->
+<img src="<%= @poster %>">
+<p>Directed by <%= @director %></p>
+<p>Plot: <%= @plot %></p>
