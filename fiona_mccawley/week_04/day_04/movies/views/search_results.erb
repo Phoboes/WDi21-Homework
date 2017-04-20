@@ -2,8 +2,21 @@
 <!-- <a href="<%= @url %>">Link</a> -->
 <!-- @movie_name[] -->
 
-<!-- # <%= @res %> -->
+<%= @empty_arr %>
+
+
 <!-- # <%= @titles %> -->
-<%= @search %>
+
+<!-- # <%= num = @search[1]["Title"]%> -->
+<!-- num = @search[i]["Title"] -->
+
+
+<ul>
+  <% @empty_arr.each do |title| %>
+  <li><a href = "/posters"><%=title%></a></li>
+  <% end %>
+</ul>
+
+
 
 <!-- <img src="<%= @poster %>"> -->

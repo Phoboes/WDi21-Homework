@@ -13,7 +13,17 @@ get "/search_results" do
   movie_name = params["t"]
   url = "http://www.omdbapi.com/?s=#{movie_name}"
   res = HTTParty.get(url)
-  @search = res["Search"][1]["Title"]
+  @search = res["Search"]
+  
+# I want to create an array of only the titles from the list of results
+  @empty_arr = []
+
+  i = 0
+  while i < @search.length
+    @empty_arr.push(@search[i]["Title"])
+    i += 1
+  end
+
 
 
   # movie_name = params["t"]
@@ -26,3 +36,5 @@ end
 
 
 # http://www.omdbapi.com/?s=jaws - for list of results
+
+  # binding.pry
