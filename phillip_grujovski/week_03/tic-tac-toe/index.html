@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tic Tac Toe GA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <!--<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>-->
+        <script src="js/jQuery.js"></script>
+        
+    </head>
+    <body>
+        <header>
+            <h1>TIC TAC TOE</h1>
+        </header>
+        <main>
+            <div class="container">
+                <div class="game-settings">
+                    <h3>Choose opponent</h3>
+                    <button class="human-btn">Human</button>
+                    <button class="ai-btn">Computer</button>
+                </div>
+                <h2>Who will win?</h2>
+                <p class="player1 player">Player1 <span id="p1-score"></span></p>
+                <p class="player2 player"><span id="p2-score"></span> <span class="player2-name"></span></p>
+                <div class="clear-fix"></div>
+                
+                <div class="game-board">
+                    <div class="row">
+                        <div class="game-square" data-value="0"></div>
+                        <div class="game-square" data-value="1"></div>
+                        <div class="game-square" data-value="2"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="game-square" data-value="3"></div>
+                        <div class="game-square" data-value="4"></div>
+                        <div class="game-square" data-value="5"></div>
+                    </div>
+ 
+                    <div class="row">
+                        <div class="game-square" data-value="6"></div>
+                        <div class="game-square" data-value="7"></div>
+                        <div class="game-square" data-value="8"></div>
+                    </div>
+                </div> <!--END GAME-BOARD-->
+
+                <div class="bottom-btn">
+                    <button id="reset-game">Reset Game</button>
+                    <button id="reset-count">Reset scores</button>
+                </div>
+
+            </div> <!--END CONTAINER-->
+        </main>
+        <script src="js/main.js"></script>
+    </body>
+</html>
