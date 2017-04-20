@@ -91,8 +91,6 @@ exercise (4);
 // # 3 Calculate the area of a circle with the result of #2 as the radius.
 // # 4 Calculate what percentage that area is of the squared result (#3).
 
-
-
 var exercise = function ( number ) {
   var a = halfNumber(number);
   var b = squareNumber(a);

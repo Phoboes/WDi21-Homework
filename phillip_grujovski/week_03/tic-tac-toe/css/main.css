@@ -1,0 +1,101 @@
+body {
+    background-image: url("../assets/bg.jpg");
+    background-position: cover;
+    line-height: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+header {
+    margin: 20px auto 5px auto;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: white;
+    font-size: 25px;
+}
+
+h3 {
+    color: white;
+    font-size: 20px;
+}
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.game-board {
+    height: 600px;
+    display: table;
+    border-spacing: 5px;
+    margin: 0 auto 10px auto;
+}
+
+.row {
+    border: 1px solid blue;
+    display: table-row;
+}
+
+.game-square {
+    display: table-cell;
+    border: 2px solid white;
+    width: 300px;
+    background-color: rgba(0, 51, 153, .4);
+    background-size: cover;
+    background-position: center;
+}
+
+.player {
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    padding: 0 10px 0 10px;
+}
+
+.player1 {
+    float: left;
+}
+
+.player2 {
+    float: right;
+}
+
+button {
+    border: 2px solid red;
+    background-color: black;
+    color: white;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+button:hover {
+    border: 2px solid red;
+    background-color: red;
+    color: black;
+}
+
+.bottom-btn {
+    text-align: center;
+}
+
+.game-settings {
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+
+.clear-fix {
+    clear: both;
+}

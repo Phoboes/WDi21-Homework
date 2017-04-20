@@ -57,6 +57,18 @@ drEvil(100000988);
 // fixStart('babble'): 'ba**le'
 
 // debugger;
+
+// var fixStart = function ( string ) {
+//     var firstLetter = string.charAt(0);
+//     for (var i = 1; i < string.length; i += 1) {
+//
+//     var replace = string[i]   ;
+//     console.log(replace);
+//     return replace;
+//     }
+// };
+// fixStart("Babble");
+
 var fixStart = function ( string ) {
     var returnStr = '';
     var firstLetter = string.charAt(0);
@@ -67,7 +79,7 @@ var fixStart = function ( string ) {
       if( string[i] === firstLetter ){
         returnStr += '*'
       } else {
-        
+
       }
     // var replace = string[i];
     }
@@ -75,6 +87,7 @@ var fixStart = function ( string ) {
     return replace;
 };
 fixStart("babble");
+
 
 // var string = "Babble";
 // var newString = string.replace("a", "g");

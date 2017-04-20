@@ -1,0 +1,53 @@
+body {
+    font-color: red;
+    font-family: 'Schoolbell', cursive;
+    background: #FFF1EB;;
+    font-size: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #F75C48;
+}
+
+h2 {
+  text-align: center;
+  font-size: 25px;
+  color: #F75C48;
+}
+
+td {
+  color: #FABCAF;
+}
+
+.board {
+  margin: auto;
+  border: none;
+}
+
+.column1, .column2, .column3 {
+  height: 100px;
+  width: 100px;
+  border: 4px solid #FFF1EB;
+  background: #F75C48;
+  text-align: center;
+  font-size: 50px;
+}
+
+/*.box:hover {
+  width: 120px;
+  height: 120px;
+}*/
+
+.reset{
+  padding: 0px;
+  margin-top: 30px;
+  text-align: center;
+  color: #F75C48;
+  font-size: 25px;
+}
+
+.reset:hover {
+  font-size: 30px;
+}
