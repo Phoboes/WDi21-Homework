@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+
+}
+
+td {
+ background-color: white;
+ border: 1px solid black;
+ height: 50px;
+ line-height: 50px;
+ width: 50px;
+ padding: 0;
+ text-align: center;
+ font-size: 100px;
+ font-weight: bold;
+ font-family: fantasy;
+ font-style: oblique;
+}
+
+table {
+  width: 500px;
+  height: 500px;
+  margin-left: 450px;
+  margin-top: 150px;
+}
+
+td.layout {
+  /*font-size: 15px;*/
+
+}
+
+button  {
+  background: white;
+  margin-left: 635px;
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: lighter;
+  border-bottom: 20px;
+  border-color: #5D6D7E;
+  border-radius: 8px;
+  text-decoration-color: #5D6D7E;
+  shape-outside: circle();
+}
+
+.text {
+  font-size: 15px;
+}
+
+.pennib {
+  display:block;
+  width:8px;
+  height:15px;
+  background:#fff;
+  float:left;
+  overflow:hidden;
+}
+
+table {
+  table-layout: fixed;
+}
