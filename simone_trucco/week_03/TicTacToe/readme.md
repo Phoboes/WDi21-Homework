@@ -1,19 +1,19 @@
 12 - 04 - 2017
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
---------------------------------------------------------INDEX.HTML--------------------------------------------------------
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          --------------------------------------------------------INDEX.HTML--------------------------------------------------------
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 The approach to index.html has been pretty easy since the project didn't require a big HTML structure.
 
-I created the boiler-plate and added a div for every square of the game board, giving it a common class with each other (square) and a single id (sqOne, sqTwo, etc.) so that I could easily work with the divs both in CSS and JS.
+I created the boiler-plate and added a div for every square of the game board, giving it a common class with each other (square) and a single id ('sqOne', 'sqTwo', etc.) so that I could easily work with the divs both in CSS and JS.
 
 I then linked style.css, jQuery.js and main.js as usual.
 
 Later on during the refinement of the visual side of the project I added the font family link and the sweet-alert link so that I could customise the body font and the alerts.
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
----------------------------------------------------------STYLE.CSS--------------------------------------------------------
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          ---------------------------------------------------------STYLE.CSS--------------------------------------------------------
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 The approach to the css file it wasn't as easy as the html to finalise.
 
 The first part was actually easy but when I wanted more and more customisations and elements things started to get messy.
@@ -28,9 +28,9 @@ In order to do that I used fade ins and keyframes.
 
 I also tried to modify the CSS for the sweet-alert CSS file but I had to give up at some stage since it's really tricky.
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
----------------------------------------------------------MAIN.JS---------------------------------------------------------
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+          ---------------------------------------------------------MAIN.JS---------------------------------------------------------
+          /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 This was, of course, the hardest part.
 
 It took me a while to figure out the various steps, and I got lost a couple of times.
