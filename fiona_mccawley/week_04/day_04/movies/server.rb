@@ -26,8 +26,18 @@ get "/search_results" do
     @empty_arr.push(@search[i]["Title"])
     i += 1
   end
-# end
-  #if only one result
+  # I then also want to capture the poster link, so when you click on the image it goes to the poster
+  @picture_arr = []
+  i = 0
+  while i < @search.length
+    @picture_arr.push(@search[i]["Poster"])
+    i += 1
+  end
+
+  @picture_arr.each do |img|
+    @img = img
+  end
+
 
 
 
