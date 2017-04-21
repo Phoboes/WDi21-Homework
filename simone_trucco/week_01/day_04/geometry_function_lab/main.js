@@ -48,8 +48,16 @@ perimeter();
 // isIsosceles - Returns whether the triangle is isosceles or not
 // area - Returns the area of the Triangle
 // isObtuse - Returns whether the triangle is obtuse or not
-// var triangle = {
-//   sideA: 3,
-//   sideB: 4,
-//   sideC: 4
-// };
+
+var triangle = {
+  sideA: 3,
+  sideB: 4,
+  sideC: 4
+};
+
+var isEquilateral = function () {
+  if ( sideA === sideB && sideB === sideC ) {
+    console.log("The triangle is EQUILATERAL");
+  } else if (sideA === sideB && sideB ) {
+
+  }
