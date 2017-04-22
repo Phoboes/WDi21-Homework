@@ -1,0 +1,13 @@
+<h1>This is the band index</h1>
+
+
+<!--I want a ul of all bands  -->
+<ul>
+
+  <% @all_bands.each do |band| %>
+
+  <li><a href="/bands/<%= band["id"] %>"><%= band["name"] %></a></li>
+
+  <% end %>
+
+</ul>
