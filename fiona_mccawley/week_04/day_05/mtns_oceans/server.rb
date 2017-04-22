@@ -60,6 +60,7 @@ get "/bands/:id" do
 end
 
 get "/bands/:id/edit" do
+
   id = params["id"]
 
   db = SQLite3::Database.new("database.db")
@@ -72,6 +73,7 @@ get "/bands/:id/edit" do
 end
 
 post "/bands/:id" do
+
   id = params["id"]
   name = params["name"]
   genre = params["genre"]
@@ -87,4 +89,13 @@ post "/bands/:id" do
 
   redirect("/bands/#{id}")
 
+end
+
+get "/bands/:id/delete" do
+  id = params["id"]
+  db = SQLite3::Database.new("database.db")
+  sql = "DELETE FROM bands WHERE id == #{id}"
+  db.execute(sql)
+  db.close
+  redirect("/bands")
 end
