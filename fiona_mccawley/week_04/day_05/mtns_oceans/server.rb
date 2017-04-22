@@ -49,10 +49,42 @@ end
 
 get "/bands/:id" do
   id = params["id"]
+
   db = SQLite3::Database.new("database.db")
   db.results_as_hash = true
   sql = "SELECT * FROM bands WHERE id == #{id}"
   @band = db.execute(sql).first
   db.close
+
   erb(:bands_show)
+end
+
+get "/bands/:id/edit" do
+  id = params["id"]
+
+  db = SQLite3::Database.new("database.db")
+  db.results_as_hash = true
+  sql = "SELECT * FROM bands WHERE id == #{id}"
+  @band = db.execute(sql).first
+  db.close
+
+  erb(:bands_edit)
+end
+
+post "/bands/:id" do
+  id = params["id"]
+  name = params["name"]
+  genre = params["genre"]
+  bio = params["bio"]
+  image = params["image"]
+
+  sql = "UPDATE bands SET name = '#{name}', genre = '#{genre}', bio = '#{bio}', image = '#{image}' WHERE id == #{id}"
+
+  db = SQLite3::Database.new("database.db")
+  db.results_as_hash = true
+  db.execute(sql)
+  db.close
+
+  redirect("/bands/#{id}")
+
 end
