@@ -99,3 +99,11 @@ get "/bands/:id/delete" do
   db.close
   redirect("/bands")
 end
+
+get "/engineers" do
+  db = SQLite3::Database.new("database.db")
+  db.results_as_hash = true
+  @all_engineers = db.execute "SELECT * FROM engineers"
+  db.close
+  erb(:engineer_index)
+end

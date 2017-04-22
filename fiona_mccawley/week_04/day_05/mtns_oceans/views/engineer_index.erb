@@ -1,0 +1,17 @@
+<h1>This is the Engineer index</h1>
+
+
+<!--I want a ul of all bands  -->
+<ul>
+
+  <% @all_engineers.each do |engineer| %>
+
+  <li><a href="/engineers/<%= engineer["id"] %>"><%= engineer["name"] %></a></li>
+
+  <% end %>
+
+</ul>
+
+<div class="controls">
+  <a href="/engineers/new">Add my engineer</a>
+</div>
