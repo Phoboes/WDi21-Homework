@@ -24,6 +24,29 @@ get "/bands" do
   erb(:band_index)
 end
 
+# input
+get "/bands/new" do
+  erb(:bands_new)
+end
+
+# submit part
+post "/bands" do
+
+  name = params["name"]
+  genre = params["genre"]
+  bio = params["bio"]
+  img = params["image"]
+
+  sql = "INSERT INTO bands (name, genre, bio, image) VALUES ('#{name}', '#{genre}', '#{bio}', '#{img}')"
+  db = SQLite3::Database.new("database.db")
+  db.results_as_hash = true
+  db.execute( sql )
+  db.close
+
+  redirect("/bands")
+end
+
+
 get "/bands/:id" do
   id = params["id"]
   db = SQLite3::Database.new("database.db")
