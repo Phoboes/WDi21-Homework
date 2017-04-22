@@ -19,14 +19,17 @@ end
 get "/bands" do
   db = SQLite3::Database.new("database.db")
   db.results_as_hash = true
-
   @all_bands = db.execute "SELECT * FROM bands"
-
   db.close
-
   erb(:band_index)
 end
 
 get "/bands/:id" do
-  "This is a bands page"
+  id = params["id"]
+  db = SQLite3::Database.new("database.db")
+  db.results_as_hash = true
+  sql = "SELECT * FROM bands WHERE id == #{id}"
+  @band = db.execute(sql).first
+  db.close
+  erb(:bands_show)
 end
