@@ -6,6 +6,8 @@ body {
   background-image: url("http://static.tumblr.com/ab9bdf68d7b309d025c33223120f1306/tnms5f8/b32nwychi/tumblr_static_3lew72cnseio84g0ccgw8048o.jpg");
   background-size: cover;
   color: white;
+  text-align: center;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 ul {
@@ -44,4 +46,20 @@ a {
 h1 {
   text-align: center;
   color: white;
+}
+
+img {
+    position: relative;
+    width:  500px;
+    border-radius: 10px;
+}
+
+.controls a {
+  display: block;
+}
+
+.container {
+  /*border: 2px yellow solid;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 10px
 }
