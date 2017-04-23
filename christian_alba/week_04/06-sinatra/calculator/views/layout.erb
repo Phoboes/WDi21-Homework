@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our Sinatra App</title>
+</head>
+<body>
+  <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/calculator">Calculator</a>
+  </nav>
+
+  <hr>
+    <%= yield %>
+  <hr>
+
+    <footer>
+      <h2>
+        This footer will be on every page
+      </h2>
+    </footer>
+</body>
+</html>
