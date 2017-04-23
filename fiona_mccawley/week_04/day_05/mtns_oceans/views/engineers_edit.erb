@@ -1,0 +1,22 @@
+<h2>Edit your details</h2>
+
+
+<form action="/engineers/<%= @engineer['id'] %>" method="post">
+  <p>
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="name" value = "<%= @engineer['name'] %>">
+  </p>
+  <p>
+    <label>Bio:</label>
+    <input type="text" name="bio" placeholder="Bio" value = "<%= @engineer['bio'] %>">
+  </p>
+  <p>
+    <label>Gear:</label>
+    <input type="text" name="gear" placeholder="Gear/equipment" value = "<%= @engineer['gear'] %>">
+  </p>
+  <p>
+    <label>Image:</label>
+    <input type="text" name="image" placeholder="Image URL" value = "<%= @engineer['image'] %>">
+  </p>
+  <input type="submit" value="Update your Details">
+</form>
