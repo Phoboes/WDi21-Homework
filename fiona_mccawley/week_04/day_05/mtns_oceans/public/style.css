@@ -6,12 +6,14 @@ body {
   background-image: url("http://static.tumblr.com/ab9bdf68d7b309d025c33223120f1306/tnms5f8/b32nwychi/tumblr_static_3lew72cnseio84g0ccgw8048o.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+  background-color: #FF962D;
   color: white;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 .content {
   width: 80vw;
+  height: 100vh;
   margin: auto;
 }
 
