@@ -15,7 +15,6 @@ get "/books" do
   db = SQLite3::Database.new("database.db")
   db.results_as_hash = true
   @all_books = db.execute "SELECT * FROM books"
-
   db.close
 
   erb(:books_index)
@@ -71,7 +70,7 @@ end
 
 post "/books/:id" do
   id = params["id"]
-  title = params["s"]
+  title = params["t"]
   description = params["d"]
   image = params["i"]
 
