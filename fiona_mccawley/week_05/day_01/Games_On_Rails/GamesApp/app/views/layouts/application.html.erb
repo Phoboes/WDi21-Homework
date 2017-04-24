@@ -6,19 +6,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   </head>
 
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/games/secret">Secret Number Game</a>
-      <a href="/games/magic">Magic 8 Ball Game</a>
-      <a href="/games/rock_paper_scissors">Rock Paper Scissors Game</a>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/games/secret">Secret Number Game</a>
+        <a href="/games/magic">Magic 8 Ball Game</a>
+        <a href="/games/rock_paper_scissors">Rock Paper Scissors Game</a>
+      </nav>
 
-    <hr>
-    <%= yield %>
-    <hr>
+      <div class="content">
+      <%= yield %>
+      </div>
+
+    </div>
+
   </body>
 </html>

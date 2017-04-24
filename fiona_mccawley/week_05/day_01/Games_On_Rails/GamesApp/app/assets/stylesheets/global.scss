@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  border: 2px yellow solid;
+}
+
+.container {
+  border: 2px green solid;
+  width: 70vw;
+  margin: auto;
+}
+
+nav {
+  border: 2px red solid;
+}
+
+.content {
+  border: 2px blue solid;
+  width: 60vw;
+  margin: auto;
+  text-align: center;
+}
