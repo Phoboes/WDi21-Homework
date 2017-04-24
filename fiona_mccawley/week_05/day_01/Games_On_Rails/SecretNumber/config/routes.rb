@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 
   get "/magic/:question" => "pages#magic_response"
 
+  get "games/rock_paper_scissors" => "games#rock_paper_scissors"
+  
+  get "/games/rock_paper_scissors/:throw" => "games#rock_paper_scissors_play"
+
 end
