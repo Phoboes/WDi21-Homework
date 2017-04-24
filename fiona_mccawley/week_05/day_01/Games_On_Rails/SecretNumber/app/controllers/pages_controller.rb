@@ -26,7 +26,7 @@ class PagesController < ApplicationController
   end
 
   def magic
-
+    @shake = params["q"]
   end
 
   def magic_response
@@ -55,7 +55,7 @@ class PagesController < ApplicationController
       "Outlook not so good",
       "Very doubtful"]
       @response = ball_response.sample()
-      @question = params["question"]
+      @shake = params["q"]
 
 
   end

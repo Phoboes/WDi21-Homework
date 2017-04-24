@@ -8,10 +8,10 @@ Rails.application.routes.draw do
 
   get "/magic" => "pages#magic"
 
-  get "/magic/:question" => "pages#magic_response"
+  get "/magic/response" => "pages#magic_response"
 
   get "games/rock_paper_scissors" => "games#rock_paper_scissors"
-  
+
   get "/games/rock_paper_scissors/:throw" => "games#rock_paper_scissors_play"
 
 end
