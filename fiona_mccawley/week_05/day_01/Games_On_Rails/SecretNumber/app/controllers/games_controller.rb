@@ -9,7 +9,7 @@ class GamesController < ApplicationController
     @comp_go = array.sample()
 
     if @throw == @comp_go
-      @result == "It's a tie, play again"
+      @result = "Its a tie"
     elsif @throw == "Rock" && @comp_go == "Scissors"
       @result = "You Win"
     elsif @throw == "Paper" && @comp_go == "Rock"
@@ -21,10 +21,8 @@ class GamesController < ApplicationController
     elsif @throw == "Paper" && @comp_go == "Scissors"
       @result = "You lose"
     elsif @throw == "Scissors" && @comp_go == "Rock"
-      @result == "You lose"
+      @result = "You lose"
     end
-
-
 
   end
 
