@@ -1,0 +1,23 @@
+<h1>
+  <%= @band["name"] %>
+</h1>
+
+<p>
+  Genre: <%= @band["genre"] %>
+</p>
+
+<p>
+  Bio: <%= @band["bio"] %>
+</p>
+
+<div class="photo">
+  <img src="<%= @band['image'] %>">
+</div>
+
+<div class="controls">
+  <a href="/bands/<%= @band['id'] %>/edit">Edit</a>
+</div>
+
+<div class="controls">
+  <a href="/bands/<%= @band['id'] %>/delete">Delete</a>
+</div>

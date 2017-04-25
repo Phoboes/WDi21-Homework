@@ -1,0 +1,23 @@
+
+<h2>Edit artist details</h2>
+
+
+<form action="/bands/<%= @band['id'] %>" method="post">
+  <p>
+    <label>Artist name:</label>
+    <input type="text" name="name" placeholder="Band name" value = "<%= @band['name'] %>">
+  </p>
+  <p>
+    <label>Genre:</label>
+    <input type="text" name="genre" placeholder="Music genre" value = "<%= @band['genre'] %>">
+  </p>
+  <p>
+    <label>Bio:</label>
+    <input type="text" name="bio" placeholder="Bio" value = "<%= @band['bio'] %>">
+  </p>
+  <p>
+    <label>Image:</label>
+    <input type="text" name="image" placeholder="Image URL" value = "<%= @band['image'] %>">
+  </p>
+  <input type="submit" value="Update Band Details">
+</form>
