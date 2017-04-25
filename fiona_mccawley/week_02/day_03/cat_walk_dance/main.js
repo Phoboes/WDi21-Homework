@@ -22,6 +22,8 @@ question.style.display = "none";
 question.style.position = "relative";
 question.style.top = "100px";
 question.style.left = (centreScreen - 300) + "px";
+//to select multiple images, first get the value of one, then you have
+//to set up a loop to loop through the array and add the style that you want
 var gravestoneOne = document.querySelector(".rip");
 gravestoneOne.style.width = "100px";
 gravestoneOne.style.display = "none";
@@ -47,7 +49,7 @@ var reaper = document.querySelector('.grim');
 reaper.style.width = "300px";
 reaper.style.left = "0px";
 reaper.style.display = "none";
-reaper.style.zIndex = 1;
+// reaper.style.zIndex = "1";
 
 
 
@@ -86,33 +88,83 @@ var stopCatWalk = function () {
 // which triggers the ball to drop top: 435px
   // Cat disappears
     // Blood ensues
+    var grimGlide = function () {
+      reaper.style.display = "inline";
+      var width = window.innerWidth; //created variable to store width of screen minus size of cat
+      var grimLeft = parseInt(reaper.style.left);
+      var grimRight = grimLeft + 10;
+      reaper.style.left = grimRight + "px";
+    };
 
-// I already have the bowling ball selector stored in a variable bowlingBall
+    var setGrave = function(){
+      dancingCat.style.display = "none";
+      question.style.display = "none";
+      wallpaper.style.background = "red";
+      gravestoneOne.style.display = "inline-block";
+      gravestoneTwo.style.display = "inline-block";
+      gravestoneThree.style.display = "inline-block";
+    };
 
     var ballFall = function () {
       var ballTop = parseInt(bowlingBall.style.top);
       var ballBottom = ballTop + 5;
       bowlingBall.style.top = ballBottom + "px";
-      var ballFallId = window.setInterval (ballFall, 100);
-      if (ballBottom === 450) {
-        dancingCat.style.display = "none";
-        question.style.display = "none";
-        wallpaper.style.background = "red";
-        gravestoneOne.style.display = "inline-block";
-        gravestoneTwo.style.display = "inline-block";
-        gravestoneThree.style.display = "inline-block";
-        var grimGlide = function () {
-          reaper.style.display = "inline";
-          var width = window.innerWidth; //created variable to store width of screen minus size of cat
-          var grimLeft = parseInt(reaper.style.left);
-          var grimRight = grimLeft + 10;
-          reaper.style.left = grimRight + "px";
-        };
-        window.setInterval(grimGlide, 100);
-      }
+    };
+
+// Make ballFallId global so I can easily access it from my else statement
+var ballFallId;
+
+var killCat = function(){
+  // If the ball is above 450 px, set a timer and increment the ball
+  if ( parseInt(bowlingBall.style.top) < 450) {
+    // If I haven't set a timer, make one - otherwise just move the ball.
+    if( !ballFallId ){
+      ballFallId = window.setInterval(killCat, 100);
+    }
+    // Increment the ball's falling animation
+    ballFall();
+  } else {
+    // Hide the bowling ball
+    bowlingBall.style.display = "none";
+    // Once I've got above 450px, stop the timer
+    window.clearInterval( ballFallId );
+    // Call my grave setters
+    setGrave();
+    // Make the reaper move.
+    window.setInterval(grimGlide, 100);
+  }
 };
 
-bowlingBall.addEventListener("click", ballFall);
+// Call the main setter function -> killCat
+bowlingBall.addEventListener("click", killCat);
+
+
+
+// I already have the bowling ball selector stored in a variable bowlingBall
+//     var ballFall = function () {
+//       var ballTop = parseInt(bowlingBall.style.top);
+//       var ballBottom = ballTop + 5;
+//       bowlingBall.style.top = ballBottom + "px";
+//       var ballFallId = window.setInterval (ballFall, 100);
+//       if (ballBottom >= 450) {
+//         dancingCat.style.display = "none";
+//         question.style.display = "none";
+//         wallpaper.style.background = "red";
+//         gravestoneOne.style.display = "inline-block";
+//         gravestoneTwo.style.display = "inline-block";
+//         gravestoneThree.style.display = "inline-block";
+//         var grimGlide = function () {
+//           reaper.style.display = "block";
+//           var width = window.innerWidth; //created variable to store width of screen minus size of cat
+//           var grimLeft = parseInt(reaper.style.left);
+//           var grimRight = grimLeft + 20;
+//           reaper.style.left = grimRight + "px";
+//         };
+//         window.setInterval(grimGlide, 1000);
+//       }
+// };
+//
+// bowlingBall.addEventListener("click", ballFall);
 
 
 

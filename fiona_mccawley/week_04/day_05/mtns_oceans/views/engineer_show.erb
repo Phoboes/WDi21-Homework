@@ -1,0 +1,24 @@
+<h1>
+  <%= @engineer["name"] %>
+</h1>
+
+<p>
+  Bio: <%= @engineer["bio"] %>
+</p>
+
+<p>
+  Gear: <%= @engineer["gear"] %>
+</p>
+
+<div class="photo">
+  <img src="<%= @engineer['image'] %>">
+</div>
+
+<div class="controls">
+  <a href="/engineers/<%= @engineer['id'] %>/edit">Edit</a>
+</div>
+
+<div class="controls">
+  <a href="/engineers/<%= @engineer['id'] %>/delete">
+    Delete</a>
+</div>

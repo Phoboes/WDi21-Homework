@@ -4,7 +4,7 @@
 # variables as input (look up the necessary variables)
 #
 require "pry"
-
+p "-----------------------------------------------------"
 def monthly_repayment
 
     p "How much do you want to borrow?"
@@ -34,6 +34,7 @@ def monthly_repayment
     p "Your monthly repayment on a $#{principal} loan, at #{interest_rate}% over #{num_of_years} years is $#{result}" #(top half / bottom half) * p
 end
 monthly_repayment()
+p "-----------------------------------------------------"
 
 
 
