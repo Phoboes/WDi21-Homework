@@ -25,15 +25,15 @@ for ( var i = 0; i < libraryOfBooks.length; i++) {
   var book = libraryOfBooks[i];
   var title = book.title;
   var author = book.author;
-  //var msg = title + " by " + author + ".";
-  //console.log(msg)
+  var msg = title + " by " + author + ".";
+  console.log(msg);
+};
 
-//if already read is true of a string like 'You already read "The Hobbit" by J.R.R. Tolkien',
+//if already read is true og a string like 'You already read "The Hobbit" by J.R.R. Tolkien',
+
 // else log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 if ( book.alreadyRead === true) {
   console.log( "You already read " + title + " by " + author + "." );
 } else {
   console.log( "You still need to read " + title + " by " + author + "." );
-};
-
 };

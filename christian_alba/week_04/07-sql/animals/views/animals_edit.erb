@@ -1,0 +1,22 @@
+
+<h2>Edit an animal</h2>
+
+<%= @animal %>
+
+<form action="/animals/<%= @animal['id'] %>" method="post">
+  <p>
+    <label>Species:</label>
+    <input type="text" name="species"
+      placeholder="Species">
+  </p>
+  <p>
+    <label>Description:</label>
+    <input type="text" name="description"
+      placeholder="Description">
+  </p>
+  <p>
+    <label>Image:</label>
+    <input type="text" name="image"
+      placeholder="Image">
+  </p>
+  <input type="submit" value="Create Animal">

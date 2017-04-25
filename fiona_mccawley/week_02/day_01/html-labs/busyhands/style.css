@@ -1,0 +1,90 @@
+body {
+  background: lightgrey;
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+nav {
+  background: black;
+  width: 100%;
+  border: none;
+}
+
+nav ul {
+  color: white;
+  list-style-type: none;
+  text-align: left;
+  padding: 20px;
+
+}
+nav li {
+  display: inline;
+  padding: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: grey;
+}
+
+header {
+  background-image: url("images/bg_body.jpg");
+}
+
+.photobanner {
+  box-shadow: 0px 55px 27px -23px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+  width: 280px;
+  display: inline-block;
+  padding-right: 30px;
+}
+
+.box img {
+  border: 5px solid grey;
+  padding: 3px;
+}
+
+.box a {
+  text-decoration: none;
+  color: dodgerblue;
+  font-size: 12px;
+}
+
+footer {
+  background: black;
+  margin-top: 10px;
+}
+
+
+footer li {
+  list-style-type: none;
+}
+
+.blogroll {
+  color: grey;
+  width: 250px;
+  display: inline-block;
+}
+.text-widget {
+  color: grey;
+  width: 250px;
+  display: inline-block;
+}
+.meta-widget {
+  color: grey;
+  width: 250px;
+  display: inline-block;
+}
+
+.copyright {
+  color: grey;
+}
+
+.company-bottom {
+  color: grey;
+}

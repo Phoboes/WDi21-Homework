@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: red;
+}
+
+header {
+  background: #000080;
+  height: 150px;
+  position: relative;
+}
+
+header h1, p {
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+header h1 {
+  padding: 10px;
+}
+
+.flag {
+  width: 150px;
+  transform: rotate(180deg);
+}
+
+.flagLeft {
+  display: inline-block;
+  position: absolute;
+}
+
+.flagRight {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+}
+
+.col-one {
+  border: 2px solid red;
+  display: inline-block;
+  width: 300px;
+  height: 604px;
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+  background: #000080;
+}
+
+.col-one img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.col-one p {
+  margin-top: 50px;
+  display: none;
+}
+
+.col-two {
+  border: 2px solid red;
+  display: inline-block;
+  width: 300px;
+  height: 604px;
+  position: absolute;
+  right: 7px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+  background: #000080;
+}
+
+.col-two img {
+  width: 200px;
+  border-radius: 100%;
+}
+
+.col-two p {
+  margin-top: 50px;
+  display: none;
+}
+
+.scoreOne, .scoreTwo {
+  height: 100px;
+  width: 100px;
+  background: #000000;
+  color: #E8702A;
+  border: 2px solid #FFFFFF;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 5%;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.gameboard {
+  width: 604px;
+  height: 604px;
+  border: 2px solid red;
+  position: relative;
+  display: inline-block;
+}
+
+.square {
+  border: 2px solid red;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  float: right;
+  background-image: url("../images/square_stars.png");
+  background-size: 100%;
+}
+
+.cheetoTheme {
+  display: none;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 300px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.clintonTheme {
+  display: none;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 300px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.tieTheme {
+  display: none;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: 300px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.cheetoTheme button, .clintonTheme button, .tieTheme Button {
+  border: none;
+  background: #000080;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5%;
+  font-family:'Press Start 2P', cursive;
+  display: inline-block;
+  position: absolute;
+  left: 180px;
+  outline: none;
+}
+
+.col-one button, .col-two button {
+  display: inline-block;
+  position: absolute;
+  bottom: 35px;
+  left: 80px;
+  border: none;
+  background: red;
+  color: #FFFFFF;
+  font-family:'Press Start 2P', cursive;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 5%;
+  outline: none;
+}
