@@ -1,0 +1,21 @@
+
+
+.container {
+  padding: 25%;
+  background-color: blue;
+  width: 100px;
+}
+
+.col {
+  background-color:black;
+  min-height: 50px;
+  float: left;
+}
+
+.col red {
+  background-color: red;
+}
+
+clear {
+  clear: both;
+}

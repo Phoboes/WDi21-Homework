@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  /* width typically is set, and then it changes when padding and border is added. Border box sizing
+   makes ure that the width includes padding and border */
+}
+
+body * {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+}
+
+h1 {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+img {      /*    w200 and h200 is a schortcut    */
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: lightslategray;
+  border: none;
+}
+
+p {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.layout {
+  padding: 10px;
+  background: salmon;
+}
+
+.half.first-half {
+  width: 50%;
+  border: 10px solid black;
+  box-sizing: border-box;
+  padding: 10px;
+  /* width acccounts for border and padding */
+}
+
+.half {
+  border: none;
+  width: 50%;
+  float: left;
+  min-height: 200px;
+  background: ghostwhite;
+}
+
+.half:nth-child(odd) {
+  background: papayawhip;
+}
+
+.clear {
+  clear: both;
+}
+
+/*
+BLOCK - TAKES ALL THE SPACE
+INLINE-BLOCK - SITS YOU ALIGNED WITH PERSONAL SPACE
+INLINE - SIT ALIGN WITH PERSON
+NONE - UBER
+
+Do you need to set heights and widths? IF you do, use BLOCK or INLINE-BLOCK
+
+Do you need elements to sit next to each other? If you do, use INLINE ot INLNE-BLOCK
+
+*/

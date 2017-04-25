@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movies</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <form  action="/results" method="GET">
+        <!-- <label>Find Movies</label> -->
+        <input type="text" name="movie" placeholder="Find Movies"> <!-- name="movie" - name attribute to be used in GET params  -->
+
+        <input type="submit" value="search"> <!-- submit with a search button -->
+      </form>
+    </div>
+  </header>
+
+  <main class="wrapper">
+    <%= yield %>
+  </main>
+
+
+
+</body>
+</html>
+
+<!-- ##Specification Build a search form that lets the user enter a movie name. The Sinatra app will use HTTParty to fetch the data for the chosen movie from OMDB and display it on the page. Display the poster, as a bare minimum.
+
+##Bonus I Modify your existing code to allow searches for multiple matches. For example, a search for "Alien" should return a list of clickable links (each of which would then take you to the full results page for the selected movie):
+
+Alien
+Aliens
+Alien 3
+Alien Resurrection
+My Stepmother Is An Alien
+etc
+The OMDB site documents the parameter you need to use to search for multiple matches.
+
+##Bonus II Update your code from bonus I so that if only one movie matches your search you are forwarded directly to that movie's result page. -->

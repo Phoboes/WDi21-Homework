@@ -1,0 +1,15 @@
+<h1>Artists</h1>
+<p>A list of artists available to record</p>
+<ul>
+
+  <% @all_bands.each do |band| %>
+
+  <li><a href="/bands/<%= band["id"] %>"><%= band["name"] %></a></li>
+
+  <% end %>
+
+</ul>
+
+<div class="controls">
+  <a href="/bands/new">Add artist</a>
+</div>

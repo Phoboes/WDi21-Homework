@@ -97,7 +97,7 @@ var trainForwards = function ( lineOne, stop1, lineTwo, stop2) {
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop + 1; i <= secondStop - 1; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
     arrayForward.push(i); //using .push so that it adds the index numbers loops through to the empty array
-    msgForward += lineOne[i] + ", " //adds list of stops to the msgForward variable, which can be called upon later to log out the stops
+    msgForward += lineOne[i] + ", "; //adds list of stops to the msgForward variable, which can be called upon later to log out the stops
   }
   return msgForward; //output this variable so it can be used again outside of function
   return arrayForward; //outputs the array so i can used it outside of the function
@@ -110,7 +110,7 @@ var trainBackwards = function ( lineOne, stop1, lineTwo, stop2) {
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop - 1; i >= secondStop + 1; i -= 1) { //starting point is firstStop minus 1, as I don't want to log the initial stop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
     arrayBackward.push(i);
-    msgBackward += lineOne[i] + ", "
+    msgBackward += lineOne[i] + ", ";
   }
     return msgBackward;
     return arrayForward;
@@ -153,7 +153,7 @@ var trainForwardsOne = function ( lineOne, stop1) {
   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop + 1; i <= secondStop - 1; i += 1) { //starting point is first stop +1 ( I don't want to log the first stop in my stops list), loops stops at second stop, increase by 1
     arrayForwardOne.push(i);
-    msgForwardOne += lineOne[i] + ", "
+    msgForwardOne += lineOne[i] + ", ";
   }
   return msgForwardOne;
   return arrayForwardOne;
@@ -166,7 +166,7 @@ var trainBackwardsOne = function ( lineOne, stop1 ) {
   var secondStop = lineOne.indexOf("Union Square"); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop -1 ; i >= secondStop + 1; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
     arrayBackwardOne.push(i);
-    msgBackwardOne += lineOne[i] + ", "
+    msgBackwardOne += lineOne[i] + ", ";
   }
     return msgBackwardOne;
     return arrayBackwardOne;
@@ -203,7 +203,7 @@ var trainForwardsTwo = function ( lineTwo, stop2) {
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop + 1; i <= secondStop - 1; i += 1) { //starting point is first stop, loops stops at second stop, increase by 1
     arrayForwardTwo.push(i);
-    msgForwardTwo += lineTwo[i] + ", "
+    msgForwardTwo += lineTwo[i] + ", ";
   }
   return msgForwardTwo; //output this variable so it can be used again outside of function
   return arrayForwardTwo;
@@ -216,7 +216,7 @@ var trainBackwardsTwo = function ( lineTwo, stop2 ) {
   var secondStop = lineTwo.indexOf(stop2); //declare a variable to capture the index number of stop 2
   for ( var i = firstStop - 1; i >= secondStop + 1; i -= 1) { //starting point is firstStop, loop keeps going as long as i is greater than the Secondstop  , increase by 1
     arrayBackwardTwo.push(i);
-    msgBackwardTwo += lineTwo[i] + ", "
+    msgBackwardTwo += lineTwo[i] + ", ";
   }
     return msgBackwardTwo;
     return arrayBackwardTwo;
@@ -251,11 +251,11 @@ var planJourney = function ( lineOne, stop1, lineTwo, stop2) {
     trainJourneyOne( lineOne, stop1);
     console.log("Change at Union Square");
     trainJourneyTwo( lineTwo, stop2);
-    var stopsForwardOne = arrayForwardOne.length   //store the length of each array in 4 different variables
-    var stopsBackwardOne = arrayBackwardOne.length
-    var stopsForwardTwo = arrayForwardTwo.length
-    var stopsBackwardTwo = arrayBackwardTwo.length
-    var totalStops = (stopsForwardOne + stopsBackwardOne + stopsForwardTwo + stopsBackwardTwo) + 2 //add all together, and add 2, as a stop was taken away in each of the backwards and forwards functions
+    var stopsForwardOne = arrayForwardOne.length;  //store the length of each array in 4 different variables
+    var stopsBackwardOne = arrayBackwardOne.length;
+    var stopsForwardTwo = arrayForwardTwo.length;
+    var stopsBackwardTwo = arrayBackwardTwo.length;
+    var totalStops = (stopsForwardOne + stopsBackwardOne + stopsForwardTwo + stopsBackwardTwo) + 2; //add all together, and add 2, as a stop was taken away in each of the backwards and forwards functions
     console.log(totalStops + " stops in total"); //only 2 of the above variables will ever have values (fwd1 + fwd2, or bwd1 + bwd2 etc. )
   }
 };
