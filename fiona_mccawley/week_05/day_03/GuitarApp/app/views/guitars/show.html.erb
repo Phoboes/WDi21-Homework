@@ -1,2 +1,14 @@
-<h1>Guitars#show</h1>
-<p>Find me in app/views/guitars/show.html.erb</p>
+
+<p>Brand: <%= @guitar.brand %></p>
+
+<p>Model: <%= @guitar.model %></p>
+
+<p>Color: <%= @guitar.color %></p>
+
+<p>Manufactured: <%= @guitar.manufactured %></p>
+
+<p>Image: <%= @guitar.image %></p>
+
+<div class="controls">
+  <a href="/guitars/<%= @guitar.id %>/edit">Edit this listing</a>
+</div>

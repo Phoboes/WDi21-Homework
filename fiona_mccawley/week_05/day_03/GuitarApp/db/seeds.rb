@@ -1,4 +1,4 @@
-Planet.destroy_all
+Guitar.destroy_all
 
 jazzmaster = Guitar.create(model: "Jazzmaster", brand: "Fender", color: "Relic Black", manufactured: 1959)
 jaguar = Guitar.create(model: "Jaguar", brand: "Fender", color: "3-Color Sunburst", manufactured: 1965)

@@ -1,6 +1,9 @@
 <h1>Guitar List</h1>
+
 <% @all_guitars.each do |guitar| %>
 <p>
-  <a href="#"></a>
+  <a href="/guitars/<%= guitar.id %>"><%= guitar.model %></a>(id: <%= guitar.id %>)
 </p>
 <% end %>
+
+<a href="/guitars/new">Add a guitar to the database</a>
