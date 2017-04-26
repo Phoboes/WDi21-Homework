@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   post 'venues/:id' => 'venues#update'
 
+  delete 'venues/:id/delete' => 'venues#destroy'
+
 end

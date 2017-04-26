@@ -28,7 +28,11 @@ class VenuesController < ApplicationController
     redirect_to "/venues/#{venue.id}"
   end
 
-
+  def destroy
+    venue = Venue.find_by(id: params["id"])
+    venue.destroy
+    redirect_to "/venues"
+  end
 
   private
   def venue_params

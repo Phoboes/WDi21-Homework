@@ -5,9 +5,10 @@
 <p>Capacity:<%= @venue.capacity %></p>
 
 <% if @venue.image %>
-  <p>Venue image: <img src="<%= @venue.image %>" alt=""></p>
+  <img src="<%= @venue.image %>" alt="">
 <% end %>
 
 <div class="controls">
   <a href="/venues/<%= @venue.id %>/edit">Edit this venue listing</a>
+  <%= button_to "Delete this venue listing", "/venues/#{@venue.id}/delete", method: :delete %>
 </div>
