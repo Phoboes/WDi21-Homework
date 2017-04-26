@@ -1,2 +1,13 @@
-<h1>Venues#show</h1>
-<p>Find me in app/views/venues/show.html.erb</p>
+<h1><%= @venue.name %></h1>
+
+<p>Location:<%= @venue.location %></p>
+
+<p>Capacity:<%= @venue.capacity %></p>
+
+<% if @venue.image %>
+  <p>Venue image: <img src="<%= @venue.image %>" alt=""></p>
+<% end %>
+
+<div class="controls">
+  <a href="/venues/<%= @venue.id %>/edit">Edit this venue listing</a>
+</div>
