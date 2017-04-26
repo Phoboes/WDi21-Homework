@@ -7,8 +7,11 @@
 
 <p>Manufactured: <%= @guitar.manufactured %></p>
 
-<p>Image: <%= @guitar.image %></p>
+<% if @guitar.image %>
+<img src="<%= @guitar.image %>">
+<%end %>
 
 <div class="controls">
   <a href="/guitars/<%= @guitar.id %>/edit">Edit this listing</a>
+  <%= button_to "Delete this listing", "/guitars/#{@guitar.id}/delete", method: :delete %>
 </div>

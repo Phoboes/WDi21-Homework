@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   get '/guitars/:id/edit' => 'guitars#edit'
 
+  post '/guitars/:id' => 'guitars#update'
+
+  delete 'guitars/:id/delete' => 'guitars#destroy'
+
 end
