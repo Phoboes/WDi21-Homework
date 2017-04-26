@@ -1,0 +1,18 @@
+<h1>Producers</h1>
+<p>A list of producers available to record you</p>
+
+
+<!--I want a ul of all bands  -->
+<ul>
+
+  <% @all_engineers.each do |engineer| %>
+
+  <li><a href="/engineers/<%= engineer["id"] %>"><%= engineer["name"] %></a></li>
+
+  <% end %>
+
+</ul>
+
+<div class="controls">
+  <a href="/engineer/new">Add my details</a>
+</div>

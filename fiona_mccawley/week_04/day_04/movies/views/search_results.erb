@@ -1,0 +1,29 @@
+<!-- # <%= @poster %> -->
+<!-- <a href="<%= @url %>">Link</a> -->
+<!-- @movie_name[] -->
+
+<!-- # <%= @empty_arr %> -->
+<!-- # <%= @picture_arr %> -->
+
+
+<!-- # <%= @titles %> -->
+<!-- ul of titles, with link to full results -->
+<!-- <ul>
+  <% @empty_arr.each do |title| %>
+  <li><a href = "http://omdbapi.com?t=<%=title%>"><%=title%></a></li>
+  <% end %>
+</ul> -->
+
+
+
+<ul>
+  <%@empty_arr.each_with_index do |title, i| %>
+  <li><a href = "<%= @picture_arr[i] %>"><%=title%></a></li>
+  <% end %>
+</ul>
+
+
+<!-- straight to movie poster -->
+<!-- <img src="<%= @poster %>">
+<p>Directed by <%= @director %></p>
+<p>Plot: <%= @plot %></p> -->
