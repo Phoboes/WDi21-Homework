@@ -1,0 +1,12 @@
+<h2>Magic 8 ball game!</h2>
+
+<h4>Ask the magic 8 ball a question</h4>
+<%= form_tag("/games/magic_ball/", method: "get", class: "eight-ball-form") do %>
+    <%= text_field_tag(:question, params[:question]) %>
+    <%= submit_tag("Ask", class: "submit-btn") %>
+<% end %>
+
+<% if(@question) %>
+    <p>8 Ball says...</p>
+    <p class="eight-ball-answer"><%= @answer %></p>
+<% end %>
