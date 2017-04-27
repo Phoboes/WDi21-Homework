@@ -1,6 +1,6 @@
 <h1>All Events</h1>
 
-<%=@all_events.each do |event| %>
+<%@all_events.each do |event| %>
 <p>
   <%= link_to( event.band, event_path(event)) %>
 </p>

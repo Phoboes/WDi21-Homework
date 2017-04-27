@@ -12,3 +12,11 @@
   <a href="/venues/<%= @venue.id %>/edit">Edit this venue listing</a>
   <%= button_to "Delete this venue listing", "/venues/#{@venue.id}/delete", method: :delete %>
 </div>
+
+<h3>Events held here</h3>
+
+<% @venue.events.each do |event| %>
+<p>
+  <%= link_to(event.band, event_path(event)) %>
+</p>
+<% end %>

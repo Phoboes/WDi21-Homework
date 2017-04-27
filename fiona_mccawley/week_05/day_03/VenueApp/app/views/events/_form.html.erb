@@ -16,4 +16,10 @@
     <%= f.url_field :photos%>
   </p>
   <%= f.submit %>
+
+  <p>
+    <%= f.label :venue_id %>
+    <%= f.collection_select(:venue_id, Venue.all, :id, :name) %>
+  </p>
+
 <% end %>

@@ -10,12 +10,14 @@ event1 = Event.create ({
   band: "The Horrors",
   date: "2009/09/09",
   ticket: "$60",
-  photos: "http://www.streetandstage.com/wp-content/uploads/2009/09/the_horrors_bowery_ballroom.jpg"
+  photos: "http://www.streetandstage.com/wp-content/uploads/2009/09/the_horrors_bowery_ballroom.jpg",
+  venue_id: bowery.id
   })
 
 event2 = Event.create ({
   band: "My Vitriol",
   date: "2001/10/18",
   ticket: "$50",
-  photos: "https://upload.wikimedia.org/wikipedia/commons/5/50/MyVitriol.Nov24.KOKO.jpg"
+  photos: "https://upload.wikimedia.org/wikipedia/commons/5/50/MyVitriol.Nov24.KOKO.jpg",
+  venue_id: brixton.id
   })
