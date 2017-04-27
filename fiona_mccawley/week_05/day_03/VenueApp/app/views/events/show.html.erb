@@ -1,0 +1,15 @@
+<h1><%= @event.band%></h1>
+
+<% if @event.photos %>
+<%= image_tag(@event.photos) %>
+<% end %>
+
+<p>Date: <%= @event.date %></p>
+
+<p>Ticket Cost: <%= @event.ticket %></p>
+
+
+
+<div class="controls">
+  <%= link_to("Edit this event", edit_event_path(@event)) %>
+</div>

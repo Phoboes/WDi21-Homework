@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :events
+
   get '/' => 'pages#home'
 
   get '/venues' => 'venues#index'
