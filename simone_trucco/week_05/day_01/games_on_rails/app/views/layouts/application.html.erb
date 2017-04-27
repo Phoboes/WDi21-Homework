@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games On Rails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Monofett|Monoton" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <h1>GAMES ON RAILS</h1>
+
+    <hr class="lines">
+    <nav>
+      <a class="navbar" href="/secret">Secret Number</a>
+      <a class="navbar" href="/magic8">Magic 8</a>
+      <a class="navbar" href="/rps">Rock Paper Scissors</a>
+    </nav>
+
+    <hr class="lines">
+      <%= yield %>
+    <hr class="lines">
+
+  </body>
+</html>
