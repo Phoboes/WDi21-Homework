@@ -10,17 +10,13 @@
 
   <body>
     <nav>
-      <!-- <div id="nav-icon2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div> -->
-      <a href="/">Home</a>
-      <a href="/venues">Venue List</a>
-      <a href="/venues/new">Add a Venue</a>
+    <%= link_to("Home", "/") %>
+    <%= link_to("All Venues", "/venues") %>
+    <%= link_to("Add Venue", "/venues/new") %>
+    <%= link_to("All Events", events_path()) %>
+    <%= link_to("Add Event", new_event_path()) %>
+
+
     </nav>
 
     <hr>
