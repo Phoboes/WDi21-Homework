@@ -1,0 +1,27 @@
+<h1>Add a guitar to the database</h1>
+
+  <form action="/guitars" method="POST">
+  <!-- p*5>label+input -->
+  <p>
+    <label for="">Brand:</label>
+    <input type="text" name="guitar[brand]">
+  </p>
+  <p>
+    <label for="">Model:</label>
+    <input type="text" name="guitar[model]">
+  </p>
+  <p>
+    <label for="">Color:</label>
+    <input type="text" name="guitar[color]">
+  </p>
+  <p>
+    <label for="">Manufactured:</label>
+    <input type="number" name="guitar[manufactured]">
+  </p>
+  <p>
+    <label for="">Image:</label>
+    <input type="text" name="guitar[image]">
+  </p>
+  <input type="submit" value="Create Guitar">
+
+  </form>

@@ -1,0 +1,25 @@
+<%= form_for @event do |f| %>
+  <p>
+    <%= f.label :band %>
+    <%= f.text_field :band, required: true%>
+  </p>
+  <p>
+    <%= f.label :date %>
+    <%= f.date_field :date, required: true %>
+  </p>
+  <p>
+    <%= f.label :ticket %>
+    <%= f.text_field :ticket, required: true%>
+  </p>
+  <p>
+    <%= f.label :photos %>
+    <%= f.url_field :photos%>
+  </p>
+  <%= f.submit %>
+
+  <p>
+    <%= f.label :venue_id %>
+    <%= f.collection_select(:venue_id, Venue.all, :id, :name) %>
+  </p>
+
+<% end %>
