@@ -1,0 +1,7 @@
+<h1>Recipes</h1>
+
+<% @recipes.each do |r| %>
+  <p><%= link_to(r.title, recipe_path(r.id)) %></p>
+<% end %>
+
+<%= link_to("Create a new recipe", new_recipe_path(@recipe), class: "btn btn-success") %>

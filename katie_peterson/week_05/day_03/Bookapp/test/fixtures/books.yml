@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  published: MyText
+  genre: MyText
+  language: MyText
+  image: MyText
+
+two:
+  title: MyText
+  published: MyText
+  genre: MyText
+  language: MyText
+  image: MyText

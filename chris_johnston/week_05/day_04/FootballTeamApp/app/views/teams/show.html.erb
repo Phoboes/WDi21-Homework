@@ -1,0 +1,17 @@
+
+<h1><%= @team.name %></h1>
+
+
+<ul>
+  <li>Name: <%=@team.name%></li>
+  <li>Country: <%=@team.country%></li>
+  <li>Competition: <%= @team.competition %></li>
+</ul>
+
+
+<h3>Team Players</h3>
+<% @team.players.each do |player| %>
+  <p>
+    <%= link_to(player.name, player_path(player))%>
+  </p>
+<% end %>
