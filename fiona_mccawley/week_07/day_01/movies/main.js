@@ -1,81 +1,74 @@
-console.log("this");
-// Everything to do with XML HTTP Request comes back to the readyState
-  // 0 - Request has been initialised, but has not been sent ( it is still sitting on the our computer)
-  //1 - Server connection has been established (after the handshake)
-  //2 - Request has been received by the server, and the server is processing it
-  //3 - Processing response in the browser (the server has gien us some data, but we can't work with it yet)
-  //4 - REsponse is ready to be worked with
-
-// Make XMLHTTPRequest to OMDB API
-  // var request = new XMLHttpRequest();
-  //
-  // request.onreadystatechange = function (){
-  //   console.log( request.readyState);
-  //   if (request.readyState < 4 ) {
-  //     return false; // we don't want to do anything until we can work with the data
-  //   }
-  //   var data = request.responseText;
-  //   var parsedData = JSON.parse( data );
-  //   var title = parsedData["Title"];
-  //   var poster = parsedData["Poster"]
-  //   console.log(title, poster);
-  // };
-  //
-  // request.open("GET", "http://omdbapi.com/?t=Jaws");
-  //
-  // request.send();
+// console.log("this");
 
   var request = new XMLHttpRequest();
-  console.log(request.readyState);
   // I need to be able to listen to clicks on the button
   window.onload = function () {
-    // console.log("The page is loaded");
-
-    $btn = $("button"); //could use jquery for this
-    $btn.on("click", function (){
+    //saved the class of button as a jquery variable
+      $btn = $("button");
+      $btn.on("click", function (){
+        // Get the value of the input field and save as a variable
       $search = $("input.search").val();
-      url = "http://omdbapi.com/?t=" + $search;
+      // Use s for omdb search to get a list of all matches to search keyword
+      url = "http://omdbapi.com/?s=" + $search;
 
       request.onreadystatechange = function (){
-        console.log( request.readyState );
-        if ( request.readyState < 4 ) {
+        console.log( request.readyState);
+        if (request.readyState < 4 ) {
           return false;
         }
         var data = request.responseText;
         var parsedData = JSON.parse( data );
-        // I want to get the poster value and add that to the src on an img on the index page
-        var poster = parsedData["Poster"];
-        $(".poster").attr("src", poster);
-        // Get the title and add that as a heading
-        var title = parsedData["Title"];
-        $(".title").html(title );
-        // Get the plot and add that as a paragraph
-        var plot = parsedData["Plot"];
-        $(".plot").html("Plot: " + plot);
-        var released = parsedData["Released"];
-        $(".released").html("Release Date: " + released)
-      };
+        //save the result which is an object with objects as a variable so I can try loop through
+        var search = parsedData["Search"];
+        // loop through search so I can get the title, create a list to display
+        var each = function ( collection, callback ) {
+          for (var i = 0; i < search.length; i += 1) {
+            var currentItem = collection [i];
+            callback( currentItem );
+          }
+        };
+        each(search, function ( movie ) {
+        // console.log(movie["Title"]);
+        $(".multiple ul").append('<li>' + movie["Title"] + '</li>');
 
-      request.open( "GET", url );
+        });
+
+      };
+      request.open("GET", url);
 
       request.send();
-
-
     });
 
   };
 
-  // Find a way to make it dynamic
-
-  // Get the inputs current value
 
 
-  // Construct a URL using the value
-  // http://omdbapi.com/?t=SOMETITLEHERE
-  // Make the request
-  // Once the data comes back
-  // Parse it
-    // Represent the movie on the page
-    // Try and show the image
-      // document.createElement ("img") or use Jquery
-      //img.setAttribute( "src", _________ )
+
+
+// Below code is to display movie poster, title, plot and release date - working ok
+          // $search = $("input.search").val();
+    // Use s for omdb search to get a list of all matches to search keyword
+          // url = "http://omdbapi.com/?t=" + $search;
+      // request.onreadystatechange = function (){
+      //   console.log( request.readyState );
+      //   if ( request.readyState < 4 ) {
+      //     return false;
+      //   }
+      //   var data = request.responseText;
+      //   var parsedData = JSON.parse( data );
+      //   // I want to get the poster value and add that to the src on an img on the index page
+      //   var poster = parsedData["Poster"];
+      //   $(".poster").attr("src", poster);
+      //   // Get the title and add that as a heading
+      //   var title = parsedData["Title"];
+      //   $(".title").html(title );
+      //   // Get the plot and add that as a paragraph
+      //   var plot = parsedData["Plot"];
+      //   $(".plot").html("Plot: " + plot);
+      //   var released = parsedData["Released"];
+      //   $(".released").html("Release Date: " + released)
+      // };
+      //
+      // request.open( "GET", url );
+      //
+      // request.send();
