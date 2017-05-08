@@ -45,8 +45,15 @@ console.log("this");
         var parsedData = JSON.parse( data );
         // I want to get the poster value and add that to the src on an img on the index page
         var poster = parsedData["Poster"];
-        $(".poster").attr("src", poster)
-        console.log(poster);
+        $(".poster").attr("src", poster);
+        // Get the title and add that as a heading
+        var title = parsedData["Title"];
+        $(".title").html(title );
+        // Get the plot and add that as a paragraph
+        var plot = parsedData["Plot"];
+        $(".plot").html("Plot: " + plot);
+        var released = parsedData["Released"];
+        $(".released").html("Release Date: " + released)
       };
 
       request.open( "GET", url );
