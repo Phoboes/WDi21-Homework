@@ -63,14 +63,14 @@
         var plot = parsedData["Plot"];
         $(".plot").html("Plot: " + plot);
         var released = parsedData["Released"];
-        $(".released").html("Release Date: " + released)
+        $(".released").html("Release Date: " + released);
       };
 
       request.open( "GET", url );
 
       request.send();
 
-        });
+      });
   };
 
 
