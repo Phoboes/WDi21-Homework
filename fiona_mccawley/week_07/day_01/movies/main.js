@@ -42,7 +42,7 @@
 
     //On click event of the anchor in the div with the multiple class, I want to get the html (movie title), capture that as a variable. Then use that for the second xhr request.
     $(".multiple").on('click', 'a', function (){
-      $movieselect = $('a').html();
+      $movieselect = $(this).html();
       console.log($movieselect);
       url = "http://omdbapi.com/?t=" + $movieselect;
 
