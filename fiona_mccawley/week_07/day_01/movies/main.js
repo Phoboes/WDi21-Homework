@@ -29,7 +29,8 @@
         };
         each(search, function ( movie ) {
         // console.log(movie["Title"]);
-        $(".multiple ul").append('<li>' + movie["Title"] + '</li>');
+        $(".multiple ul").append('<li><a class="list" href="#">' + movie["Title"] + '</a></li>');
+        $(".list").attr("href", movie["Poster"]);
 
         });
 
@@ -47,7 +48,6 @@
 
 // Below code is to display movie poster, title, plot and release date - working ok
           // $search = $("input.search").val();
-    // Use s for omdb search to get a list of all matches to search keyword
           // url = "http://omdbapi.com/?t=" + $search;
       // request.onreadystatechange = function (){
       //   console.log( request.readyState );
