@@ -1,0 +1,17 @@
+
+<p>Brand: <%= @guitar.brand %></p>
+
+<p>Model: <%= @guitar.model %></p>
+
+<p>Color: <%= @guitar.color %></p>
+
+<p>Manufactured: <%= @guitar.manufactured %></p>
+
+<% if @guitar.image %>
+<img src="<%= @guitar.image %>">
+<%end %>
+
+<div class="controls">
+  <a href="/guitars/<%= @guitar.id %>/edit">Edit this listing</a>
+  <%= button_to "Delete this listing", "/guitars/#{@guitar.id}/delete", method: :delete %>
+</div>

@@ -1,0 +1,15 @@
+<h1><%= @recipe.title %></h1>
+
+<p>
+  <b>Ingredients:</b> <%= @recipe.ingredients %>
+</p>
+<p>
+  Chef Name:
+  <%= link_to(@recipe.chef.name, "/chefs/#{@recipe.chef.id}") %>
+</p>
+
+<div class="controls">
+  <%= link_to("Edit Recipe", edit_recipe_path(@recipe), class: "btn btn-warning") %>
+  <%= link_to("Delete Recipe", recipe_path(@recipe), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger") %>
+</div>
+

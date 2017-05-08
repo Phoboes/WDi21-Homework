@@ -1,0 +1,7 @@
+<h1>Chefs</h1>
+
+<% @chefs.each do |c| %>
+  <p><%= link_to(c.name, chef_path(c.id)) %></p>
+<% end %>
+
+<%= link_to("Create a Chef", new_chef_path(), class: "btn btn-success") %>

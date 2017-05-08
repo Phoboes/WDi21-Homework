@@ -1,0 +1,21 @@
+<h2>
+  <%= @books["title"] %>
+</h2>
+
+<p>
+  Description: <%= @books["description"] %>
+</p>
+
+<p>
+  Image: <img src= "<%= @books['image'] %>"
+</p>
+
+<div class="controls">
+  <a href="/books/<%= @books['id'] %>/edit">
+    Edit this book</a>
+</div>
+
+<div class="controls">
+  <a href="/books/<%= @books['id'] %>/delete">
+    Delete this book</a>
+</div>

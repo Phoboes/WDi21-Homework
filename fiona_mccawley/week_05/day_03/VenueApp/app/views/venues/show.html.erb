@@ -1,0 +1,22 @@
+<h1><%= @venue.name %></h1>
+
+<p>Location:<%= @venue.location %></p>
+
+<p>Capacity:<%= @venue.capacity %></p>
+
+<% if @venue.image %>
+  <img src="<%= @venue.image %>" alt="">
+<% end %>
+
+<div class="controls">
+  <a href="/venues/<%= @venue.id %>/edit">Edit this venue listing</a>
+  <%= button_to "Delete this venue listing", "/venues/#{@venue.id}/delete", method: :delete %>
+</div>
+
+<h3>Events held here</h3>
+
+<% @venue.events.each do |event| %>
+<p>
+  <%= link_to(event.band, event_path(event)) %>
+</p>
+<% end %>

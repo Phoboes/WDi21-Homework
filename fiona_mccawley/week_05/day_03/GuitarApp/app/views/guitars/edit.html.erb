@@ -1,0 +1,27 @@
+<h1>Edit guitar listing</h1>
+
+<form action="/guitars/<%= @guitar.id %>" method="POST">
+<!-- p*5>label+input -->
+<p>
+  <label for="">Brand:</label>
+  <input type="text" name="guitar[brand]" value="<%= @guitar.brand %>">
+</p>
+<p>
+  <label for="">Model:</label>
+  <input type="text" name="guitar[model]" value="<%= @guitar.model %>">
+</p>
+<p>
+  <label for="">Color:</label>
+  <input type="text" name="guitar[color]" value="<%= @guitar.color %>">
+</p>
+<p>
+  <label for="">Manufactured:</label>
+  <input type="number" name="guitar[manufactured]" value="<%= @guitar.manufactured %>">
+</p>
+<p>
+  <label for="">Image:</label>
+  <input type="text" name="guitar[image]" value="<%= @guitar.image %>">
+</p>
+<input type="submit" value="Update listing">
+
+</form>
