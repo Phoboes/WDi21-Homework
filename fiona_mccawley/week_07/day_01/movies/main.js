@@ -34,7 +34,8 @@ console.log("this");
     $btn = $("button"); //could use jquery for this
     $btn.on("click", function (){
       $search = $("input.search").val();
-      console.log($search);
+      url = "http://omdbapi.com/?t=" + $search;
+      console.log(url);
     });
 
   };
