@@ -8,7 +8,7 @@ require "pry"
 
 # divide your weight in kilograms (kg) by your height in metres (m)
 # then divide the answer by your height again to get your BMI
-
+p "-----------------------------------------------------"
 def bmi_calc
   p "How tall are you in metres?"
   height = gets.to_f
@@ -31,6 +31,7 @@ def bmi_calc
   end
 end
 bmi_calc()
+p "-----------------------------------------------------"
 
 # Underweight: BMI is less than 18.5
 # Normal weight: BMI is 18.5 to 24.9

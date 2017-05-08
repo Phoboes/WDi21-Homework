@@ -18,7 +18,7 @@
     #my car uses 8 litres for every 100km = 12.5 km for every litre of fuel
   #(distance / kms per litre) * price per litre = total cost
     # (600 / 12.5 ) * 1.32 = $63.36
-
+p "-----------------------------------------------------"
 def trip_calculator
   p "What distance in miles are you travelling?"
   distance = gets.to_f
@@ -39,3 +39,4 @@ def trip_calculator
 
 end
 trip_calculator()
+p "-----------------------------------------------------"
