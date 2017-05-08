@@ -28,10 +28,8 @@
           }
         };
         each(search, function ( movie ) {
-        // console.log(movie["Title"]);
-        $(".multiple ul").append('<li><a class="list" href="#">' + movie["Title"] + '</a></li>');
-        $(".list").attr("href", movie["Poster"]);
-
+          // console.log(movie["Title"]);
+          $(".multiple ul").append('<li><a href=' + movie["Poster"] + '>' + movie["Title"] + '</a></li>');
         });
 
       };
@@ -42,11 +40,7 @@
 
   };
 
-
-
-
-
-// Below code is to display movie poster, title, plot and release date - working ok
+// Below code is to display movie poster, title, plot and release date after searching - working ok
           // $search = $("input.search").val();
           // url = "http://omdbapi.com/?t=" + $search;
       // request.onreadystatechange = function (){
