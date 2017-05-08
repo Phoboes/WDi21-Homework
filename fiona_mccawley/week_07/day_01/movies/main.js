@@ -35,7 +35,25 @@ console.log("this");
     $btn.on("click", function (){
       $search = $("input.search").val();
       url = "http://omdbapi.com/?t=" + $search;
-      console.log(url);
+
+      request.onreadystatechange = function (){
+        console.log( request.readyState );
+        if ( request.readyState < 4 ) {
+          return false;
+        }
+        var data = request.responseText;
+        var parsedData = JSON.parse( data );
+        // I want to get the poster value and add that to the src on an img on the index page
+        var poster = parsedData["Poster"];
+        $(".poster").attr("src", poster)
+        console.log(poster);
+      };
+
+      request.open( "GET", url );
+
+      request.send();
+
+
     });
 
   };
