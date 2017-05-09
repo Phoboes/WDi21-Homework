@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VenueApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+    <%= link_to("Home", "/") %>
+    <%= link_to("All Venues", "/venues") %>
+    <%= link_to("Add Venue", "/venues/new") %>
+    <%= link_to("All Events", events_path()) %>
+    <%= link_to("Add Event", new_event_path()) %>
+
+
+    </nav>
+
+    <hr>
+    <%= yield %>
+    <hr>
+
+  </body>
+</html>

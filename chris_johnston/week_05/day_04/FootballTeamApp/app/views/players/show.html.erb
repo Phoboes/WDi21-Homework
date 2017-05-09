@@ -1,0 +1,9 @@
+<p>Name: <%= @player.name %></p>
+<p>Nationality: <%= @player.nationality %></p>
+<p>Position: <%= @player.position %></p>
+
+
+<p>Team Name:
+
+  <%= link_to(@player.team.name, "/teams/#{@player.team_id}") %>
+</p>

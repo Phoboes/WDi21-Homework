@@ -1,0 +1,45 @@
+<h2>Task Editor</h2>
+
+<form action="/tasks/<%= @task.id %>" method="POST">
+  <p>
+    <label>Name:</label>
+    <input type="text" name="task[name]" value="<%= @task.name %>">
+  </p>
+  <p>
+    <label>Description:</label>
+    <input type="text" name="task[description]" value="<%= @task.description %>">
+  </p>
+  <p>
+    <label>Priority:</label>
+    <input type="text" name="task[priority]" value="<%= @task.priority %>">
+  </p>
+  <p>
+    <label>Start Time:</label>
+    <input type="timestamp" name="task[start_time]" value="<%= @task.start_time %>">
+  </p>
+  <p>
+    <label>Due Date:</label>
+    <input type="date" name="task[due_date]" value="<%= @task.due_date %>">
+  </p>
+  <p>
+    <label>Due Time:</label>
+    <input type="time" name="task[due_time]" value="<%= @task.due_time %>">
+  </p>
+  <p>
+    <label>Overdue Status:</label>
+    <input type="boolean" name="task[overdue_status]" value="<%= @task.overdue_status %>">
+  </p>
+
+
+  <input type="submit" value="Edit Task">
+</form>
+
+
+
+<!-- t.text :name
+t.text :description
+t.text :priority
+t.timestamp :start_time
+t.date :due_date
+t.time :due_time
+t.boolean :overdue_status -->
