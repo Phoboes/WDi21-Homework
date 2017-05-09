@@ -12,12 +12,13 @@ var displayPeople = function(data){
 };
 
 var spacePeopleNames = function (data) {
-  // var name = data.people[i].name;
-  // var craft = data.people[i].craft;
+
   // console.log(name, craft);
   var people = data.people;
     for (var i = 0; i < people.length; i++) {
-      $(".content ul").append("<li>" + "The astronaut: " + data.people[i].name + " is on the: " + data.people[i].craft + "</li>");
+      var name = data.people[i].name;
+      var craft = data.people[i].craft;
+      $(".content ul").append("<li>" + "The astronaut: " + name + " is on the: " + craft + "</li>");
     }
 };
   // var astronautOne = peopleName.name[0];

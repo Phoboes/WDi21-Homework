@@ -10,8 +10,6 @@ var displayPosition = function (data) {
   $(".longitude").text( lon );
 };
 
-
-
 var issPosition = function (){
     $.ajax ({
       url: ISS_URL,
@@ -20,3 +18,15 @@ var issPosition = function (){
   }).done(displayPosition);
 };
 issPosition();
+
+$(document).ready(function () {
+  issPosition();
+
+  var ISS_POSITION = window.setInterval(function () {
+    issPosition();
+  }, 3000);
+
+  // $(".stop button").on("click", function () {
+  //   window.clearInterval( CHUCK_TIMER );
+  // });
+});
