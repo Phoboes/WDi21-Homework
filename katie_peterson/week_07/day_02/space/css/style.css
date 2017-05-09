@@ -1,0 +1,13 @@
+body {
+  color: ghostwhite;
+  text-align: center;
+  font-family: monospace;
+  margin: 0;
+  background-image: url("http://i.imgur.com/in8OrEk.jpg");
+  background-size: 100%;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+}
