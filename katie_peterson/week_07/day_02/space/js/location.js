@@ -1,11 +1,11 @@
 var LOCATION_BASE_URL = "http://api.open-notify.org/iss-now.json";
 var LOCATION_HTTP_METHOD = "GET";
-var LOCATION_DATA_TYPE = "JSON";
+var LOCATION_DATA_TYPE = "JSONP";
 
 //Displaying the location of ISS
 var displayLocation = function(data){
-    var lat = data.latitude;
-    var long = data.longitude;
+    var lat = data.iss_position["latitude"];
+    var long = data.iss_position["longitude"];
 
     $(".latitude").text(lat);
     $(".longitude").text(long);
@@ -13,16 +13,16 @@ var displayLocation = function(data){
 
 var locationOfIss = function(){
   $.ajax({
-    url: "http://api.open-notify.org/iss-now.json",
-    method: "GET",
-    dataType: "JSONP",
-  }).done(function (data) {
-    console.log( data );
-  });
+    url: LOCATION_BASE_URL,
+    method: LOCATION_HTTP_METHOD,
+    dataType: LOCATION_DATA_TYPE
+  }).done(displayLocation);
 };
+locationOfIss();
 
 $(document).ready(function(){
-  $(".location button").on("click", function(){
+  loactionOfIss();
+  window.setInterval( function () {
     locationOfIss();
-  });
+  }, 2000);
 });
