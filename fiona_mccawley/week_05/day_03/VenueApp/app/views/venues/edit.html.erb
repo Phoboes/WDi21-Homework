@@ -1,0 +1,23 @@
+<h1>Edit venue details</h1>
+
+<form action="/venues/<%= @venue.id %>" method="POST">
+<!-- p*5>label+input -->
+<p>
+  <label for="">Name:</label>
+  <input type="text" name="venue[name]" value="<%= @venue.name %>">
+</p>
+<p>
+  <label for="">Location:</label>
+  <input type="text" name="venue[location]" value="<%= @venue.location %>">
+</p>
+<p>
+  <label for="">Capacity:</label>
+  <input type="number" name="venue[capacity]" value="<%= @venue.capacity %>">
+</p>
+<p>
+  <label for="">Image:</label>
+  <input type="url" name="venue[image]" value="<%= @venue.image %>">
+</p>
+<input type="submit" value="Update Venue Details">
+
+</form>

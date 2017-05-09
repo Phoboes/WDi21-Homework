@@ -1,0 +1,17 @@
+<h2>Task: <%= @task.name %> </h3>
+<p>Description: <%= @task.description %> </p>
+<p>Priority: <%= @task.priority %> </p>
+<p>Start Time: <%= @task.start_time %> </p>
+<p>Due Date: <%= @task.due_date %> </p>
+<p>Due Time: <%= @task.due_time %> </p>
+<p>Overdue Status: <%= @task.overdue_status %> </p>
+
+<div class="controls">
+
+  <a href="/tasks/<%= @task.id %>/edit">
+    Edit Task
+  </a>
+
+  <%= button_to "Delete Task", "/tasks/#{@task.id}/delete", method: :delete %>
+
+</div>
