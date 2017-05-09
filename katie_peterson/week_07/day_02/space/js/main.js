@@ -16,11 +16,11 @@ var displayPeople = function(data){
   var people = data.people;
 
   var $number = $("<div class='number'>").html(data.number);
-    $(".content").append($number);
+    $(".people").append($number);
 
   people.forEach(function(data){
     var $name = $("<div class='name'>").html(data.name);
-  $(".content").append($name);
+  $(".people").append($name);
   });
 
 };
