@@ -7,16 +7,22 @@ request.onreadystatechange = function () {
     return false;
   }
 
-  var data = request.responseText;
-  var parsedData = JSON.parse( data );
+  window.onload = function () {
+    var btn = document.querySelector("button");
 
-  var title = parsedData["Title"];
-  console.log(title);
+    btn.addEventListener("click", function() {
+
+    });
+  };
+
 };
 
 request.open("GET", "http://omdbapi.com/?t=Jaws");
 request.send();
 
-window.onload = function () {
-  var btn = document.querySelector("button");
-};
+
+// var data = request.responseText;
+// var parsedData = JSON.parse( data );
+//
+// var title = parsedData["Title"];
+// console.log(title);
