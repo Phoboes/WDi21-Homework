@@ -10,13 +10,19 @@ var displayPosition = function (data){
 
 };
 
-
-
-var issPostion = function (){
+var issPosition = function (){
   $.ajax({
     url: LOCATION_URL,
     method: LOCATION_METHOD,
     dataType: LOCATION_DATA_TYPE
   }).done(displayPosition);
 };
-issPostion();
+issPosition();
+
+$(document).ready(function(){
+  issPosition();
+
+  window.setInterval( function (){
+    issPosition();
+  }, 3000);
+});
