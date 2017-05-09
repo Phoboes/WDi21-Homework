@@ -7,7 +7,7 @@ var ISS_DATA_TYPE = "JSONP";
 var displayPeople = function(data){
     var numOfPeople = data.number;
     var $newParagraph = $("<p></p>");
-    $newParagraph.text("the number of people on the space station are " + numOfPeople);
+    $newParagraph.text("The number of people in space is " + numOfPeople);
     $newParagraph.prependTo(".content");
 };
 
@@ -18,9 +18,6 @@ var displayPeople = function(data){
     }
   };
 
-
-
-
 // We want to create the ajax request
 
 var peopleInSpace = function (){
@@ -28,7 +25,7 @@ var peopleInSpace = function (){
       url: ISS_URL,
       method: ISS_METHOD,
       dataType: ISS_DATA_TYPE
-  }).done(displayPeople, spacePeopleNames);
+  }).done(spacePeopleNames, displayPeople);
 };
 peopleInSpace();
 
