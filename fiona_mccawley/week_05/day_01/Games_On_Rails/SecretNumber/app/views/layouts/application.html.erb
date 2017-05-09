@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SecretNumber</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1>The Game Centre</h1>
+  <nav>
+    <a href="/home">Home</a>
+    <a href="/secret">Secret Number Game</a>
+    <a href="/magic">Magic 8 Ball</a>
+    <a href="/games/rock_paper_scissors">Rock Paper Scissors</a>
+  </nav>
+    <hr>
+    <%= yield %>
+    <hr>
+  </body>
+</html>

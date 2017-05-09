@@ -1,0 +1,24 @@
+<h1><%= @chef.name %></h1>
+
+<% if(@chef.image) %>
+  <%= image_tag(@chef.image) %>
+<% end %>
+
+<p>
+  <b>Nationality:</b> <%= @chef.nationality %>
+</p>
+<p>
+  <b>Date of Birth:</b> <%= @chef.dob %>
+</p>
+
+<h3>Chef Recipes</h3>
+
+<% @recipes.each do |r| %>
+  <p><%= link_to(r.title, recipe_path(r.id)) %></p>
+<% end %>
+
+
+<div class="controls">
+  <%= link_to("Edit Chef", edit_chef_path(@chef), class: "btn btn-warning") %>
+  <%= link_to("Delete Chef", chef_path(@chef), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger") %>
+</div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day04</title>
+    <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Chef App</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><%= link_to("Home", "/") %></li>
+            <li><%= link_to("Chefs", chefs_path()) %></li>
+            <li><%= link_to("Recipes", recipes_path()) %></li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="jumbotron">
+        <%= yield %>
+      </main>
+
+    </div> <!-- END CONTAINER -->
+  </body>
+</html>

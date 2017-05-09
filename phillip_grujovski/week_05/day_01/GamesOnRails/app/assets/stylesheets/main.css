@@ -1,0 +1,66 @@
+body {
+    height: 100%;
+}
+
+main {
+    text-align: center;
+}
+
+main > ul > li > a {
+     color: black;
+     font-size: 20px;
+     border: 1px black solid;
+     border-radius: 10px;
+     padding: 10px 0;
+     display: block;
+}
+
+main > ul > li > a:hover {
+    color: white;
+    background-color: rgb(51, 51, 51);
+    font-size: 20px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+}
+
+main > ul {
+    margin: 0 auto;
+    width: 50%;
+}
+
+main > ul > li {
+    list-style-type: none;
+    margin: 20px;
+}
+
+.jumbotron {
+    padding: 20px;
+    height: 280px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.submit-btn {
+    color: black;
+}
+
+form {
+    margin-bottom: 15px;
+}
+
+.eight-ball-form {
+    margin-bottom: 25px;
+}
+
+.jumbotron p {
+    margin-bottom: 5px;
+}
+
+.jumbotron p.eight-ball-answer {
+    font-size: 40px;
+}

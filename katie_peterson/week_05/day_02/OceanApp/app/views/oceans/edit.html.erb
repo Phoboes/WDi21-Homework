@@ -1,0 +1,29 @@
+<h2>Edit a Ocean Form</h2>
+
+<%= @ocean.to_json %>
+
+<!--
+Edit form is the same as the new form, with a slightly different URL (it should have an ID in it), and prefilled values
+-->
+
+<form action="/oceans/<%= @ocean.id %>" method="POST">
+    <!-- p*5>label+input -->
+    <p>
+        <label for="">Name:</label>
+        <input type="text" name="ocean[name]" value = "<%= @ocean.name %>">
+    </p>
+    <p>
+        <label for="">Image:</label>
+        <input type="url" name="ocean[image]" value = "<%= @ocean.image %>">
+    </p>
+    <p>
+        <label for="">Area:</label>
+        <input type="number" name="ocean[area]" value = "<%= @ocean.area %>">
+    </p>
+    <p>
+        <label for="">Depth:</label>
+        <input type="number" name="ocean[depth]" value = "<%= @ocean.depth %>">
+    </p>
+
+    <input type="submit" value="Edit Ocean">
+</form>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games Application</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/games/secret">Secret Number</a></li>
+        <li><a href="/games/magic">Magic 8 Ball</a></li>
+        <li><a href="/games/rock_paper_scissors">Rock Paper Scissors</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+      <%= yield %>
+      </div>
+
+    </div>
+
+  </body>
+</html>
