@@ -46,6 +46,7 @@ var generateImageUrl = function (photo){
 var displayPhoto = function ( photo ) {
   var url = generateImageUrl( photo );
   var $newImg = $("<img>");
+  $newImg.addClass("lightbox_trigger")
   $newImg.attr("src", url);
   $newImg.appendTo(".results");
 };
@@ -62,7 +63,7 @@ var handleSearchData = function ( photos ){
   }
 };
 
-var searchFlickr = function (query, perPage){ //removed pageCount argument, so I could do infinite scroll 
+var searchFlickr = function (query, perPage){ //removed pageCount argument, so I could do infinite scroll
   $.ajax({
     url: FLICKR_BASE_URL,
     method: "GET",
@@ -120,12 +121,17 @@ $(document).ready(function(){
     var total = entireDocHeight - bottom;
     query = $("input#searchFlickr").val();
     if( total < 1 ) {
-      perPage += 20
+      perPage += 20;
       searchFlickr(query, perPage);
     }
     // So if entireDocHeight - bottom = 100 - then run an ajax request to load 20 more pictures
   });
 
+  //lightbox 
+  $("img.lightbox_trigger").click(function(event){
+    event.preventDefault();
+    console.log('image was clicked');
+  });
 
 }); ///end of doc.ready
 
@@ -137,7 +143,7 @@ $(document).ready(function(){
     // SHow an error if there are no more photos to display - DONE
     // Only show photos related to the current search (make sure to only be showing cat images) - DONE
 
-  // 3. Infinite scroll
+  // 3. Infinite scroll - DONE
 
     // Make a new ajax request and add more images to the page so it will keep scrolling like endless horse
     // Need to know how far down the page you are, i.e when you are 50px away from the bottom, make an ajax request.
