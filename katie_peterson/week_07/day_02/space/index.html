@@ -27,7 +27,6 @@
 
     <div class="col col-4 postion">
       <h2>Current latitude and longitude of the ISS</h2>
-      <button>Current Position</button>
       <hr>
       <div class="content">
         <p>
@@ -40,40 +39,18 @@
 
     </div>
 
-    <div class="col col-4 map">
+    <div class="col col-4 ">
       <h2>Map of current position</h2>
       <button>Show Map</button>
       <hr>
-      <div class="content"></div>
+      <div class="content" id="map"></div>
+
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key&callback=initMap">
+     </script>
+
     </div>
+
   </div>
-
-
-<!--
-  <div class="container">
-
-    <div class="col col-4 people">
-        <h2>People in Space</h2>
-        <button>Search</button>
-        <div class="container">
-           <div class="content"></div>
-        </div>
-    </div>
-
-    <div class="col col-4 people ">
-        <h2>Location of ISS</h2>
-        <button>Search</button>
-        <div class="container">
-           <div class="content"></div>
-    </div>
-
-    <div class="col col-4 people ">
-        <h2>Location of ISS</h2>
-        <button>Search</button>
-        <div class="container">
-           <div class="map"></div>
-        </div>
-  </div> -->
-
 </body>
 </html>
