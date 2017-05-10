@@ -1,0 +1,24 @@
+
+<%=   form_for @booking do |f| %>
+
+  <p>
+      <%= f.label :artist_id %>
+      <%= f.collection_select(:artist_id, @current_user.artists.all, :id, :name)%>
+  </p>
+
+  <p>
+      <%= f.label :engineer_id%>
+      <%= f.collection_select(:engineer_id, Engineer.all, :id, :name) %>
+  </p>
+
+
+
+  <p>
+    <%= f.label :appointment_time, "Date/Time of appointment" %>
+    <%= f.datetime_select :appointment_time, :class => "dropdown"%>
+  </p>
+
+
+  <%= f.submit %>
+
+<% end %>
