@@ -51,6 +51,11 @@ var displayPhoto = function ( photo ) {
 };
 
 var handleSearchData = function ( photos ){
+  if ( photos.length < 10 ) {
+    var $newPara = $("<p></p>");
+    $newPara.text("No more pictures");
+    $newPara.appendTo(".error");
+  }
   for (var i = 0; i < photos.length; i++) {
     var currentPhoto = photos[i];
     displayPhoto( currentPhoto );
@@ -72,6 +77,7 @@ var searchFlickr = function (query, pageCount){
       nojsoncallback: 1 // don't pass this into a function, pass it to a .done handler
     }
   }).done(function (response){
+    console.log(response);
     $(".results").html('');
     var allImages = response.photos.photo;
     handleSearchData( allImages );
@@ -79,8 +85,10 @@ var searchFlickr = function (query, pageCount){
 };
 
 $(document).ready(function(){
+  var pageCount = 1;
   $("form").on("submit", function(event){
     event.preventDefault();
+    var pageCount = 1;
     query = $("input#searchFlickr").val();
     if(query.length === 0){
       $("#searchFlickr").css({
@@ -91,14 +99,15 @@ $(document).ready(function(){
     searchFlickr(query);
   });
 
-  var pageCount = 1;  // make a variable for page count, and add to it
+   // make a variable for page count, and add to it on next page click
   $("#next").on("click", function(){
     pageCount += 1;
     query = $("input#searchFlickr").val();
     searchFlickr(query, pageCount);
   });
 
-  $("#previous").on("click", function(){
+  $("#previous").on("click", function(){ // minue from page count on previous page click
+    $(".error").html(''); //clear no more picture error message when going back a page
     pageCount -= 1;
     query = $("input#searchFlickr").val();
     searchFlickr(query, pageCount);
@@ -110,9 +119,9 @@ $(document).ready(function(){
 // Homework
   // 1. A button for next page (show more images)
     // Parameters: page and per_page
-    // on click +1 to page value, or -1 to go to previous page.
+    // on click +1 to page value, or -1 to go to previous page. - DONE
   // 2. Add some validations to the page
-    // SHow an error if there are no more photos to display
+    // SHow an error if there are no more photos to display - DONE
     // Only show photos related to the current search (make sure to only be showing cat images) - DONE
 
   // 3. Infinite scroll
