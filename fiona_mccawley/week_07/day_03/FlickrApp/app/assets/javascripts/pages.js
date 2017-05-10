@@ -62,7 +62,7 @@ var handleSearchData = function ( photos ){
   }
 };
 
-var searchFlickr = function (query, pageCount){
+var searchFlickr = function (query, perPage){ //removed pageCount argument, so I could do infinite scroll 
   $.ajax({
     url: FLICKR_BASE_URL,
     method: "GET",
@@ -72,12 +72,11 @@ var searchFlickr = function (query, pageCount){
       api_key: API_KEY,
       text: query,
       format: "json",
-      page: pageCount, // this needs to be dynamic
-      per_page: 20,
+      // page: pageCount, // this needs to be dynamic to add a count or minus to go forward/back
+      per_page: perPage, // for page scrolling I need to add to this. So needs to be dynamic
       nojsoncallback: 1 // don't pass this into a function, pass it to a .done handler
     }
   }).done(function (response){
-    console.log(response);
     $(".results").html('');
     var allImages = response.photos.photo;
     handleSearchData( allImages );
@@ -111,6 +110,20 @@ $(document).ready(function(){
     pageCount -= 1;
     query = $("input#searchFlickr").val();
     searchFlickr(query, pageCount);
+  });
+  var perPage = 20;
+  $(window).on("scroll", function(){
+    var windowHeight = $(window).height();
+    var scroll = $(window).scrollTop();
+    var bottom = windowHeight + scroll;
+    var entireDocHeight = $(document).height();
+    var total = entireDocHeight - bottom;
+    query = $("input#searchFlickr").val();
+    if( total < 1 ) {
+      perPage += 20
+      searchFlickr(query, perPage);
+    }
+    // So if entireDocHeight - bottom = 100 - then run an ajax request to load 20 more pictures
   });
 
 
