@@ -1,0 +1,6 @@
+<h1>Recording session by <%= @booking.engineer.name %></h1>
+
+
+<p>Artist being recorded: <%= @booking.artist.name %></p>
+
+<p>Appointment date: <%= @booking.appointment_time.strftime("%b %d, %Y at %I:%M %P") %></p>

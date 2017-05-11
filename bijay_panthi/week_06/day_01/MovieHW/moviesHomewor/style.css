@@ -1,0 +1,15 @@
+body{
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+font-style: italic;
+background: rgb(242, 86, 95);
+}
+
+h1{
+  text-align: center;
+  text-shadow:1px 1px 2px blue;
+}
+
+.container {
+  background-color: slategray;
+}

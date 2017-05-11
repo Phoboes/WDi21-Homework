@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Odio</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- <link rel="stylesheet" href="assets/stylesheets/animate.css"> -->
+    <!-- <script src="dist/sweetalert.min.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="dist/sweetalert.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/easydropdown.css"/> -->
+    <!-- <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+    <!-- <script src="assets/javascripts/jquery.easydropdown.js" type="text/javascript"></script> -->
+    <!-- <script src="/AudioApp/app/assets/javascripts/application.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+  </head>
+  <body>
+
+          <div class="custom-menu-wrapper">
+            <div class="pure-menu custom-menu custom-menu-top">
+                <a href="/" class="pure-menu-heading custom-menu-brand">ODIO</a>
+                <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+            </div>
+          <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul class="pure-menu-list">
+          <% if @current_user %>
+             <li class="pure-menu-item">
+                 <%= link_to("Engineers", "/engineers", class:"pure-menu-link") %>
+             </li>
+             <li class="pure-menu-item">
+                 <%= link_to("Artists", "/artists", class:"pure-menu-link") %>
+             </li>
+             <li class="pure-menu-item">
+                 <%= link_to "Log Out", "/logout", class:"pure-menu-link", method: :delete %>
+             </li>
+             <li class="pure-menu-item">
+                 <%= link_to @current_user.name, user_path(@current_user), class:"pure-menu-link" %>
+             </li>
+             <li class="pure-menu-item">
+                 <%= link_to "Edit Profile", edit_user_path(@current_user), class:"pure-menu-link" %>
+             </li>
+           <% else %>
+             <li class="pure-menu-item">
+                 <%= link_to "Log In", "/login", class:"pure-menu-link" %>
+             </li>
+             <li class="pure-menu-item">
+                 <%= link_to "Register", "/users/new", class:"pure-menu-link" %>
+             </li>
+           <% end %>
+             </ul>
+         </div>
+        </div>
+
+
+
+        <div class="content">
+      <%= yield %>
+      </div>
+
+
+  </body>
+</html>

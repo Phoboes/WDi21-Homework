@@ -1,0 +1,19 @@
+<div class="index">
+<h1>Artists</h1>
+
+
+<ul>
+  <% @all_artists.each do |artist| %>
+    <li class = "artist">
+      <%= link_to( artist.name, "/artists/#{artist.id}") %>
+    </li>
+  <% end %>
+</ul>
+
+<% if @current_user %>
+<p>
+<%= link_to("Create Artist Profile", "/artists/new") %>
+</p>
+<% end %>
+
+</div>
