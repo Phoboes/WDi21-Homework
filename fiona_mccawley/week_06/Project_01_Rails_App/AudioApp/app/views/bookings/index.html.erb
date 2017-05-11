@@ -1,0 +1,21 @@
+<h1>All bookings</h1>
+
+
+<ul>
+  <% @all_bookings.each do |i| %>
+    <li>
+      <%= link_to(i.artist.name, "/bookings/#{i.id}") %>
+    </li>
+    <li>
+      <%= link_to(i.engineer.name, "/bookings/#{i.id}") %>
+    </li>
+    <li>
+      Appointment Time <%= i.appointment_time.strftime("%b %d, %Y at %I:%M %P") %>
+    </li>
+    <li>
+      Duration: <%= i.duration %> hr
+    </li>
+    <hr>
+  <% end %>
+
+</ul>

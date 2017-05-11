@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  appointment_time: 2017-04-30 21:45:02
+  duration: 1
+  engineer_id: 1
+  artist_id: 1
+
+two:
+  appointment_time: 2017-04-30 21:45:02
+  duration: 1
+  engineer_id: 1
+  artist_id: 1

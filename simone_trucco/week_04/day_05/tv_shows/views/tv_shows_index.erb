@@ -1,0 +1,9 @@
+<h1>Your Favorite TV Shows</h1>
+
+<% @all_tv_shows.each do |tv_show| %>
+  <p>
+    <a href="/tv_shows/<%= tv_show['id'] %>">
+    <%= tv_show["title"] %>
+    </a>
+  </p>
+<% end %>

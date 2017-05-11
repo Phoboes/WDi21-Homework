@@ -1,0 +1,19 @@
+<h2>edit an tv_show</h2>
+<%= @tv_show %>
+
+<form action="/tv_shows/<%= @tv_show['id'] %>" method="post">
+  <p>
+    <label>Title:</label>
+    <input type="text" name="t" placeholder="Title" value="<%= @tv_shows['title']%>">
+  </p>
+  <!-- CMND + SHIFT + D -->
+  <p>
+    <label>Plot:</label>
+    <input type="text" name="p" placeholder="Plot" value="<%= @tv_shows['plot'] %>">
+  </p>
+  <p>
+    <label>Poster:</label>
+    <input type="text" name="pt" placeholder="Poster" value="<%= @tv_shows['poster'] %>">
+  </p>
+  <input type="submit" value="Add Tv Show">
+</form>

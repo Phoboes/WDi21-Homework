@@ -42,7 +42,7 @@ lineN = line[:N]
 lineN.each do |station|
     puts "Stations: #{station}"
 end
-
+def trip()
 # i need to go from times square to union square
   # find the index of the station from the start to the end of the trip
   # if the start is lower than the stop (index) then evaluate the stations

@@ -1,0 +1,25 @@
+<h2>Add a Tv Show</h2>
+
+<!--
+  With a form:
+    The action - which path do you want to communicate with
+    The method - which HTTP method do you want to use
+    Anything that we want to store in params, must have a name attribute
+-->
+
+<form action="/tv_shows" method="post">
+  <p>
+    <label>Title:</label>
+    <input type="text" name="title" placeholder="Title">
+  </p>
+  <!-- CMND + SHIFT + D -->
+  <p>
+    <label>Plot:</label>
+    <input type="text" name="plot" placeholder="Plot">
+  </p>
+  <p>
+    <label>Poster:</label>
+    <input type="text" name="poster" placeholder="Poster">
+  </p>
+  <input type="submit" value="Add this Tv Show">
+</form>
