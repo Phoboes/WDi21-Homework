@@ -40,5 +40,5 @@ app.User = Backbone.Model.extend({
 // console.log(u2.toJSON());
 
 var newUser = new app.User({firstName: "Back", lastName: "Bone"});
-newUser.save();
-newUser.fetch();
+// newUser.save();
+// newUser.fetch();
