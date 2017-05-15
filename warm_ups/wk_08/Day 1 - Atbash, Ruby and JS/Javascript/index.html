@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+			<script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+  <body>
+  <div class="container">
+    <h1 id="atbashcipher">Atbash Cipher</h1>
+
+    <p>The Atbash cipher is a simple substitution cipher that relies on transposing all the letters in the alphabet such that the resulting alphabet is backwards. The first letter is replaced with the last letter, the second with the
+    second-last, and so on.</p>
+
+    <p>An Atbash cipher for the Latin alphabet would be as follows:</p>
+
+    <pre><code class="plain language-plain">Plain:  abcdefghijklmnopqrstuvwxyz
+    Cipher: zyxwvutsrqponmlkjihgfedcba
+    </code></pre>
+
+    <p>It is a very weak cipher because it only has one possible key, and it is a
+    simple monoalphabetic substitution cipher. However, this may not have been an issue in the cipher's time.</p>
+
+    <h2 id="examples">Examples</h2>
+
+    <ul>
+    <li>Encoding "test" gives "gvhg"</li>
+
+    <li>Decoding "gvhg" gives "test"</li>
+    </ul>
+  </div>
+  </body>
+  </html>
