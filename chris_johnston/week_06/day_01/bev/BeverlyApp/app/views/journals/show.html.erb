@@ -1,0 +1,27 @@
+
+<h1><%= @journal.journalname %></h1>
+
+
+
+  <p>Number of posts per <%= @journal.per %> : <%= @journal.numberofentries %></p>
+
+  <p>Number of words per journal entry: <%= @journal.wordcount %></p>
+
+  <p>Last post: </p>
+
+
+
+<div class="controls">
+
+
+<%= link_to("Delete Journal", "/journals/#{@journal.id}", method: :delete, data: {confirm: "Are you sure?"}) %>
+</div>
+
+<%= link_to("New Entry", "") %>
+
+<h3>Journal Entries</h3>
+<% @journal.entries.each do |entry| %>
+  <p>
+    <%= link_to(entry.entryname, entry_path(entry))%>
+  </p>
+<% end %>

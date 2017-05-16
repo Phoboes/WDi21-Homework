@@ -1,0 +1,9 @@
+<h1>Your Journals</h1>
+
+<% @all_journals.each do |journal|%>
+
+<p>
+  <%= link_to(journal.journalname, journal_path(journal.id)) %>
+</p>
+
+<% end %>
