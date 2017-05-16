@@ -1,0 +1,27 @@
+<h2>Oceans Show Page (Id:<%= @ocean.id %> )</h2>
+
+<h3>Ocean name : <%= @ocean.name %></h3>
+
+<% if @ocean.image %>
+  <p>
+    Ocean Image: <img src="<%= @ocean.image %>">
+  </p>
+<% end %>
+
+<p>
+  Ocean Area: <%= @ocean.area %>
+</p>
+
+<p>
+  Ocean Depth: <%= @ocean.depth %>
+</p>
+
+<!-- link to edit and link to delete  -->
+<div class="controls">
+ <a href="/oceans/<%= @ocean.id %>/edit">
+   Edit this ocean:
+ </a>
+
+<%= button_to "Destroy this ocean",
+    "/ocean/#{@ocean.id}/delete", method: :delete %>
+</div>

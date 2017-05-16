@@ -1,0 +1,30 @@
+<h1><%= @current_user.name %></h1>
+
+
+
+
+<h3>My Artist profiles</h3>
+
+<ul>
+<% @current_user.artists.each do |i| %>
+  <hr>
+  <li><%= link_to( i.name, "/artists/#{i.id}" ) %></li>
+  <hr>
+  <li><%= link_to("Edit Artist profile", "/artists/#{i.id}/edit") %></li>
+  <li><%= link_to("Delete Artist profile", "/artists/#{i.id}", method: :delete, data: { confirm: "Are you sure?"}) %></li>
+  <hr>
+<% end %>
+</ul>
+<% #end %>
+
+
+<h3>My Engineer profile</h3>
+<ul>
+  <% @current_user.engineers.each do |i| %>
+  <li><%= link_to(i.name, "/engineers/#{i.id}") %></li>
+  <hr>
+  <li><%= link_to("Edit Engineer profile", "/engineers/#{i.id}/edit") %></li>
+  <li><%= link_to("Delete engineer profile", "/engineers/#{i.id}", method: :delete, data: { confirm: "Are you sure?"}) %></li>
+  <% end %>
+</ul>
+<% #end %>

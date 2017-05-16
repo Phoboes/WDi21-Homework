@@ -1,0 +1,23 @@
+<h1>Add a chef</h1>
+
+<div class="create-form">
+  <%= form_for @chef do |f| %>
+      <div class="form-group">
+        <%= f.label :name %>:
+        <%= f.text_field :name, required: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :nationality %>:
+        <%= f.text_field :nationality, required: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :dob %>:
+        <%= f.text_field :dob, required: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :image %>:
+        <%= f.url_field :image, class: "form-control" %>
+      </div>
+      <%= f.submit("Add Chef", class: "btn btn-success") %>
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+<h1>List of music venues</h1>
+
+<%@all_venues.each do |venue| %>
+<p>
+  <a href="/venues/<%= venue.id %>"><%= venue.name %></a>
+</p>
+<% end %>
+
+<a href="/venues/new">Add a venue</a>

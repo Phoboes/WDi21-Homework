@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  author: MyText
+  nationality: MyText
+  dob: 2017-04-27
+  genre: MyText
+  image: MyText
+
+two:
+  author: MyText
+  nationality: MyText
+  dob: 2017-04-27
+  genre: MyText
+  image: MyText
