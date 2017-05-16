@@ -1,0 +1,27 @@
+<h1>Create New Journal</h1>
+
+<%= form_for @journal do |f| %>
+
+<p>
+  <%= f.label :journalname %>
+  <%= f.text_field :journalname %>
+</p>
+
+<p>
+<%= f.label :numberofentries, "Number of entries per " %>
+<%= f.text_field :numberofentries %>
+</p>
+
+<p>
+<%= f.label :per %>
+<%= f.text_field :per %>
+</p>
+
+<p>
+  <%= f.label :wordcount, "number of words per journal entry" %>
+  <%= f.text_field :wordcount %>
+</p>
+
+<%= f.submit %>
+
+<%end%>
