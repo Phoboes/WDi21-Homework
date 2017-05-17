@@ -14,7 +14,7 @@ class ChefsController < ApplicationController
 
   def create
     chef = Chef.create(chef_params())
-    redirect_to(chefs_path())
+    redirect_to(chef_path(chef))
   end
 
   def edit
