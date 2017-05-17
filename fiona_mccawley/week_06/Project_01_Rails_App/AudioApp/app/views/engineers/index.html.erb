@@ -1,0 +1,26 @@
+<h1>Audio Engineers</h1>
+
+
+</ul>
+<% @all_engineers.order(:cached_votes_up).reverse.each do |engineer| %>
+<li class = "userlink">
+  <%= link_to( engineer.name, "/engineers/#{engineer.id}", class: "index" ) %> <br>
+</li>
+<li class="controls">
+<%= link_to like_engineer_path(engineer), class: "vote", method: :put do %>
+  Upvote
+  <%= engineer.get_upvotes.size %>
+<% end %>
+<%= link_to dislike_engineer_path(engineer), class: "vote", method: :put do %>
+  Downvote
+  <%= engineer.get_downvotes.size %>
+<% end %>
+</li>
+<% end %>
+
+
+<% if @current_user %>
+<p>
+ <%= link_to("Create Engineer Profile", "/engineers/new", class: "create") %>
+</p>
+<% end %>

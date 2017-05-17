@@ -1,0 +1,35 @@
+  <h1>Welcome to our App</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <!-- I can write a mix of HTML and Ruby code (if that code is weithin delimiters) in any ERB (embedded ruby) file -->
+
+  <%= 42**42 %>
+  <!-- Echoing delimiters - they will print on the actual page-->
+
+  <% 42**42 %>
+<!-- Non-echoing delimiters - ther are not going to print out on the actual page-->
+
+  <% ["a", "b", "c", "d", "e"].each do |letter|%>
+
+    <p>Current Letter: <%= letter %> </p>
+    <!-- in this case the <%= %> will work as #{} works in ruby-->
+  <% end %>
+
+
+
+<!-- Create an array of numbers between 1 and 10 - (1..10).to_a -->
+  <!-- <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>...</li>
+    <li>10</li>
+  </ul> -->
+  <ul>
+    <% (1..10).to_a.each do |num| %>
+
+      <li><%= num %></li>
+
+    <% end %>
+  </ul>

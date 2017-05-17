@@ -1,0 +1,25 @@
+<!-- The profile page -->
+
+<h2>
+  Title<%= @tv_show["title"] %>
+</h2>
+
+<p>
+  Plot: <%= @tv_show["plot"] %>
+</p>
+
+<p>
+  Poster: <%= @tv_show["poster"] %>
+</p>
+
+<div class="controls">
+  <a href="/tv_shows/<%= @tv_show['id'] %>/edit">
+    Edit this Series
+  </a>
+  <a href="/tv_shows/<%= @tv_show['id'] %>/delete">
+    Delete this Series
+  </a>
+</div>
+
+<%#= @animal %>
+<!-- CTRL + SHIFT + . -->

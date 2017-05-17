@@ -1,0 +1,11 @@
+<h1>Show all books</h1>
+
+<% @all_books.each do |books| %>
+
+  <p>
+    <a href="/books/<%= books['id']%>">
+      <%= books["title"] %>
+    </a>
+  </p>
+
+<% end %>

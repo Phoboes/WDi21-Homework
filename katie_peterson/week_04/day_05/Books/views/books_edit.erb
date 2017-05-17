@@ -1,0 +1,22 @@
+<h2>Edit a book</h2>
+
+<%= @books %>
+
+
+<form action="/books/ <%= @books['id'] %>" method="post">
+  <p>
+    <label>Title:</label>
+    <input type="text" name="s" placeholder="title" value = "<%= books['title'] %>">
+  </p>
+
+  <p>
+    <label>Description:</label>
+    <input type="text" name="d" placeholder="description" value = "<%= @books['description'] %>">
+  </p>
+  <p>
+    <label>Image:</label>
+    <input type="text" name="i" placeholder="image" value = "<%= @books['image'] %>">
+  </p>
+
+  <input type="submit" value="Create Book">
+</form>

@@ -1,0 +1,12 @@
+<h2>All Oceans</h2>
+
+<% @all_oceans.each do |ocean| %>
+
+  <p>
+    <a href="/oceans/<%= ocean.id %>">
+      <%= ocean.name %>
+    </a>
+    (id: <%= ocean.id %>)
+  </p>
+
+<% end %>

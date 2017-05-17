@@ -1,0 +1,35 @@
+<h2>Task Creator</h2>
+
+<form action="/tasks" method="POST">
+  <p>
+    <label>Name:</label>
+    <input type="text" name="task[name]">
+  </p>
+  <p>
+    <label>Description:</label>
+    <input type="text" name="task[description]">
+  </p>
+  <p>
+    <label>Priority:</label>
+    <input type="text" name="task[priority]">
+  </p>
+  <p>
+    <label>Start Time:</label>
+    <input type="timestamp" name="task[start_time]">
+  </p>
+  <p>
+    <label>Due Date:</label>
+    <input type="date" name="task[due_date]">
+  </p>
+  <p>
+    <label>Due Time:</label>
+    <input type="time" name="task[due_time]">
+  </p>
+  <p>
+    <label>Overdue Status:</label>
+    <input type="boolean" name="task[overdue_status]">
+  </p>
+
+
+  <input type="submit" value="Create Task">
+</form>

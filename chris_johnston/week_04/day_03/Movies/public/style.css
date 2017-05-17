@@ -1,0 +1,21 @@
+body.home {
+background: url("background.png")
+}
+
+
+button {
+     width: 30px;
+     height: 30px;
+     left: 100px;
+
+}
+
+input[type=text] {
+     width: 300px;
+     height: 25.5px;
+padding-left: 300px;
+}
+
+#searchmovie {
+left:
+}
