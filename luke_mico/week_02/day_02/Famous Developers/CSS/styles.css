@@ -1,0 +1,78 @@
+body {
+	background-color: Black;
+	color: White;
+	text-align: center;
+	/*background-image: url("japan3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;*/
+}
+
+nav	{
+	background-color: rgba(0, 0, 0, 0.5);
+	color: White;
+	text-align: center;
+	font-family: 'Cutive Mono', monospace;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 28px;
+	padding: 10px 0;
+	margin: 0;
+}
+
+div {
+  height: 150px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+h2 {
+	background-color: White;
+	color: Black;
+	font-family: 'Bungee Hairline', cursive;
+	font-size: 42px;
+	border-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Khula', sans-serif;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: White;
+
+}
+
+p {
+	text-align: center;
+	font-family: 'Khula', sans-serif;
+		background-color: rgba(0, 0, 0, 0.5);
+	color: White;
+}
+
+a {
+	text-align: center;
+	color: White;
+	font-family: 'Bungee Hairline', cursive;
+	padding: 20px;
+}
+
+footer {
+	display: block;
+	font-family: 'Bungee Hairline', cursive;
+
+}
+
+/* Article:  https://superdevresources.com/full-background-image-css/ */
+body {
+  background: url(https://superdevresources.com/wp-content/uploads/2015/12/new-york-background.jpg)no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*url(https://images/japan3.jpg) no-repeat center center fixed;*/

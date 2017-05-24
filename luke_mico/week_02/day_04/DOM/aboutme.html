@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+    .listitem {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+   </ul>
+
+<!-- Add a script tag to the bottom. -->
+  <script>
+
+// (In JS) Change the body tag's style so it has a font-family of "Arial, sans-serif".
+   document.body.style.fontFamily = "Arial, sans-serif";
+
+// (In JS) Replace each of the spans (nickname, favorites, hometown) with your own information.
+   document.getElementById("nickname").innerHTML = "Luke Mico";
+   document.getElementById("favorites").innerHTML = "35";
+   document.getElementById("hometown").innerHTML = "Surry Hills";
+
+// Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+   var items = document.getElementsByTagName("li");
+   for (var i = 0; i < items.length; i++) {
+      items[i].className = "listitem";
+   }
+
+// Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+    var myPic = document.createElement("img");
+    myPic.src = "https://www.google.com.au/search?q=linkedin+luke+mico&rlz=1C5CHFA_enAU732AU732&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi4rNeek4bUAhWDEbwKHTVOAPUQ_AUICygC&biw=1425&bih=926#imgrc=G1f9OqE5UE8WGM:";
+    document.body.appendChild(myPic);
+  </script>
+</body>
+</html>
+
+
+
+<!-- Homework -->
+<!-- Add a script tag to the bottom.
+(In JS) Change the body tag's style so it has a font-family of "Arial, sans-serif".
+(In JS) Replace each of the spans (nickname, favorites, hometown) with your own information.
+Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+Create a new img element and set its src attribute to a picture of you. Append that element to the page. -->
