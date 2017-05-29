@@ -1,0 +1,278 @@
+body {
+  margin: 0;
+}
+
+.container {
+  overflow: auto;
+  background: #97ccf1;
+  padding: 10px 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  clear: both;
+  text-align: center;
+  font-style: arial;
+
+}
+
+.column {
+  transition: width 0.5s;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 5px;
+  border-color: #4b738e;
+  background: #d8ecf9;
+  box-sizing: border-box;
+  float: left;
+  min-height: 50px;
+  border: 1px solid black;
+
+}
+
+.lg-col-1 {
+    width: 6.86666666667%;
+}
+
+.lg-col-2 {
+    width: 15.3333333333%;
+}
+
+.lg-col-3 {
+    width: 23.8%;
+}
+
+.lg-col-4 {
+    width: 32.2666666667%;
+}
+
+.lg-col-5 {
+    width: 40.7333333333%;
+}
+
+.lg-col-6 {
+    width: 49.2%;
+}
+
+.lg-col-7 {
+    width: 57.6666666667%;
+}
+
+.lg-col-8{
+    width: 66.1333333333%;
+}
+
+.lg-col-9{
+    width: 74.6%;
+}
+
+.lg-col-10 {
+    width: 83.0666666667%;
+}
+
+.lg-col-11 {
+    width: 91.5333333333%;
+}
+
+.lg-col-12 {
+    width: 100%;
+}
+
+.md-col-1 {
+    width: 6.86666666667%;
+}
+
+.md-col-2 {
+    width: 15.3333333333%;
+}
+
+.md-col-3 {
+    width: 23.8%;
+}
+
+.md-col-4 {
+    width: 32.2666666667%;
+}
+
+.md-col-5 {
+    width: 40.7333333333%;
+}
+
+.md-col-6 {
+    width: 49.2%;
+}
+
+.md-col-7 {
+    width: 57.6666666667%;
+}
+
+.md-col-8{
+    width: 66.1333333333%;
+}
+
+.md-col-9{
+    width: 74.6%;
+}
+
+.md-col-10 {
+    width: 83.0666666667%;
+}
+
+.md-col-11 {
+    width: 91.5333333333%;
+}
+
+.md-col-12 {
+    width: 100%;
+}
+
+.sm-col-1 {
+    width: 6.86666666667%;
+}
+
+.sm-col-2 {
+    width: 15.3333333333%;
+}
+
+.sm-col-3 {
+    width: 23.8%;
+}
+
+.sm-col-4 {
+    width: 32.2666666667%;
+}
+
+.sm-col-5 {
+    width: 40.7333333333%;
+}
+
+.sm-col-6 {
+    width: 49.2%;
+}
+
+.sm-col-7 {
+    width: 57.6666666667%;
+}
+
+.sm-col-8{
+    width: 66.1333333333%;
+}
+
+.sm-col-9{
+    width: 74.6%;
+}
+
+.sm-col-10 {
+    width: 83.0666666667%;
+}
+
+.sm-col-11 {
+    width: 91.5333333333%;
+}
+
+.sm-col-12 {
+    width: 100%;
+}
+
+.heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 50rem;
+
+}
+
+h2 {
+  font-size: 42rem;
+}
+
+h3 {
+font-size: 36rem;
+}
+
+h4 {
+font-size: 30rem;
+}
+
+h5 {
+font-size: 24rem;
+}
+
+h6 {
+font-size: 15rem;
+}
+
+.button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: ghostwhite;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: hotpink;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+  }
+
+  .button:hover,
+    button:hover,
+      input[type="submit"]:hover,
+      input[type="reset"]:hover,
+      input[type="button"]:hover,
+    .button:focus,
+    button:focus,
+      input[type="submit"]:focus,
+      input[type="reset"]:focus,
+      input[type="button"]:focus {
+        color: #333;
+        border-color: #888;
+        outline: 0;
+}
+
+.button-primary,
+  button.button-primary,
+    input[type="submit"].button-primary,
+    input[type="reset"].button-primary,
+    input[type="button"].button-primary {
+      color: #FFF;
+      background-color: #33C3F0;
+      border-color: #33C3F0;
+      clear: both;
+    }
+  .button.button-primary:hover,
+    button.button-primary:hover,
+      input[type="submit"].button-primary:hover,
+      input[type="reset"].button-primary:hover,
+      input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+    button.button-primary:focus,
+      input[type="submit"].button-primary:focus,
+      input[type="reset"].button-primary:focus,
+      input[type="button"].button-primary:focus {
+        color: #FFF;
+        background-color: #1EAEDB;
+        border-color: #1EAEDB;
+}
+
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
