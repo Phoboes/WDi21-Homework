@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>primefactors</title>
+		<script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+  <body>
+    <div class="container">
+      <h1 id="primefactors">Prime Factors</h1>
+      <hr>
+      <p>A <a href="https://en.wikipedia.org/wiki/Prime_number">prime number</a> is any number greater than one that is only divisible by itself. </p>
+      <ul>
+        <li>1 is not a prime number (it is not greater than 1).</li>
+        <li>2 is a prime number (it is greater than one and is only evenly divisible by itself and 1).</li>
+        <li>3 is a prime number (as above).</li>
+        <li>4 is not a prime number (it is evenly divisible by 2).</li>
+      </ul>
+      <p>The <a href="https://en.wikipedia.org/wiki/Prime_factor">prime factors</a> of an integer are the set of prime numbers will divide the integer exactly. </p>
+      <br>
+      <h2 id="example">Example</h2>
+      <hr>
+      <p>What are the prime factors of 60?</p>
+      <ul>
+        <li>1 is not a prime number.</li>
+        <li>2 is a prime number. 60 is evenly divisible by 2 (therefore <strong>2</strong> is a prime factor of 60), and leaves 30.</li>
+        <li>30 is evenly divisible by 2 (therefore <strong>2</strong> is a prime factor of 60), and leaves 15.</li>
+        <li>15 is not evenly divisible by 2.</li>
+        <li>3 is the next prime number. 15 is evenly divisible by 3 (therefore <strong>3</strong> is a prime factor of 60), and leaves 5.</li>
+        <li>4 is not a prime number.</li>
+        <li>5 is a prime number. 5 is evenly divisible by 5 (therefore <strong>5</strong> is a prime factor of 50), and leaves 1.</li>
+        <li>When we get to 1, we're done. </li>
+        <li>The prime factors of 60 are <strong>2, 2, 3, 5</strong></li>
+      </ul>
+      <p>You can check this yourself:</p>
+      <ul>
+        <li>2 * 2 * 3 * 5</li>
+        <li>= 4 * 15</li>
+        <li>= 60</li>
+        <li>Success!</li>
+      </ul>
+      <h2 id="yourtask">YOUR TASK</h2>
+      <hr>
+      <p>Write a function in Javascript which takes a number as its argument and returns an array containing the prime factors of that number.</p>
+    </div>
+  </body>
+  </html>
