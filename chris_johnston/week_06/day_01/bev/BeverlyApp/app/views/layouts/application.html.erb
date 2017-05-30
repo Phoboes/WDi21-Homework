@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BeverlyApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+    <% if @current_user %>
+    <%= link_to "Log Out", "/logout", method: :delete %>
+    <%= link_to @current_user.email, user_path(@current_user) %>
+    <%= link_to edit_user_path(@current_user) %>
+    <% else %>
+    <%= link_to "Login", "/login" %>
+    <%= link_to "Sign Up", "/users/new" %>
+    <%end  %>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+<%= @current_user %>
+
+    <%= yield %>
+  </body>
+</html>
