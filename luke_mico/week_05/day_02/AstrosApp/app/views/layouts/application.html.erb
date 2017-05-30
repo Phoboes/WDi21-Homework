@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Top Albums 1980</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav>
+      <a href="/home">Home</a>
+      <a href="/albums">All Albums</a>
+      <a href="/albums/new">Create Album</a>
+    </nav>
+
+    <hr>
+    <%= yield %>
+    <hr>
+
+  </body>
+</html>

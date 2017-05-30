@@ -1,0 +1,58 @@
+h1 {
+  font-family: Arial;
+  padding: 0px 0px 0px 20px;
+  border: 20px;
+}
+
+h2 {
+  font-family: Arial;
+  font-weight: lighter;
+  padding: 0px 0px 0px 20px;
+  border: 20px;
+}
+
+h4 {
+  font-family: Arial;
+  font-weight: lighter;
+  padding: 0px 0px 0px 20px;
+  border: 20px;
+}
+
+h6 {
+  font-family: Arial;
+  font-weight: lighter;
+  padding: 0px 0px 0px 20px;
+  border: 20px;
+}
+
+p{
+  font-family: Arial;
+  font-size: 24px;
+  padding: 0px 0px 0px 20px;
+  border: 20px;
+}
+
+img {
+  padding: 10px 20px 10px 20px;
+  border: 20px 20px;
+}
+
+img.hero {
+  width: 100%;
+}
+
+container {
+  border: 10px solid grey;
+  display: inline-block;
+}
+
+img.container {
+  width: 100%;
+  padding: 5px solid grey;
+  display: inline-block;
+  float: left;
+}
+
+.clear  {
+  clear: both;
+}
