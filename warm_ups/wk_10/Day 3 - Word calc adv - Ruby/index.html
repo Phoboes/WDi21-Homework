@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word calc</title>
+</head>
+<body>
+  <div class="container" style="width: 80%; margin: auto; font-family: arial;">
+    <h1 id="wordyarithmeticchains">Wordy Arithmetic Chains</h1>
+    <p>Write a program that takes a word problem in the format:</p>
+    <blockquote>
+      <p>What is 5 plus -13?</p>
+      <p>What is 7 minus 5?</p>
+      <p>What is 5 plus 13 plus 6?</p>
+      <p>What is 7 minus 5 minus 1?</p>
+      <p>What is 9 minus 3 plus 5?</p>
+      <p>What is 3 plus 5 minus 8?</p>
+    </blockquote>
+
+    <p>and returns the answer as an integer.</p>
+    <p>Your program should say "That's too complicated for me" if it gets a question it doesn't understand. </p>
+    <p>Use the <a href="https://gist.github.com/Phoboes/92fa8aeab5c586b929abbcfc8d78d013">tests</a> to drive your solution by deleting the <code>skip</code> in one test at a time. </p>
+    <h2 id="extensions">Extensions</h2>
+    <p>Handle all permutations of plus, minus, multiplied by, and divided by.</p>
+    <p>Make sure you have failing tests for any code you implement.</p>
+    <h2 id="source">Source</h2>
+    <p>Inspired by one of the generated questions in the <a href="https://github.com/rchatley/extreme_startup">Extreme Startup</a> game.</p>
+    <h4 id="tips">Tips</h4>
+    <ul>
+    <li><a href="https://github.com/ga-wolf/wdi-21/blob/master/12-advanced/RegularExpressions/regular-expressions.pdf">Remember your regex notes</a></li>
+    <li>Run tests by calling <code>ruby test.rb</code> in the terminal from the same folder that 'test.rb' is in (if you name it that).</li>
+    <li>Write the bare minimum to get your tests passing.</li>
+    <li>The tests guide the structure of your program, for instance <code>require_relative './word_problem'</code> is telling you it expects a file called 'word<em>problem.rb' in the same folder as the test. <code>WordProblem.new</code> indicates that the 'word</em>problem.rb' will need a class of that name and <code>.answer</code> on that class should return your results.</li>
+    </ul>
+  </div>
+</body>
+</html>
