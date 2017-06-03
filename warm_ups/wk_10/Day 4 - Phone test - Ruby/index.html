@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Phone number validations</title>
+</head>
+<body>
+  <div class="container" style="width: 80%; margin: auto; font-family: arial" >
+    <h1 id="normalizedphonenumber">Normalized Phone Number</h1>
+
+    <p>Write a program that cleans up user-entered phone numbers so that they can be sent SMS messages.</p>
+
+    <p>The rules are as follows:</p>
+
+    <ul>
+    <li>If the phone number is less than 10 digits assume that it is bad number</li>
+
+    <li>If the phone number is 10 digits assume that it is good</li>
+
+    <li>If the phone number is 11 digits and the first number is 1, trim the 1 and use the first 10 digits</li>
+
+    <li>If the phone number is 11 digits and the first number is not 1, then it is a bad number</li>
+
+    <li>If the phone number is more than 11 digits assume that it is a bad number</li>
+    </ul>
+
+    <p>We've provided tests, now make them pass.</p>
+
+    <p>Hint: Only make one test pass at a time. You can turn off tests by sending the message <code>skip</code> to it:</p>
+
+    <pre><code class="ruby language-ruby">def test_string_conversion
+      skip
+      assert_equal 1, "1".to_i
+    end
+    </code></pre>
+
+    <h2 id="source">Source</h2>
+
+    <p><a href="http://tutorials.jumpstartlab.com/projects/eventmanager.html">Event Manager</a> by JumpstartLab</p>
+
+    <h4 id="testfile">Test file</h4>
+
+    <pre><code class="rb language-rb">require 'minitest/autorun'
+    require 'minitest/pride'
+    require_relative './phone'
+
+    class PhoneTest &lt; MiniTest::Test
+
+      def test_cleans_number
+        number = Phone.new("(123) 456-7890").number
+        assert_equal "1234567890", number
+      end
+
+      def test_cleans_number_with_dots
+        skip
+        number = Phone.new("123.336.7890").number
+        assert_equal "1233367890", number
+      end
+
+      def test_valid_when_11_digits_and_first_is_1
+        skip
+        number = Phone.new("11234567890").number
+        assert_equal "1234567890", number
+      end
+
+      def test_invalid_when_11_digits
+        skip
+        number = Phone.new("21234567890").number
+        assert_equal "0000000000", number
+      end
+
+      def test_invalid_when_9_digits
+        skip
+        number = Phone.new("123456789").number
+        assert_equal "0000000000", number
+      end
+
+      def test_area_code
+        skip
+        number = Phone.new("1234567890")
+        assert_equal "123", number.area_code
+      end
+
+      def test_pretty_print
+        skip
+        number = Phone.new("1234567890")
+        assert_equal "(123) 456-7890", number.to_s
+      end
+
+    end
+    </code></pre>
+  </div>
+</body>
+</html>
