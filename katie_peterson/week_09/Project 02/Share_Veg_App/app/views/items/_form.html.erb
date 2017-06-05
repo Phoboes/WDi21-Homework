@@ -1,0 +1,17 @@
+<div class="container">
+
+  <%= form_for(@item, :html => { :multipart => true }) do |f| %>
+    <%= f.text_field :name, required: true, placeholder: 'Name' %>
+
+    <%= f.text_field :description, placeholder: 'Description' %>
+
+    <%= f.select :collected, options_for_select([["Select availability", ""], "Item available now", "Collected"]), :class => 'collected_dropBox' %>
+
+    <%= f.label :link %>
+    <%= f.file_field :link %>
+
+    <button class="btn waves-effect waves-light z-depth-0" type="submit" name="action"><%= f.submit %></button>
+
+  <% end %>
+
+</div>

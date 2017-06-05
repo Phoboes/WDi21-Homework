@@ -1,0 +1,49 @@
+
+<a href="/users" ></a>
+<% if @user.image %>
+  <%= image_tag( @user.image ) %>
+<% end %>
+<ul>
+  <li>name: <%= @user.name %></li>
+  <li>Location: <%= @user.location %></li>
+  <li>Email: <%= @user.email %></li>
+  <li>
+      Average Rating: <%= rating_for @user, "avg", path: 'star_icons', cancel: true, cancel_hint: 'Cancel this rating!', cancel_place: 'right', disable_after_rate: false  %>
+  </li>
+
+
+  <ul>
+
+      <div>
+        <% @user.services.each do |service| %>
+        <%= link_to(image_tag(service.name), "/services/#{service.id}") %>
+        <%= link_to 'Edit', edit_service_path(service) %>
+        <% end %>
+      </div>
+
+
+  </ul>
+</ul>
+
+
+<div class="container" width: 40%;>
+
+<% if @current_user.present? && @current_user.id == @user.id %>
+  <div class="row center">
+    <a href="/pets/new" class="waves-effect waves-light btn blue">Add New Pet</a>
+ </div>
+ <% end %>
+
+<!-- <#%#= form_tag "/users/#{ @user.id }/rate", method: "POST" do %>
+  <#%#= number_field_tag "rating", min: 1, max: 5 %>
+  <#%#= submit_tag "Create Rating" %>
+<#%# end %> -->
+
+<h2> Pets List </h2>
+    <div class="listImage" >
+      <% @user.pets.each do |pet| %>
+      <%= link_to(image_tag(pet.image), "/pets/#{pet.id}") %>
+      <% end %>
+   </div>
+
+</div>

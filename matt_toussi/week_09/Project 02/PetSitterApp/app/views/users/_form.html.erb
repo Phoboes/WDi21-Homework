@@ -1,0 +1,42 @@
+
+<%= form_for(@user, :html => {:multipart => true}) do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+  </p>
+  <p>
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true %>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password, required: true %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, required: true %>
+  </p>
+  <p>
+    <%= f.label :location %>
+    <%= f.text_field :location, required: true %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image, required: true %>
+  </p>
+
+
+  <% Service.all.each do |service| %>
+     <p>
+       <% if @user.service_ids.include?(service.id) %>
+         <input type="checkbox" id="<%= service.id %>" name="user[service_ids][]" value="<%= service.id %>" checked="true" />
+       <% else %>
+         <input type="checkbox" id="<%= service.id %>" name="user[service_ids][]" value="<%= service.id %>" />
+       <% end %>
+       <label for="<%= service.id %>"><%= "#{service.name} #{service.description}" %></label>
+     </p>
+   <% end %>
+   <button class="btn waves-effect waves-light" type="submit" name="action"><%= f.submit %>
+       <i class="material-icons right">send</i>
+   </button>
+    <% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  average: 1
+  rater_id: 1
+  rated_id: 1
+
+two:
+  average: 1
+  rater_id: 1
+  rated_id: 1

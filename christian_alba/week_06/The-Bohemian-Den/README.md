@@ -1,0 +1,47 @@
+# Steps
+
+- Model - User
+  - What does a User need?
+    - name:text
+    - email:text
+    - password_digest:text
+  - Generate a model
+  - Run the migration
+                  - CRUDS
+- Views for User        
+  - Index
+  - Show
+  - New
+  - Create
+  - Edit
+  - Update
+  - Delete
+- User Authentication
+  - Generate a SessionController with a new view and action
+  - Generate a create and destroy action in the SessionController
+- Model - Post
+  - What does a Post need?
+    - heading:text
+    - content:text
+    - user_id:integer
+  - Generate a model
+  - Run the migration
+- Views for Post
+  - Index
+  - Show
+  - New
+  - Create
+  - Edit
+  - Update
+  - Delete
+- Associations
+  - User has_many posts
+  - Post belongs_to user
+    - Tell Active Record
+  - When you create a post, associate it with the current user
+- When you view a User profile
+  - Show all of the User posts
+- When you view a Post show page
+  - Link to the user who wrote the post
+
+# Connect to Heroku

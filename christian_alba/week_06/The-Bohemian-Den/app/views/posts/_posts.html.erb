@@ -1,0 +1,19 @@
+
+<%= form_for @post do |f| %>
+
+<blockquote>
+    “Don’t focus on having a great blog. Focus on producing a blog that’s great for your readers.”
+</blockquote>
+
+
+    <%= f.label :heading %>
+    <%= f.text_field :heading, required: true %>
+
+    <%= f.label :content %>
+    <%= f.text_area :content, required: true %>
+
+
+<a class="btn waves-effect waves-light">
+  <%= f.submit  %>
+</a>
+<% end %>

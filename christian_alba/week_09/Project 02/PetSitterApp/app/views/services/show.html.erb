@@ -1,0 +1,17 @@
+<!--   PRINT OUT THE SERVICE OF THE DETAILS -->
+<!-- t.index ["service_id", "user_id"], name: "index_services_users_on_service_id_and_user_id", using: :btree -->
+<!-- t.index ["user_id", "service_id"], name: "index_services_users_on_user_id_and_service_id", using: :btree -->
+
+<div>
+  <%= @service.name %>
+  <%= @service.description %>
+</div>
+
+<hr>
+
+<div>
+  <h2>All Users</h2>
+  <% @service.users.each do |user| %>
+    <%= user.name %>
+  <% end %>
+</div>

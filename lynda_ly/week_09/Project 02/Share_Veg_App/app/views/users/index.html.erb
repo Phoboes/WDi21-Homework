@@ -1,0 +1,13 @@
+<h1>All Users</h1>
+
+<% @all_users.each do |user| %>
+  <div>
+  <img src="<%= user.image %>">
+    <div>
+      <ul>
+        <li>Name: <a class = "a-links" <%= link_to(user.name, "/users/#{user.id}") %></a></a></li>
+        <li>Email: <%= user.email %></li>
+      </ul>
+    </div>
+  </div>
+<% end %>

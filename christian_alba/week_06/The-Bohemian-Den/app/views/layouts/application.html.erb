@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thebohemianden</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= flash[:error] %>
+
+    <nav class="#37474f blue-grey darken-3">
+        <a href="#" class="brand-logo left">The Bohemian Den</a>
+
+      <div class="right">
+        <% if @current_user %>
+          <%= link_to @current_user.name, user_path(@current_user) %>
+          <%= link_to "Log Out", "/logout", method: :delete %>
+          <%= link_to "Edit Profile", edit_user_path(@current_user) %>
+        <% else %>
+          <%= link_to "Login", "/login" %>
+          <%= link_to "Sign Up", "/users/new" %>
+        <% end %>
+          <%= link_to "All Posts", "/posts" %>
+          <%= link_to "New Post", "/posts/new" %>
+        </div>
+    </nav>
+
+    <header class="container">
+
+    </header>
+
+
+    <footer class="container">
+
+
+    </footer>
+
+
+    <%= yield %>
+  </body>
+</html>

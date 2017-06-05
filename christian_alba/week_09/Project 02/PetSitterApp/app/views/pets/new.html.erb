@@ -1,0 +1,31 @@
+
+<h1>Create a Pet</h1>
+
+<%= form_for(@pet, :html => { :multipart => true }) do |f| %>
+  <p>
+    <%= f.label :pet_name %>
+    <%= f.text_field :name, required: true %>
+  </p>
+  <p>
+    <%= f.label :date_of_birth %>
+    <%= f.date_field :date_of_birth, required: true %>
+  </p>
+  <p>
+    <%= f.label :type_of_pet %>
+    <%= f.text_field :type_of_pet, required: true %>
+  </p>
+  <p>
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.file_field :image, required: true %>
+  </p>
+  <a class="waves-effect waves-light btn"><%= f.submit "Add Pet"%></a>
+
+  <% end %>

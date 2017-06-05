@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<% if @booking.owner %>
+  <%= @booking.owner.name %>
+<% end %>
+<%= @booking.sitter.name %>
+<%= @booking.start_time %>
+<%= @booking.end_time %>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

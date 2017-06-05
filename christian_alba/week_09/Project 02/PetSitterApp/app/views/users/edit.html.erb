@@ -1,0 +1,33 @@
+<h1>Edit Profile</h1>
+
+<%= form_for(@user, :html => { :multipart => true }, url: "/users/#{@user.id}")   do |f| %>
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password, required: true %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, required: true %>
+    </p>
+    <p>
+      <%= f.label :location %>
+      <%= f.text_field :location %>
+    </p>
+    <p>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </p>
+
+    <a class="waves-effect waves-light btn"><%= f.submit "Update Profile" %></a>
+
+    <%= link_to "Delete Profile", @user, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <% end %>

@@ -1,0 +1,9 @@
+<h3 class="center-align">All Posts</h3>
+
+<h5> No. of Posts: <%= @posts.count %></h5>
+
+<% @posts.each do |post| %>
+  <h5 class="center-align">
+    <%= link_to(post.heading, "/posts/#{post.id}") %>
+  </h5>
+<% end %>

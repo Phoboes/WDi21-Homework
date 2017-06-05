@@ -1,0 +1,63 @@
+<div class="hero">
+    <div class="center row">
+        <div class="col s12 m4"></div>
+        <div class="box-white col s12 m4">
+          <% if @conversation.sender_id == @current_user.id %>
+            <% @recipient = User.find(@conversation.recipient_id) %>
+          <% else %>
+            <% @recipient = User.find(@conversation.sender_id) %>
+          <% end %>
+
+            <h1>Message <%= @recipient.name %></h1>
+            <div class="col s12 m4 l1"></div>
+            <div class="col s12 m4 l10">
+              <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+               <div class="field">
+                 <%= f.text_area :body, class: "form-control" %>
+               </div>
+               <%= f.text_field :user_id, value: @current_user.id, type: "hidden" %>
+               <div>
+                <button class="btn waves-effect waves-light z-depth-0" type="submit" name="action"><%= f.submit %></button>
+               </div>
+              <% end %>
+            </div>
+            <div class="col s12 m4 l1"></div>
+
+        </div>
+        <div class="col s12 m4"></div>
+
+    </div>
+</div>
+
+<div class="container">
+  <h1 align="center">Conversation With <%= @recipient.name %></h1>
+  <% if @over_ten %>
+   <%= link_to 'Show Previous', '?m=all' %>
+  <% end %>
+    <table class="bordered">
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>Message</th>
+          <th>Sent</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @messages.each do |message| %>
+      <% if message.user_id != @current_user.id && message.read == false %>
+      <% message.read = true %>
+      <% message.save %>
+
+       <% end %>
+        <% if message.body %>
+          <% user = User.find(message.user_id) %>
+            <tr>
+              <td><strong><%= user.name %> </strong></td>
+              <td><%= message.body %> </td>
+              <td><%= message.message_time %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+</div>

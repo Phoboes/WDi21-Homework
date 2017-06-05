@@ -1,0 +1,17 @@
+
+<h3>Update your details</h3>
+
+<%= form_for @service, url: "/services/#{@service.id}" do |f| %>
+<p>
+  <%= f.label :Service_name %>
+  <%= f.text_field :name, required: true %>
+</p>
+<p>
+<%= f.label :description %>
+<%= f.text_field :description, :required => true %>
+</p>
+
+<%= f.submit %>
+<% end %>
+
+</div>

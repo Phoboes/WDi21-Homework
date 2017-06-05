@@ -1,0 +1,11 @@
+<h4 class="center-align">Users Access</h4>
+
+<h4 class="waves-effect waves-teal btn-flat">
+<%= link_to "Create New Users", "/users/new" %>
+</h4>
+
+<% @users.each do |u| %>
+  <h5 class=center-align>
+    <%= link_to u.name, user_path(u) %>
+  </h5>
+<% end %>

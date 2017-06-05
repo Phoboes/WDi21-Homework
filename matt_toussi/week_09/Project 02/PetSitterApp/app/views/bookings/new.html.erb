@@ -1,0 +1,18 @@
+<h1>New Booking</h1>
+
+<%= form_for @booking do |f| %>
+  <p>
+    <%= f.label :Start_Date_and_Time %>
+    <%= f.datetime_field :start_time, required: true %>
+  </p>
+  <p>
+  <%= f.label :End_Date_and_Time %>
+  <%= f.datetime_field :end_time, required: true %>
+  </p>
+  <p>
+  <%= f.label :Service_Type%>
+  <%= f.collection_select(:service_id, Service.all.uniq, :id, :name) %>
+  <%#= f.text_field :service_id, required: true %>
+  </p>
+  <%= f.submit "Submit"%>
+<% end %>

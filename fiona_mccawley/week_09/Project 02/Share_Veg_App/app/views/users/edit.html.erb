@@ -1,0 +1,104 @@
+<div class="flex-height">
+  <div class="box-white-darken">
+    <div class="container row">
+
+      <h1>Edit Profile</h1>
+      <% unless @user.errors.full_messages.empty? %>
+        <% @user.errors.full_messages.each do |msg| %>
+          <p>
+              <%= msg %>
+          </p>
+        <% end %>
+      <% end %>
+
+      <div class="col s12 m4">
+        <%= form_for(@user, :html => { :multipart => true }) do |f| %>
+        <p>
+            <%= f.label :name %>
+            <br>
+            <%= f.text_field :name, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :email %>
+            <br>
+            <%= f.email_field :email, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :mobile %>
+            <br>
+            <%= f.telephone_field :mobile, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :link %>
+            <br>
+            <%= f.file_field :link%>
+        </p>
+
+      </div>
+
+      <div class="col s12 m4">
+        <p>
+            <%= f.label :building_number %>
+            <br>
+            <%= f.text_field :building_number, required: true %>
+        </p>
+
+        <p>
+            <%= f.label :street %>
+            <br>
+            <%= f.text_field :street, required: true %>
+        </p>
+        <p>
+            <%= f.label :city %>
+            <br>
+            <%= f.text_field :city, required: true %>
+        </p>
+        <p>
+            <%= f.label :state %>
+            <br>
+            <%= f.text_field :state, required: true %>
+        </p>
+        <p>
+            <%= f.label :country %>
+            <br>
+            <%= f.text_field :country, required: true %>
+        </p>
+      </div>
+
+      <div class="col s12 m4">
+        <p>
+            <%= f.label :bio %>
+            <br>
+            <%= f.text_field :bio, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :likes %>
+            <br>
+            <%= f.text_field :likes, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :dislikes %>
+            <br>
+            <%= f.text_field :dislikes, required: false %>
+        </p>
+
+        <p>
+            <%= f.label :allergies %>
+            <br>
+            <%= f.text_field :allergies, required: false %>
+        </p>
+
+        <button style ="margin-top:31px;" class="btn waves-effect waves-light z-depth-0" type="submit" name="action"><%= f.submit %></button>
+        <% end %>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<%= form_for @service do |f| %>
+  <p>
+    <%= f.label :Service_name %>
+    <%= f.text_field :name, required: true %>
+  </p>
+  <p>
+  <%= f.label :description %>
+  <%= f.text_field :description, required: true %>
+  </p>
+  <%= f.submit "Submit"%>
+  <% end %>

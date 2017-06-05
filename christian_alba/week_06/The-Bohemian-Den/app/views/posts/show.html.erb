@@ -1,0 +1,17 @@
+<h4 class="center-align">
+<%= @post.heading %>
+</h4>
+
+<p class="center-align">
+  <%= @post.content %>
+</p>
+
+<td><%= link_to 'Edit', "/posts/#{@post.id}/edit" %></td>
+<td><%= link_to 'Destroy', "/posts/#{@post.id}", method: :delete,
+        data: { confirm: "Are you sure?" } %></td>
+
+<% if @post.user %>
+  <%= link_to "Author: #{@post.user.name}", "/posts/#{@post.user.id}" %>
+<% end %>
+
+<!-- Link to the user who wrote this - post belongs to user, post.user -->

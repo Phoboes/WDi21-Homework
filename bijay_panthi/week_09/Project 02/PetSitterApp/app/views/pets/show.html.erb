@@ -1,0 +1,29 @@
+
+<% if @pet.image %>
+  <%= image_tag( @pet.image ) %>
+<% end %>
+
+<ul>
+  <li>Name: <%= @pet.name %></li>
+  <li>Type: <%= @pet.type_of_pet %></li>
+  <li>Age: <%= @pet.date_of_birth %></li>
+  <li>Sex: <%= @pet.gender %></li>
+  <li>Description: <%= @pet.description %></li>
+
+</ul>
+
+
+
+    <div class="controls">
+      <% if @current_user.present? && @current_user.id == @pet.user_id %>
+      <%= link_to("Edit Pet", "/pets/#{@pet.id}/edit") %>
+      <%= link_to("Delete Pet", "/pets/#{@pet.id}", method: :delete, data: { confirm: "Are you sure?" }) %>
+      <% else %>
+
+      <% end %>
+   </div>
+
+    <p>
+      Owner Name:
+      <%= link_to(@pet.user.name, "/users/#{@user.id}") %>
+    </p>

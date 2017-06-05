@@ -1,0 +1,51 @@
+<div class="hero">
+  <div class="center row">
+      <div class="col s12 m4"></div>
+      <div class="box-white col s12 m4">
+        <h1>Share your food</h1>
+        <h3>Do your bit for your community <br>
+          and help tackle food waste</h3>
+
+
+          <% if !@current_user %>
+
+        <button class="btn waves-effect waves-light z-depth-0 light-green darken-1" type="submit" name="action"><%= link_to 'Sign Up', new_user_path %></button>
+        <% end %>
+      </div>
+      <div class="col s12 m4"></div>
+  </div>
+</div>
+
+<div class="container about center">
+    <h1>How it works</h1>
+    <div class="row">
+      <div class="col s12 m3">
+        <h3><strong>STEP 1</strong></h3>
+        <div class="circle">
+          <p><i class="large material-icons">place</i></p>
+        </div>
+        <p>Set Up Your Location</p>
+      </div>
+      <div class="col s12 m3">
+        <h3><strong>STEP 2</strong></h3>
+        <div class="circle">
+          <p><i class="large material-icons">search</i></p>
+        </div>
+        <p>Search &amp; Find Nearby</p>
+      </div>
+      <div class="col s12 m3">
+        <h3><strong>STEP 3</strong></h3>
+        <div class="circle">
+          <p><i class="large material-icons">chat</i></p>
+        </div>
+        <p>Send A Request</p>
+      </div>
+      <div class="col s12 m3">
+        <h3><strong>STEP 4</strong></h3>
+        <div class="circle">
+          <p><i class="large material-icons">drive_eta</i></p>
+        </div>
+        <p>Arrange Pick-Up</p>
+      </div>
+    </div>
+</div>

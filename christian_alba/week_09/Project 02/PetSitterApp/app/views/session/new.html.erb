@@ -1,0 +1,33 @@
+
+<div class="login_image">
+  <%= image_tag "dog_caress.png" %>
+</div>
+
+
+<div class="login_page">
+
+<% if flash[:login_error] %>
+  <p>
+    <%= flash[:login_error] %>
+  </p>
+<% end %>
+  <br><br>
+<%= form_tag "/login" do %>
+
+<div class="row col s8" style="margin:1px">
+  <form class="col s8" style="border:1px;color:blac">
+    <div class="row" style="width:250px">
+    <%= label_tag :email %>
+    <%= email_field_tag :email %>
+   </div>
+   <div class="row" style="width:250px">
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+  </div>
+  <a class="waves-effect waves-light btn"><i class="material-icons left">perm_identity</i><div class="row" style="width:250px"><%= submit_tag "Login" %></div></a>
+</div>
+
+<% end %>
+</form>
+
+</div>

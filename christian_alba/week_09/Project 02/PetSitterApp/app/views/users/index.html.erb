@@ -1,0 +1,60 @@
+<div class="left_column">
+  <div id="map" style="width:400px; height:400px"></div>
+
+  <div class="row">
+      <div class="col s3 m5">
+        <div class="card-panel blue darken-1">
+          <span class="white-text"><h4><%= @users.length %> PetSitters available in your area </h4>
+          </span>
+        </div>
+      </div>
+    </div>
+</div>
+
+  <div class="right_column">
+    <% @users.each do |user| %>
+    <div class="listImage" width="150px" height="150px">
+      <% if user.image %>
+      <!--  WRAP AROUND A DIV FOR IAMGE TO BE APPEAR RIGHT AND BOOKING LINK ON LEFT -->
+        <%= link_to(image_tag(user.image), user_path(user)) %>
+      <% else %>
+        <%= link_to(user.name, user_path(user)) %>
+      <% end %>
+    </div>
+      <% end %>
+
+ </div>
+
+// Geocoder 
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxeAbvMpzSxjfYXVRsxH9F1mmUjiKZ9OU&libraries=visualization"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxeAbvMpzSxjfYXVRsxH9F1mmUjiKZ9OU&libraries=places"></script>
+<script>
+      function initMap() {
+          var userPos = {
+              lat: <%= @users.first.latitude %>,
+              lng: <%= @users.first.longitude %>
+          };
+          // Using markers array from above, saved this to variable
+          var locs = <%= @markers.to_json.html_safe %>
+          // Create map, rendering to the div with id of map, use userPos as the center
+          var map = new google.maps.Map(document.querySelector("#map"), {
+              zoom: 12,
+              center: userPos
+          });
+          var locs = [];
+          <% @users.each do |user| %>
+            locs.push({lat:<%=user.latitude%>, lng:<%=user.longitude%>})
+          <% end %>
+
+
+          for (i = 0; i < locs.length; i++) {
+              var marker = new google.maps.Marker({
+                  position: new google.maps.LatLng(locs[i].lat, locs[i].lng),
+                  map: map
+              })
+          }
+      }
+      initMap();
+  </script>

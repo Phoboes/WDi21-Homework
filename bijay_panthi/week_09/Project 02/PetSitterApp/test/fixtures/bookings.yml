@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_time: 2017-05-20 15:11:56
+  end_time: 2017-05-20 15:11:56
+  service_id: 1
+  owner_id: 1
+  sitter_id: 1
+
+two:
+  start_time: 2017-05-20 15:11:56
+  end_time: 2017-05-20 15:11:56
+  service_id: 1
+  owner_id: 1
+  sitter_id: 1

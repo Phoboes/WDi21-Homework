@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShareVegoApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="z-depth-0 white"> <!-- removes drop shadow -->
+      <div class="container"> <!-- wraps everything so that it's not full width of screen -->
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">WasteNot</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+          <ul class="right hide-on-med-and-down">
+
+            <% if @current_user %>
+            <li><a href="/items">Search</a></li>
+              <li><%= link_to "Log Out", "/logout", method: :delete %></li>
+              <li><a href= "<%= user_path(@current_user) %>">Hi <%= @current_user.name %> <span id="megryan" class="test new badge light-green lighten-3" data-badge-caption="Mail"></span></a></li>
+
+            <% else %>
+              <li><a href="/login">Log In</a></li>
+              <li><a href="/users/new">Sign Up</a></li>
+            <% end %>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <% if @current_user %>
+            <li><a href="/items">Search</a></li>
+              <li><%= link_to "Log Out", "/logout", method: :delete %></li>
+              <li><a href= "<%= user_path(@current_user) %>">Hi <%= @current_user.name %> <span class="test new badge light-green lighten-3" data-badge-caption="Mail"></span></a></li>
+
+            <% else %>
+              <li><a href="/login">Log In</a></li>
+              <li><a href="/users/new">Sign Up</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <main> <!-- check main css -->
+    <%= yield %>
+
+    <div class="container">
+      <button onclick="topFunction()" id="myBtn" title="Go to top" class="btn waves-effect waves-light z-depth-0"><i class="material-icons">arrow_upward</i></button>
+    </div>
+
+
+  </main>
+
+  <footer class="page-footer grey lighten-3">
+    <div class="container sponsors center">
+      <h3>Our Sponsors</h3>
+      <div class="row">
+        <div class="col s12 m2"></div>
+        <div class="col s12 m2">
+          <%= image_tag "fresh_food_cafe.png", size: "120x120", alt: "Fresh Food Cafe" %>
+        </div>
+        <div class="col s12 m2">
+          <%= image_tag "the_local_farmers.png", size: "120x120", alt: "The Local Farmers" %>
+        </div>
+        <div class="col s12 m2">
+          <%= image_tag "greenbean.png", size: "150x150", alt: "Greenbean" %>
+        </div>
+        <div class="col s12 m2">
+          <%= image_tag "always_go_organic.png", size: "150x150", alt: "Always Go Organic" %>
+        </div>
+        <div class="col s12 m2"></div>
+      </div>
+    </div>
+
+    <div class="footer-copyright light-green darken-1">
+      <div class="container">
+      © 2017 WasteNot. All rights reserved.
+      </div>
+    </div>
+  </footer>
+  <% if @current_user %>
+  <script>
+
+    $(document).ready(function(){
+
+      var MESSAGE_TIMER = window.setInterval(function(){
+        getMessages(<%= @current_user.id %>);
+      }, 3000);
+    })
+
+    //   // var MESSAGE_TIMER = window.setInterval(function(){
+    //   //   getMessages();
+    //   // });
+
+  </script>
+  <% end %>
+
+  </body>
+</html>

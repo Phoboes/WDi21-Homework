@@ -1,0 +1,11 @@
+<h4>Wall of Pets</h4>
+<div class="container">
+  <div class="row">
+  <% @all_pets.each do |pet| %>
+    <div class="listImage">
+      <%= link_to(image_tag(pet.image), pet_path(pet)) %>
+      <p><%= pet.name %></p>
+    </div>
+  <% end %>
+  </div>
+</div>

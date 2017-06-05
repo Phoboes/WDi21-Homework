@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PetSitterApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <body>
+
+    <nav>
+       <div class="nav-wrapper">
+         <a href="/home" class="brand-logo"><%= image_tag "petcare.png" %></a>
+         <ul class="right hide-on-med-and-down">
+           <% if @current_user %>
+             <li><%= link_to "Log Out", "/logout", method: :delete %><li>
+             <li><%= link_to @current_user.email, user_path(@current_user) %><li>
+             <li><%= link_to "Edit Profile", edit_user_path(@current_user) %><li>
+             <li><%= link_to "Services", "/services" %><li>
+             <li><%= link_to "Users", "/users" %><li>
+           <% else %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/users/new">Sign Up</a></li>
+            <% end  %>
+            <li><a href="/available_bookings">Book a Sitter</a></li>
+            <li><a href="/wall">Wall of Pets</a></li>
+       </div>
+     </nav>
+
+    <%= yield %>
+  </body>
+</html>

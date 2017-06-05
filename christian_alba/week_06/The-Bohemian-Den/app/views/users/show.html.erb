@@ -1,0 +1,31 @@
+<h3><%= @user.name %></h3>
+
+<a href="/users" class="waves-effect waves-teal btn-flat right" >Back to all users</a>
+
+<table class="responsive-table">
+   <tr>
+     <td>
+     Name: <%= @user.name %>
+     </td>
+     <td>
+     Email: <%= @user.email %>
+     </td>
+     <td>
+     Password Digest: <%= @user.password_digest %>
+     </td>
+   </tr>
+</table>
+
+<div class="center-align">
+  <td class="waves-effect waves-light btn"><%= link_to 'Edit', "/users/#{@user.id}/edit"%></td>
+  <td class="waves-effect waves-light btn"><%= link_to 'Destroy', "/users/#{@user.id}", method: :delete,
+          data: { confirm: "Are you sure?" }%></td>
+</div>
+
+<ul >
+    <% @user.posts.each do |post| %>
+      <li>
+      <%= link_to post.heading, "/posts/#{post.id}" %>
+      </li>
+    <% end %>
+</ul>
