@@ -1,0 +1,17 @@
+#canvasWrap {
+  margin: 5% auto;
+  width: 300px;
+}
+
+canvas {
+  border: 1px solid grey;
+}
+
+.buttonWrapper {
+  width: 100px;
+  margin: auto;
+}
+
+button {
+  margin: auto;
+}
