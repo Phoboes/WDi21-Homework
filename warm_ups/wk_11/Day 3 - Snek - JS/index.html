@@ -8,6 +8,9 @@
   <title>snek</title>
 </head>
 <body>
+<div class="container">
+  <h2 id="snek">Snek</h2>
+  <h3>WASD to move.</h3>
   <div id="canvasWrap">
     <canvas id="canvas" width="300" height="300"></canvas>
     <div class="buttonWrapper">
@@ -15,6 +18,53 @@
       <button id="pause" style="display: inline-block">Pause</button>
     </div>
   </div>
+
+
+  <h4 id="thegoodnews">The good news:</h4>
+
+  <ul>
+  <li>I've done a lot of it for you.</li>
+
+  <li>All that is required is to plug in some extra bits and bobs that you have already seen before, or to reuse content that is already there.</li>
+  </ul>
+
+  <h4 id="thebadnews">The bad news:</h4>
+
+  <ul>
+  <li>I've done a lot of it for you.</li>
+
+  <li>Reading code is often <em>harder</em> than writing it -- and I haven't annotated this at all (yet). Spend a little bit of time trying to understand roughly what is happening, and how things are separated (objects within objects). Calling the <code>app</code> variable in the console may help with this.</li>
+  </ul>
+
+  <p>This warm-up was inspired by my etch-a-sketch warmup from the other day. There is nothing in here that you haven't seen before; there's just a bit more logic behind the scenes.</p>
+
+  <hr />
+
+  <h4 id="thecodeclonethisrepositoryhttpsgithubcomphoboessssnek">The code: <a href="https://github.com/Phoboes/sssnek">Clone this repository.</a></h4>
+
+  <hr />
+
+  <h4 id="tasks">Tasks</h4>
+
+  <ul>
+  <li><p>1: Currently, our poor snek is blind. As you can see, as soon as we begin our program, he careens off into a wall and dies. Modify the code to accept a user's input (WASD) to guide snek away from walls and self harm, to the loving embrace of junk food (and inevitable death). </p></li>
+
+  <li><p>2: If snek dies, there is currently no way to reset the game. Add a reset button.</p></li>
+
+  <li><p>3: Snek is now on a diet. Add a score so it can keep track of how many things it's eaten.</p></li>
+  </ul>
+
+  <p>Tips:</p>
+
+  <ul>
+  <li><p>Task 1: Look at the etch-a-sketch code if you've forgotten how I wrote key detection. Feel free to steal it. To see what you should be changing, look at both the snake object and the <code>directionStep</code> function.</p></li>
+
+  <li><p>Task 2: The code for this is already there. Have a look for something that is already resetting things -- then tie it to an HTML button or something.</p></li>
+
+  <li><p>Task 3: I've coded none of this -- you are on your own.</p></li>
+  </ul>
+</div>
+
 
   <script src="main.js"></script>
 </body>

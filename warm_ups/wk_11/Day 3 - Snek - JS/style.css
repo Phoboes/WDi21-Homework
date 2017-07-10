@@ -15,3 +15,13 @@ canvas {
 button {
   margin: auto;
 }
+
+.container {
+  margin: auto;
+  width: 80%;
+  font-family: arial;
+}
+
+h2, h3 {
+  text-align: center;
+}
